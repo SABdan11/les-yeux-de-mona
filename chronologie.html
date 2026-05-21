@@ -215,17 +215,20 @@
 
     .frise-table {
       width: 100%;
-      min-width: 460px;
       border-collapse: collapse;
-      font-size: 12px;
+      font-size: 11px;
+      table-layout: fixed;
     }
+    .frise-table col.col-periode  { width: 22%; }
+    .frise-table col.col-artistes { width: 28%; }
+    .frise-table col.col-ideal    { width: 50%; }
     .frise-table thead th {
       background: #1a3a5c;
       color: white;
-      padding: 8px 10px;
+      padding: 7px 8px;
       text-align: left;
       font-weight: 600;
-      font-size: 10px;
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -237,25 +240,21 @@
     .frise-table tbody tr:hover { background: #f4f0ea; }
     .frise-table tbody tr:last-child { border-bottom: none; }
     .frise-table td {
-      padding: 8px 10px;
+      padding: 6px 7px;
       vertical-align: top;
-      line-height: 1.5;
-    }
-    .frise-table td:first-child {
-      white-space: nowrap;
-      font-weight: 700;
-      color: #1a3a5c;
+      line-height: 1.4;
+      word-break: break-word;
     }
     .frise-table .frise-dates {
-      font-size: 10px;
+      font-size: 9px;
       color: #c9a84c;
       font-weight: 700;
       display: block;
       margin-bottom: 1px;
     }
-    .frise-table .frise-nom { color: #1a3a5c; font-weight: 700; font-size: 12px; }
-    .frise-table .frise-artistes { color: #666; font-size: 11px; }
-    .frise-table .frise-ideal { color: #888; font-size: 11px; font-style: italic; }
+    .frise-table .frise-nom { color: #1a3a5c; font-weight: 700; font-size: 11px; }
+    .frise-table .frise-artistes { color: #666; font-size: 10px; }
+    .frise-table .frise-ideal { color: #888; font-size: 10px; font-style: italic; }
 
   </style>
 </head>
@@ -274,10 +273,15 @@
   </div>
   <div class="frise-table-wrap" id="friseTableWrap">
     <table class="frise-table">
+      <colgroup>
+        <col class="col-periode">
+        <col class="col-artistes">
+        <col class="col-ideal">
+      </colgroup>
       <thead>
         <tr>
           <th>Période</th>
-          <th>Artistes du roman</th>
+          <th>Artistes</th>
           <th>Idéal esthétique</th>
         </tr>
       </thead>
