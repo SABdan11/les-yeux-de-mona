@@ -10,7 +10,6 @@
   const scoreLbl  = profil ? (scoreData.reconnu + '/52') : '—';
 
   const items = [
-    { href: 'quiz.html',        icon: '🎯', label: 'Jeu' },
     { href: 'musees.html',      icon: '🏛️', label: 'Musées' },
     { href: 'chronologie.html', icon: '📜', label: 'Histoire' },
     { href: 'roman.html',       icon: '📖', label: 'Roman' },
@@ -74,6 +73,10 @@
   // HTML nav + modal
   document.body.insertAdjacentHTML('beforeend', `
     <nav class="bottom-nav">
+      <button onclick="window.lancerJeu()" class="nav-item ${page === 'quiz.html' ? 'active' : ''}" style="background:none;border:none;cursor:pointer;padding:8px 0;flex:1">
+        <span class="nav-icon">🎯</span>
+        <span class="nav-label">Jouer</span>
+      </button>
       ${items.map(it => `
         <a href="${it.href}" class="nav-item ${page === it.href ? 'active' : ''}">
           <span class="nav-icon">${it.icon}</span>
@@ -92,10 +95,9 @@
 
     <div class="joueur-overlay" id="joueurOverlay" onclick="if(event.target===this)window.fermerJoueur()">
       <div class="joueur-panel">
-        <h3>👤 Qui joue ?</h3>
         <div class="joueur-liste" id="joueurListe"></div>
         <div class="joueur-input-row">
-          <input class="joueur-input" id="joueurInput" type="text" placeholder="Prénom (min. 5 lettres)…" maxlength="20" minlength="5">
+          <input class="joueur-input" id="joueurInput" type="text" placeholder="Prénom (min. 5 lettres)…" maxlength="20">
           <button class="joueur-btn-add" onclick="window.ajouterJoueur()">Ajouter</button>
         </div>
         <button class="joueur-btn-close" id="joueurBtnClose" onclick="window.fermerJoueur()">Fermer</button>
@@ -136,6 +138,15 @@
     document.getElementById('joueurBtnClose').style.display = actif ? 'block' : 'none';
   }
 
+  window.lancerJeu = function() {
+    if (Profil.getActif()) {
+      window.location.href = 'quiz.html';
+    } else {
+      _modeJouer = true;
+      window.ouvrirJoueur(true);
+    }
+  };
+
   window.ouvrirJoueur = function(obligatoire) {
     rafraichirListe();
     document.getElementById('joueurOverlay').classList.add('visible');
@@ -150,9 +161,12 @@
     document.getElementById('joueurOverlay').classList.remove('visible');
   };
 
+  let _modeJouer = false;
+
   window.choisirJoueur = function(nom) {
     Profil.setActif(nom);
-    setTimeout(() => window.location.reload(), 200);
+    if (_modeJouer) { window.location.href = 'quiz.html'; }
+    else { setTimeout(() => window.location.reload(), 200); }
   };
 
   window.ajouterJoueur = function() {
@@ -163,7 +177,8 @@
       return;
     }
     Profil.ajouter(nom);
-    setTimeout(() => window.location.reload(), 200);
+    if (_modeJouer) { window.location.href = 'quiz.html'; }
+    else { setTimeout(() => window.location.reload(), 200); }
   };
 
   window.supprimerJoueur = function(nom) {
