@@ -13,7 +13,7 @@
   const items = [
     { href: 'quiz.html',        icon: '🃏', label: 'Quiz' },
     { href: 'musees.html',   icon: '🏛️', label: 'Musées' },
-    { href: 'chronologie.html', icon: '📅', label: 'Époque' },
+    { href: 'chronologie.html', icon: '📅', label: 'Histoire' },
     { href: 'roman.html',       icon: '📖', label: 'Roman' },
   ];
 
@@ -26,7 +26,7 @@
         </a>`).join('')}
       <a href="carnet.html" class="nav-item nav-carnet ${page === 'carnet.html' ? 'active' : ''}">
         <div class="nav-avatar">${initiale}</div>
-        <span class="nav-label">${scoreLabel}</span>
+        <span class="nav-label">${profil ? scoreLabel : 'Joueur'}</span>
       </a>
       <a href="index.html" class="nav-item ${page === 'index.html' ? 'active' : ''}">
         <span class="nav-icon">🏠</span>
