@@ -11,7 +11,7 @@
   const scoreLabel = profil ? (scoreData.reconnu + '/52') : 'Carnet';
 
   const items = [
-    { href: 'quiz.html',        icon: '🃏', label: 'Quiz' },
+    { href: 'quiz.html',        icon: '🃏', label: 'Jeu' },
     { href: 'musees.html',   icon: '🏛️', label: 'Musées' },
     { href: 'chronologie.html', icon: '📅', label: 'Histoire' },
     { href: 'roman.html',       icon: '📖', label: 'Roman' },
