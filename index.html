@@ -6,34 +6,8 @@
   <title>Les Yeux de Mona</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Barre profil */
-    .profil-bar {
-      background: white;
-      border-bottom: 1px solid #eee;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-    }
-    .profil-avatar {
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      background: #1a3a5c;
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .profil-nom { font-size: 14px; font-weight: 600; color: #1a1a1a; flex: 1; }
-    .profil-changer { font-size: 12px; color: #c9a84c; font-weight: 600; }
-
-    /* Contenu principal */
     .accueil-corps { padding: 20px 16px 16px; }
 
-    /* Blocs d'explication */
     .aide-bloc {
       margin-bottom: 18px;
       padding-bottom: 18px;
@@ -65,7 +39,6 @@
       color: #555;
     }
 
-    /* Bouton CTA */
     .btn-cta {
       display: block;
       width: 100%;
@@ -84,7 +57,6 @@
       box-shadow: 0 4px 16px rgba(26,58,92,0.25);
     }
 
-    /* Mentions légales */
     .legal {
       background: #f4f0ea;
       border-radius: 10px;
@@ -104,112 +76,37 @@
     }
     .legal p + p { margin-top: 8px; }
     .legal strong { color: #555; }
-
-    /* Modal profils */
-    .modal-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 100;
-      align-items: flex-end;
-      justify-content: center;
-    }
-    .modal-overlay.visible { display: flex; }
-    .modal {
-      background: white;
-      border-radius: 20px 20px 0 0;
-      padding: 24px 20px 40px;
-      width: 100%;
-      max-width: 480px;
-    }
-    .modal h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: #1a3a5c;
-      margin-bottom: 16px;
-    }
-    .profils-liste { margin-bottom: 16px; }
-    .profil-item {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .profil-item:hover { background: #f4f0ea; }
-    .profil-item.actif { background: #e8eef4; }
-    .profil-item .pi-nom { flex: 1; font-size: 15px; font-weight: 600; }
-    .profil-item .pi-actif { font-size: 11px; color: #c9a84c; font-weight: 600; }
-    .profil-item .pi-suppr { font-size: 18px; color: #ddd; cursor: pointer; padding: 4px; }
-    .profil-item .pi-suppr:hover { color: #e05555; }
-    .modal-input-row { display: flex; gap: 8px; margin-top: 4px; }
-    .modal-input {
-      flex: 1; padding: 12px 14px;
-      border: 2px solid #e0d8ce;
-      border-radius: 10px;
-      font-size: 15px;
-      font-family: 'Open Sans', sans-serif;
-      outline: none;
-    }
-    .modal-input:focus { border-color: #1a3a5c; }
-    .modal-btn-add {
-      padding: 12px 18px;
-      background: #1a3a5c;
-      color: white;
-      border: none; border-radius: 10px;
-      font-size: 14px; font-weight: 600; cursor: pointer;
-    }
-    .modal-fermer {
-      width: 100%; margin-top: 12px;
-      padding: 12px;
-      background: #f4f0ea;
-      color: #555;
-      border: none; border-radius: 10px;
-      font-size: 14px; font-weight: 600; cursor: pointer;
-    }
   </style>
 </head>
 <body>
 
-  <!-- EN-TÊTE -->
   <header class="app-header">
     <div class="app-subtitle">Guide de visite</div>
     <h1 class="app-title">Les Yeux de Mona</h1>
     <p class="app-tagline">52 chefs-d'œuvre à découvrir avec vos grands-parents</p>
   </header>
 
-  <!-- BARRE PROFIL -->
-  <div class="profil-bar" id="profilBar" onclick="ouvrirModal()">
-    <div class="profil-avatar" id="profilAvatar">?</div>
-    <div class="profil-nom" id="profilNom">Choisir un enfant…</div>
-    <div class="profil-changer">Changer ›</div>
-  </div>
-
-  <!-- CONTENU PRINCIPAL -->
   <div class="accueil-corps">
 
-    <!-- PRÉSENTATION -->
     <div class="aide-bloc">
-      <h4>🎮 Un jeu de culture générale sur l'histoire de l'art</h4>
+      <h4>🎯 Un jeu de culture générale sur l'histoire de l'art</h4>
       <p>Ludique et simple, conçu pour les enfants : se familiariser avec les <strong>52 chefs-d'œuvre</strong> du roman <em>Les Yeux de Mona</em> de Thomas Schlesser, les reconnaître, les mémoriser, et <strong>améliorer son score</strong>.</p>
       <p style="margin-top:10px">Toutes ces œuvres sont exposées dans les musées parisiens. L'application propose aussi un <strong>jeu de piste</strong> dans ces musées — pour des visites amusantes et instructives, en famille.</p>
       <p style="margin-top:10px">Pour aller plus loin, une approche académique repositionne chaque œuvre dans les <strong>grandes périodes et mouvements de l'histoire de l'art</strong>, grâce à une frise chronologique interactive allant de la Renaissance italienne à l'art contemporain.</p>
       <div class="highlight">Mon conseil : lisez le roman avant de visiter. Ou après. Ou pendant. Peu importe l'ordre — le livre et les musées se répondent et se nourrissent l'un l'autre. Un livre rare : aussi captivant pour un enfant de 10 ans que pour un adulte.</div>
     </div>
 
-    <!-- LE QUIZ -->
     <div class="aide-bloc">
-      <h4>🃏 Comment fonctionne le jeu ?</h4>
+      <h4>🎯 Comment fonctionne le jeu ?</h4>
       <p>Une image s'affiche — à l'enfant de reconnaître l'œuvre. <strong>Au moins l'artiste</strong>, c'est déjà très bien. Et plus si affinités : le titre, l'époque, le musée...</p>
       <p style="margin-top:8px">Si besoin, la fiche complète est accessible au verso de la carte. Puis on répond honnêtement :</p>
       <ul>
         <li>✓ <strong>Reconnu !</strong> — l'œuvre est ajoutée au score</li>
         <li>✗ <strong>Pas encore</strong> — elle reviendra plus tard</li>
       </ul>
-      <p style="margin-top:8px">Le score s'affiche dans le menu, sous le prénom de l'enfant. L'objectif : atteindre <strong>52/52</strong>.</p>
+      <p style="margin-top:8px">Le score s'affiche dans le menu sous le prénom du joueur. L'objectif : atteindre <strong>52/52</strong>.</p>
     </div>
 
-    <!-- MUSÉES -->
     <div class="aide-bloc">
       <h4>🏛️ Le jeu de piste au musée</h4>
       <p>Choisissez un musée dans le menu. L'application guide de salle en salle dans l'ordre logique du parcours. Sur chaque fiche :</p>
@@ -221,20 +118,18 @@
       </ul>
     </div>
 
-    <!-- PROFILS & NAVIGATION -->
     <div class="aide-bloc">
-      <h4>👤 Profils · 📅 Époque · 📖 Roman · 📒 Carnet</h4>
+      <h4>👤 Joueur · 📜 Histoire · 📖 Roman · 📒 Mon carnet</h4>
       <ul>
-        <li><strong>Profil</strong> — chaque enfant a son propre score. Appuyez sur la barre du prénom pour changer d'enfant.</li>
-        <li><strong>Par époque</strong> — explorez la frise de l'histoire de l'art</li>
-        <li><strong>Dans le roman</strong> — les 52 semaines dans l'ordre du livre</li>
+        <li><strong>Joueur</strong> — chaque enfant a son propre score. Identifiez-vous au démarrage du jeu ou via le menu.</li>
+        <li><strong>Histoire</strong> — la frise de l'histoire de l'art et ses 11 mouvements</li>
+        <li><strong>Roman</strong> — les 52 semaines dans l'ordre du livre</li>
         <li><strong>Mon carnet</strong> — œuvres vues, reconnues, leçons de Dadé collectées</li>
       </ul>
     </div>
 
     <a href="quiz.html" class="btn-cta">On commence le jeu ! 🎯</a>
 
-    <!-- MENTIONS LÉGALES -->
     <div class="legal">
       <h5>Mentions légales</h5>
       <p><strong>© 2026 Daniel Sabban</strong> — Tous droits réservés.<br>
@@ -245,84 +140,7 @@
 
   </div>
 
-  <!-- MODAL PROFILS -->
-  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)fermerModal()">
-    <div class="modal">
-      <h3>👤 Quel enfant visite ?</h3>
-      <div class="profils-liste" id="profilsListe"></div>
-      <div class="modal-input-row">
-        <input class="modal-input" id="inputNom" type="text" placeholder="Prénom de l'enfant…" maxlength="20">
-        <button class="modal-btn-add" onclick="ajouterProfil()">Ajouter</button>
-      </div>
-      <button class="modal-fermer" onclick="fermerModal()">Fermer</button>
-    </div>
-  </div>
-
   <script src="js/profil.js"></script>
   <script src="js/nav.js"></script>
-  <script>
-    function rafraichirBarre() {
-      const actif = Profil.getActif();
-      document.getElementById('profilAvatar').textContent = Profil.initiale(actif);
-      document.getElementById('profilNom').textContent = actif || 'Choisir un enfant…';
-    }
-
-    function rafraichirListe() {
-      const liste = Profil.getListe();
-      const actif = Profil.getActif();
-      const el    = document.getElementById('profilsListe');
-      if (liste.length === 0) {
-        el.innerHTML = '<p style="font-size:13px;color:#aaa;margin-bottom:8px">Aucun profil — ajoutez un prénom ci-dessous.</p>';
-        return;
-      }
-      el.innerHTML = liste.map(nom => `
-        <div class="profil-item ${nom === actif ? 'actif' : ''}" onclick="choisirProfil('${nom}')">
-          <div class="profil-avatar" style="width:30px;height:30px;font-size:14px;background:#1a3a5c;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">${Profil.initiale(nom)}</div>
-          <div class="pi-nom">${nom}</div>
-          ${nom === actif ? '<div class="pi-actif">actif</div>' : ''}
-          <div class="pi-suppr" onclick="event.stopPropagation();supprimerProfil('${nom}')">✕</div>
-        </div>`).join('');
-    }
-
-    function ouvrirModal() {
-      rafraichirListe();
-      document.getElementById('modalOverlay').classList.add('visible');
-      document.getElementById('inputNom').focus();
-    }
-
-    function fermerModal() {
-      document.getElementById('modalOverlay').classList.remove('visible');
-    }
-
-    function choisirProfil(nom) {
-      Profil.setActif(nom);
-      rafraichirBarre();
-      rafraichirListe();
-      setTimeout(fermerModal, 300);
-    }
-
-    function ajouterProfil() {
-      const nom = document.getElementById('inputNom').value.trim();
-      if (!nom) return;
-      Profil.ajouter(nom);
-      document.getElementById('inputNom').value = '';
-      rafraichirBarre();
-      rafraichirListe();
-    }
-
-    function supprimerProfil(nom) {
-      if (!confirm('Supprimer le profil de ' + nom + ' ?')) return;
-      Profil.supprimer(nom);
-      rafraichirBarre();
-      rafraichirListe();
-    }
-
-    document.getElementById('inputNom').addEventListener('keydown', e => {
-      if (e.key === 'Enter') ajouterProfil();
-    });
-
-    rafraichirBarre();
-    if (Profil.getListe().length === 0) ouvrirModal();
-  </script>
 </body>
 </html>
