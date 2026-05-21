@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Jeu de piste Pompidou</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .parcours-header { background: linear-gradient(160deg, #1a6b3a, #2a9c5a); color: white; padding: 48px 20px 24px; }
+    .parcours-header h1 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .parcours-header p { font-size: 13px; opacity: 0.7; }
+    .parcours-progress { background: white; padding: 12px 20px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px; }
+    .pp-bar { flex:1; height:6px; background:#f0ece6; border-radius:3px; overflow:hidden; }
+    .pp-fill { height:100%; background:#1a6b3a; border-radius:3px; transition: width .5s; }
+    .pp-label { font-size:12px; color:#888; white-space:nowrap; }
+    .parcours-body { padding: 16px; padding-bottom: 80px; }
+    .depart { background: #1a6b3a; color: white; border-radius: 12px; padding: 16px 18px; margin-bottom: 8px; display: flex; align-items: center; gap: 14px; }
+    .depart-icon { font-size: 28px; }
+    .depart-titre { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; }
+    .depart-desc { font-size: 12px; opacity: 0.75; margin-top: 3px; }
+    .direction { display: flex; align-items: center; gap: 10px; padding: 10px 4px; color: #888; font-size: 12px; }
+    .direction-line { flex: 1; height: 1px; background: #ddd; }
+    .zone { margin-bottom: 8px; }
+    .zone-header { background: #f4f0ea; border-radius: 10px 10px 0 0; padding: 10px 14px; border-bottom: 2px solid #1a6b3a; }
+    .zone-etiquette { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #1a6b3a; margin-bottom: 2px; }
+    .zone-nom { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: #1a1a1a; }
+    .zone-salle { font-size: 12px; color: #888; margin-top: 2px; }
+    .zone-oeuvres { background: white; border-radius: 0 0 10px 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .piste-card { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid #f4f0ea; transition: background 0.15s; }
+    .piste-card:last-child { border-bottom: none; }
+    .piste-card.clickable:active { background: #f4f0ea; }
+    .piste-card.locked { opacity: 0.45; }
+    .piste-num { width: 26px; height: 26px; border-radius: 50%; background: #1a6b3a; color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .piste-card.vue .piste-num { background: #2a8c4a; }
+    .piste-card.locked .piste-num { background: #ccc; }
+    .piste-img { width: 52px; height: 52px; border-radius: 6px; overflow: hidden; background: #e8e0d4; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .piste-img img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .piste-info { flex: 1; }
+    .piste-artiste { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #1a1a1a; }
+    .piste-titre { font-size: 11px; color: #777; margin-top: 2px; line-height: 1.3; }
+    .piste-salle { font-size: 10px; color: #aaa; margin-top: 3px; }
+    .piste-badge { font-size: 10px; padding: 3px 7px; border-radius: 10px; flex-shrink: 0; }
+    .badge-vue { background: #e6f4ea; color: #2a8c4a; font-weight: 700; }
+    .badge-avenir { background: #f0ece6; color: #bbb; }
+    .arrivee { background: linear-gradient(135deg, #c9a84c, #e8c86a); color: white; border-radius: 12px; padding: 16px 18px; margin-top: 8px; text-align: center; }
+    .arrivee-icon { font-size: 32px; margin-bottom: 6px; }
+    .arrivee-titre { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; }
+    .arrivee-desc { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+    .note-atelier { background: #e8f4ec; border-left: 4px solid #1a6b3a; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-bottom: 8px; font-size: 12px; color: #1a6b3a; }
+  </style>
+</head>
+<body>
+  <header class="parcours-header">
+    <a href="musees.html" class="back-btn">‹ Musées</a>
+    <h1>🗺️ Jeu de piste — Pompidou</h1>
+    <p>18 œuvres · Durée estimée : 2h</p>
+  </header>
+  <div class="parcours-progress">
+    <div class="pp-bar"><div class="pp-fill" id="ppFill" style="width:0%"></div></div>
+    <div class="pp-label" id="ppLabel">0 / 18 œuvres vues</div>
+  </div>
+  <div class="parcours-body" id="parcoursBody"></div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const vues = Profil.getVues();
+
+    const PARCOURS = [
+      {
+        etape: 'Niveau 0 — Extérieur',
+        salle: 'Atelier Brancusi · Place Georges-Pompidou',
+        direction: '→ Avant d\'entrer, longez la façade à gauche · 2 min',
+        note: '⚠️ L\'Atelier Brancusi est un bâtiment séparé, gratuit, sur la place.',
+        oeuvres: [
+          { id: null, artiste: 'Constantin Brancusi', titre: "L'Oiseau dans l'espace", salle: 'Atelier Brancusi' },
+        ]
+      },
+      {
+        etape: 'Niveau 4 — Collection permanente',
+        salle: 'Avant-gardes 1905–1940 · Galerie Sud',
+        direction: '↑ Entrez et prenez les escalators jusqu\'au niveau 4 · 5 min',
+        oeuvres: [
+          { id: null, artiste: 'Vassily Kandinsky', titre: 'Étude pour l\'Almanach du Blaue Reiter', salle: 'Niveau 4, galerie 1' },
+          { id: null, artiste: 'Kasimir Malévitch', titre: 'Croix noire', salle: 'Niveau 4, galerie 2' },
+          { id: null, artiste: 'Marcel Duchamp', titre: 'Porte-bouteilles', salle: 'Niveau 4, galerie 3' },
+          { id: null, artiste: 'Georgia O\'Keeffe', titre: 'Stries rouges, jaunes et noires', salle: 'Niveau 4, galerie 4' },
+          { id: null, artiste: 'René Magritte', titre: 'Le Modèle rouge', salle: 'Niveau 4, galerie 5' },
+        ]
+      },
+      {
+        etape: 'Niveau 4 — Collection permanente',
+        salle: 'Art moderne 1940–1960 · Galerie Nord',
+        direction: '→ Continuer dans la galerie · 3 min',
+        oeuvres: [
+          { id: null, artiste: 'Pablo Picasso', titre: "L'Aubade", salle: 'Niveau 4, galerie 6' },
+          { id: null, artiste: 'Jackson Pollock', titre: 'Peinture (Argent sur noir…)', salle: 'Niveau 4, galerie 7' },
+          { id: null, artiste: 'Hans Hartung', titre: 'T 1964-H45', salle: 'Niveau 4, galerie 8' },
+          { id: null, artiste: 'Anna-Eva Bergman', titre: 'Proue noire', salle: 'Niveau 4, galerie 8' },
+        ]
+      },
+      {
+        etape: 'Niveau 5 — Collection permanente',
+        salle: 'Art contemporain 1960–2000 · Galerie Sud',
+        direction: '↑ Monter au niveau 5 · Escalators · 3 min',
+        oeuvres: [
+          { id: null, artiste: 'Niki de Saint Phalle', titre: 'La Mariée', salle: 'Niveau 5, galerie 1' },
+          { id: null, artiste: 'Jean-Michel Basquiat', titre: 'Sans titre', salle: 'Niveau 5, galerie 2' },
+          { id: null, artiste: 'Frida Kahlo', titre: 'The Frame (Le Cadre)', salle: 'Niveau 5, galerie 3' },
+          { id: null, artiste: 'Joan Mitchell', titre: 'Sans titre', salle: 'Niveau 5, galerie 4' },
+        ]
+      },
+      {
+        etape: 'Niveau 5 — Collection permanente',
+        salle: 'Art contemporain · Installations · Galerie Nord',
+        direction: '→ Continuer vers les grandes installations · 3 min',
+        oeuvres: [
+          { id: null, artiste: 'Louise Bourgeois', titre: 'Precious Liquids', salle: 'Niveau 5, galerie 5' },
+          { id: null, artiste: 'Marina Abramović', titre: 'Vider son bateau, faire face à l\'océan', salle: 'Niveau 5, galerie 6' },
+          { id: null, artiste: 'Christian Boltanski', titre: 'La vie impossible de Christian Boltanski', salle: 'Niveau 5, galerie 7' },
+          { id: null, artiste: 'Pierre Soulages', titre: 'Peinture 200 x 220 cm, 22 avril 2002', salle: 'Niveau 5, galerie 8' },
+        ]
+      },
+    ];
+
+    const idsPompidou = Array.from({length: 18}, (_, i) => i + 35);
+    const nbVus = idsPompidou.filter(id => vues[id]).length;
+    document.getElementById('ppFill').style.width = (nbVus / 18 * 100) + '%';
+    document.getElementById('ppLabel').textContent = nbVus + ' / 18 œuvres vues';
+
+    const body = document.getElementById('parcoursBody');
+    let num = 0;
+
+    body.innerHTML = `
+      <div class="depart">
+        <div class="depart-icon">🚩</div>
+        <div>
+          <div class="depart-titre">Départ — Place Georges-Pompidou</div>
+          <div class="depart-desc">Prenez les escalators extérieurs · Vue sur Paris depuis le niveau 5</div>
+        </div>
+      </div>`;
+
+    PARCOURS.forEach((zone, zi) => {
+      body.innerHTML += `<div class="direction"><div class="direction-line"></div><span>⬇</span><span>${zone.direction}</span><div class="direction-line"></div></div>`;
+
+      if (zone.note) {
+        body.innerHTML += `<div class="note-atelier">${zone.note}</div>`;
+      }
+
+      let oeuvresHTML = '';
+      zone.oeuvres.forEach(o => {
+        num++;
+        const oeuvre = o.id ? OEUVRES.find(x => x.id === o.id) : null;
+        const estVue = oeuvre && !!vues[oeuvre.id];
+        const dispo  = !!oeuvre;
+        const imgHTML = oeuvre ? `<img src="${oeuvre.image}" alt="${o.artiste}" onerror="this.parentElement.innerHTML='🖼️'">` : '🖼️';
+        const badge = estVue ? '<span class="piste-badge badge-vue">✓ Vue</span>' : (!dispo ? '<span class="piste-badge badge-avenir">À venir</span>' : '');
+        const tag = dispo ? 'a' : 'div';
+        const href = dispo ? `href="fiche.html?id=${oeuvre.id}"` : '';
+        oeuvresHTML += `<${tag} ${href} class="piste-card ${dispo ? 'clickable' : 'locked'} ${estVue ? 'vue' : ''}"><div class="piste-num">${num}</div><div class="piste-img">${imgHTML}</div><div class="piste-info"><div class="piste-artiste">${o.artiste}</div><div class="piste-titre">${o.titre}</div><div class="piste-salle">${o.salle}</div></div>${badge}</${tag}>`;
+      });
+
+      body.innerHTML += `<div class="zone"><div class="zone-header"><div class="zone-etiquette">Étape ${zi + 1}</div><div class="zone-nom">${zone.etape}</div><div class="zone-salle">${zone.salle}</div></div><div class="zone-oeuvres">${oeuvresHTML}</div></div>`;
+    });
+
+    body.innerHTML += `<div class="direction"><div class="direction-line"></div><span>⬇</span><div class="direction-line"></div></div><div class="arrivee"><div class="arrivee-icon">🏆</div><div class="arrivee-titre">Bravo !</div><div class="arrivee-desc">Parcours Pompidou terminé !<br>Profitez de la vue depuis la terrasse du niveau 5.</div></div>`;
+  </script>
+</body>
+</html>

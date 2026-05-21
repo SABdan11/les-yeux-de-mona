@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Jeu de piste Orsay</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .parcours-header { background: linear-gradient(160deg, #8b3a3a, #c05050); color: white; padding: 48px 20px 24px; }
+    .parcours-header h1 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .parcours-header p { font-size: 13px; opacity: 0.7; }
+    .parcours-progress { background: white; padding: 12px 20px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px; }
+    .pp-bar { flex:1; height:6px; background:#f0ece6; border-radius:3px; overflow:hidden; }
+    .pp-fill { height:100%; background:#8b3a3a; border-radius:3px; transition: width .5s; }
+    .pp-label { font-size:12px; color:#888; white-space:nowrap; }
+    .parcours-body { padding: 16px; padding-bottom: 80px; }
+    .depart { background: #8b3a3a; color: white; border-radius: 12px; padding: 16px 18px; margin-bottom: 8px; display: flex; align-items: center; gap: 14px; }
+    .depart-icon { font-size: 28px; }
+    .depart-titre { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; }
+    .depart-desc { font-size: 12px; opacity: 0.75; margin-top: 3px; }
+    .direction { display: flex; align-items: center; gap: 10px; padding: 10px 4px; color: #888; font-size: 12px; }
+    .direction-line { flex: 1; height: 1px; background: #ddd; }
+    .zone { margin-bottom: 8px; }
+    .zone-header { background: #f4f0ea; border-radius: 10px 10px 0 0; padding: 10px 14px; border-bottom: 2px solid #8b3a3a; }
+    .zone-etiquette { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #8b3a3a; margin-bottom: 2px; }
+    .zone-nom { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: #1a1a1a; }
+    .zone-salle { font-size: 12px; color: #888; margin-top: 2px; }
+    .zone-oeuvres { background: white; border-radius: 0 0 10px 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .piste-card { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid #f4f0ea; transition: background 0.15s; }
+    .piste-card:last-child { border-bottom: none; }
+    .piste-card.clickable:active { background: #f4f0ea; }
+    .piste-card.locked { opacity: 0.45; }
+    .piste-num { width: 26px; height: 26px; border-radius: 50%; background: #8b3a3a; color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .piste-card.vue .piste-num { background: #2a8c4a; }
+    .piste-card.locked .piste-num { background: #ccc; }
+    .piste-img { width: 52px; height: 52px; border-radius: 6px; overflow: hidden; background: #e8e0d4; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .piste-img img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .piste-info { flex: 1; }
+    .piste-artiste { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #1a1a1a; }
+    .piste-titre { font-size: 11px; color: #777; margin-top: 2px; line-height: 1.3; }
+    .piste-salle { font-size: 10px; color: #aaa; margin-top: 3px; }
+    .piste-badge { font-size: 10px; padding: 3px 7px; border-radius: 10px; flex-shrink: 0; }
+    .badge-vue { background: #e6f4ea; color: #2a8c4a; font-weight: 700; }
+    .badge-avenir { background: #f0ece6; color: #bbb; }
+    .arrivee { background: linear-gradient(135deg, #c9a84c, #e8c86a); color: white; border-radius: 12px; padding: 16px 18px; margin-top: 8px; text-align: center; }
+    .arrivee-icon { font-size: 32px; margin-bottom: 6px; }
+    .arrivee-titre { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; }
+    .arrivee-desc { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <header class="parcours-header">
+    <a href="musees.html" class="back-btn">‹ Musées</a>
+    <h1>🗺️ Jeu de piste — Orsay</h1>
+    <p>16 œuvres · Durée estimée : 2h</p>
+  </header>
+  <div class="parcours-progress">
+    <div class="pp-bar"><div class="pp-fill" id="ppFill" style="width:0%"></div></div>
+    <div class="pp-label" id="ppLabel">0 / 16 œuvres vues</div>
+  </div>
+  <div class="parcours-body" id="parcoursBody"></div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const vues = Profil.getVues();
+
+    const PARCOURS = [
+      {
+        etape: 'Niveau 0 — Grande nef',
+        salle: 'Réalisme · Salles 4 et 7',
+        direction: '→ Entrez par la rue de Bellechasse · Traversez la nef centrale',
+        oeuvres: [
+          { id: null, artiste: 'Rosa Bonheur', titre: 'Laborage nivernais', salle: 'Salle 4' },
+          { id: null, artiste: 'Gustave Courbet', titre: 'Un enterrement à Ornans', salle: 'Salle 7' },
+        ]
+      },
+      {
+        etape: 'Niveau 0 — Aile gauche',
+        salle: 'Peintures XIXe · Salles 14–18',
+        direction: '← Longer la nef sur la gauche · 3 min',
+        oeuvres: [
+          { id: null, artiste: 'Henri Fantin-Latour', titre: 'Hommage à Delacroix', salle: 'Salle 14' },
+          { id: null, artiste: 'James Whistler', titre: 'La Mère de l\'artiste', salle: 'Salle 15' },
+          { id: null, artiste: 'Julia M. Cameron', titre: 'Mrs Herbert Duckworth', salle: 'Salle 16 (photo)' },
+        ]
+      },
+      {
+        etape: 'Niveau 0 — Sculpture',
+        salle: 'Sculpture XIXe · Terrasse Amont',
+        direction: '→ Traverser la nef · Terrasse de sculpture · 2 min',
+        oeuvres: [
+          { id: null, artiste: 'Camille Claudel', titre: "L'Âge mûr", salle: 'Terrasse Amont' },
+        ]
+      },
+      {
+        etape: 'Niveau 0 — Aile droite',
+        salle: 'Peinture nordique · Salles 20–22',
+        direction: '→ Longer la nef sur la droite · 3 min',
+        oeuvres: [
+          { id: null, artiste: 'J. M. W. Turner', titre: 'Paysage avec une rivière', salle: 'Salle 21' },
+        ]
+      },
+      {
+        etape: 'Niveau 2 — Pavillon Amont',
+        salle: 'Symbolisme & Transition · Salles 60–67',
+        direction: '↑ Escalier central · Niveau 2 · 5 min',
+        oeuvres: [
+          { id: null, artiste: 'Edward Burne-Jones', titre: 'La Roue de la Fortune', salle: 'Salle 60' },
+          { id: null, artiste: 'Gustav Klimt', titre: 'Rosiers sous les arbres', salle: 'Salle 65' },
+          { id: null, artiste: 'Vilhelm Hammershøi', titre: 'Hvile (Repos)', salle: 'Salle 65' },
+          { id: null, artiste: 'Piet Mondrian', titre: 'Meules de foin III', salle: 'Salle 67' },
+        ]
+      },
+      {
+        etape: 'Niveau 5 — Galerie des Impressionnistes',
+        salle: 'Impressionnisme · Salles 29–36',
+        direction: '↑ Escalier Pavillon Amont · Niveau 5 · 4 min',
+        oeuvres: [
+          { id: null, artiste: 'Édouard Manet', titre: "L'Asperge", salle: 'Salle 29' },
+          { id: null, artiste: 'Claude Monet', titre: 'La Gare Saint-Lazare', salle: 'Salle 34' },
+          { id: null, artiste: 'Edgar Degas', titre: "L'Étoile (Danseuse sur scène)", salle: 'Salle 31' },
+          { id: null, artiste: 'Paul Cézanne', titre: 'La Montagne Sainte-Victoire', salle: 'Salle 36' },
+          { id: null, artiste: 'Vincent van Gogh', titre: "L'Église d'Auvers-sur-Oise", salle: 'Salle 35' },
+        ]
+      },
+    ];
+
+    const idsOrsay = Array.from({length: 16}, (_, i) => i + 19);
+    const nbVus = idsOrsay.filter(id => vues[id]).length;
+    document.getElementById('ppFill').style.width = (nbVus / 16 * 100) + '%';
+    document.getElementById('ppLabel').textContent = nbVus + ' / 16 œuvres vues';
+
+    const body = document.getElementById('parcoursBody');
+    let num = 0;
+
+    body.innerHTML = `
+      <div class="depart">
+        <div class="depart-icon">🚩</div>
+        <div>
+          <div class="depart-titre">Départ — Entrée principale</div>
+          <div class="depart-desc">1 rue de la Légion d'Honneur · Prenez un plan à l'accueil</div>
+        </div>
+      </div>`;
+
+    PARCOURS.forEach((zone, zi) => {
+      body.innerHTML += `<div class="direction"><div class="direction-line"></div><span>⬇</span><span>${zone.direction}</span><div class="direction-line"></div></div>`;
+
+      let oeuvresHTML = '';
+      zone.oeuvres.forEach(o => {
+        num++;
+        const oeuvre = o.id ? OEUVRES.find(x => x.id === o.id) : null;
+        const estVue = oeuvre && !!vues[oeuvre.id];
+        const dispo  = !!oeuvre;
+        const imgHTML = oeuvre ? `<img src="${oeuvre.image}" alt="${o.artiste}" onerror="this.parentElement.innerHTML='🖼️'">` : '🖼️';
+        const badge = estVue ? '<span class="piste-badge badge-vue">✓ Vue</span>' : (!dispo ? '<span class="piste-badge badge-avenir">À venir</span>' : '');
+        const tag = dispo ? 'a' : 'div';
+        const href = dispo ? `href="fiche.html?id=${oeuvre.id}"` : '';
+        oeuvresHTML += `<${tag} ${href} class="piste-card ${dispo ? 'clickable' : 'locked'} ${estVue ? 'vue' : ''}"><div class="piste-num">${num}</div><div class="piste-img">${imgHTML}</div><div class="piste-info"><div class="piste-artiste">${o.artiste}</div><div class="piste-titre">${o.titre}</div><div class="piste-salle">${o.salle}</div></div>${badge}</${tag}>`;
+      });
+
+      body.innerHTML += `<div class="zone"><div class="zone-header"><div class="zone-etiquette">Étape ${zi + 1}</div><div class="zone-nom">${zone.etape}</div><div class="zone-salle">${zone.salle}</div></div><div class="zone-oeuvres">${oeuvresHTML}</div></div>`;
+    });
+
+    body.innerHTML += `<div class="direction"><div class="direction-line"></div><span>⬇</span><div class="direction-line"></div></div><div class="arrivee"><div class="arrivee-icon">🏆</div><div class="arrivee-titre">Bravo !</div><div class="arrivee-desc">Parcours Orsay terminé !<br>Ressortez par la grande horloge.</div></div>`;
+  </script>
+</body>
+</html>

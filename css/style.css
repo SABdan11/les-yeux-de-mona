@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap');
+
+/* ===== NAVIGATION BAS ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-top: 1px solid #e8e0d4;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  z-index: 50;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 0;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-item.active { color: #1a3a5c; }
+
+.nav-icon { font-size: 20px; line-height: 1; }
+
+.nav-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.nav-carnet { color: #aaa; }
+.nav-carnet.active { color: #1a3a5c; }
+
+.nav-avatar {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: #e0d8ce;
+  color: #555;
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-carnet.active .nav-avatar {
+  background: #1a3a5c;
+  color: white;
+}
+
+/* ===== RESET & BASE ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f9f6f0;
+  color: #2c2c2c;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.app-header {
+  background: linear-gradient(160deg, #1a3a5c, #2a5a8c);
+  color: white;
+  padding: 48px 24px 36px;
+  text-align: center;
+}
+
+.app-subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.app-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.app-tagline {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ===== PRÉAMBULE ===== */
+.preambule {
+  background: #fffbf2;
+  border-left: 4px solid #c9a84c;
+  margin: 24px 16px;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ===== TITRES DE SECTION ===== */
+.section-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1a3a5c;
+  margin: 0 16px 16px;
+}
+
+/* ===== CARTES MUSÉES ===== */
+.musees {
+  padding: 0 0 8px;
+}
+
+.musee-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 16px 14px;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-left: 5px solid transparent;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.musee-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+
+.musee-card.louvre  { border-left-color: #1a3a5c; }
+.musee-card.orsay   { border-left-color: #8b3a3a; }
+.musee-card.pompidou { border-left-color: #1a6b3a; }
+
+.musee-visuel {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 26px;
+}
+
+.louvre  .musee-visuel { background: #e8eef4; }
+.orsay   .musee-visuel { background: #f4e8e8; }
+.pompidou .musee-visuel { background: #e8f4ec; }
+
+.musee-info { flex: 1; }
+
+.musee-nom {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.musee-detail {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.musee-exemples {
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+}
+
+.musee-arrow {
+  font-size: 22px;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+/* ===== AUTRES MODES ===== */
+.modes {
+  padding: 16px 0 8px;
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 16px;
+}
+
+.mode-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.15s;
+}
+
+.mode-card:active { transform: scale(0.97); }
+
+.mode-icon { font-size: 26px; }
+
+.mode-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3a5c;
+}
+
+.mode-desc {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* ===== FOOTER ===== */
+.app-footer {
+  text-align: center;
+  padding: 32px 16px 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.app-footer em { font-style: italic; }
+
+
+/* ===== PAGE MUSÉE ===== */
+.page-header {
+  color: white;
+  padding: 48px 20px 24px;
+  position: relative;
+}
+
+.back-btn {
+  font-size: 14px;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.page-count {
+  font-size: 13px;
+  opacity: 0.65;
+  margin-top: 4px;
+}
+
+.oeuvres-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.oeuvre-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.15s;
+}
+
+.oeuvre-card:active { transform: scale(0.98); }
+
+.oeuvre-img {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #e8e0d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.oeuvre-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.oeuvre-info { flex: 1; padding: 12px 0; }
+
+.oeuvre-num {
+  font-size: 10px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.oeuvre-artiste {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.oeuvre-titre {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.oeuvre-date {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.oeuvre-arrow {
+  font-size: 22px;
+  color: #ddd;
+  padding-right: 14px;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  padding: 48px 0;
+  font-style: italic;
+}
+
+
+/* ===== PAGE FICHE ===== */
+.fiche-header {
+  color: white;
+  padding: 48px 20px 24px;
+}
+
+.fiche-num {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.fiche-artiste {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fiche-titre-oeuvre {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  opacity: 0.82;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.fiche-image {
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+  background: #e8e0d4;
+}
+
+.fiche-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.frise-band {
+  border-left: 5px solid #c9a84c;
+  background: #fffbf2;
+  padding: 12px 16px;
+}
+
+.frise-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c9a84c;
+  margin-bottom: 3px;
+}
+
+.frise-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3a5c;
+}
+
+.frise-desc {
+  font-size: 12px;
+  color: #777;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.fiche-body { padding: 16px; }
+
+/* Identité */
+.identite-bloc {
+  background: #f4f0ea;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.id-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.id-item label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a3a5c;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.id-item span { font-size: 13px; color: #444; }
+
+.id-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  border-top: 1px solid #d9d3c8;
+  padding-top: 12px;
+}
+
+/* Section générique */
+.fiche-section { margin-bottom: 20px; }
+
+.fiche-section h2, .grandparent-bloc h2, .anecdote-bloc h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: #1a3a5c;
+  margin-bottom: 10px;
+}
+
+.section-content p { font-size: 14px; line-height: 1.75; color: #333; }
+.section-content p + p { margin-top: 10px; }
+
+/* Leçon de Dadé */
+.lecon-bloc {
+  background: linear-gradient(135deg, #1a3a5c, #2a5a8c);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lecon-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 8px;
+}
+
+.lecon-titre {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.lecon-bloc p { font-size: 14px; line-height: 1.7; color: white; font-style: italic; }
+
+/* Grand-parent */
+.grandparent-bloc {
+  background: #f4f0ea;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.grandparent-bloc h2 { color: #5a3e28; }
+
+.gp-methode {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5a3e28;
+  margin-bottom: 6px;
+}
+
+.gp-texte { font-size: 13px; color: #555; line-height: 1.6; margin-bottom: 12px; }
+
+.grandparent-bloc ol {
+  padding-left: 18px;
+  margin-bottom: 12px;
+}
+
+.grandparent-bloc li { font-size: 13.5px; color: #444; line-height: 1.8; }
+
+.gp-conseil {
+  font-size: 12.5px;
+  color: #666;
+  font-style: italic;
+  border-top: 1px solid #d9d3c8;
+  padding-top: 10px;
+}
+
+/* Mot mystère */
+.mot-mystere-bloc {
+  background: #1a3a5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.mm-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 6px;
+}
+
+.mm-mot {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.mot-mystere-bloc p { font-size: 13.5px; line-height: 1.7; color: white; }
+
+/* Anecdote */
+.anecdote-bloc {
+  background: #fff8e6;
+  border: 1px solid #f0d88a;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.anecdote-bloc h2 { color: #b8860b; }
+.anecdote-bloc p { font-size: 14px; line-height: 1.7; color: #444; }
+
+/* Barre actions fiche */
+.fiche-actions {
+  display: flex;
+  gap: 10px;
+  padding: 0 16px 20px;
+}
+.btn-favori, .btn-vue {
+  flex: 1;
+  padding: 13px;
+  border: 2px solid #e0d8ce;
+  border-radius: 10px;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #555;
+}
+.btn-favori.actif {
+  background: #fff0f0;
+  border-color: #e05555;
+  color: #e05555;
+}
+.btn-vue.actif {
+  background: #f0fff4;
+  border-color: #2a8c4a;
+  color: #2a8c4a;
+}
+
+/* Footer fiche */
+.fiche-footer {
+  text-align: center;
+  padding: 20px 16px 40px;
+  font-size: 11px;
+  color: #bbb;
+  border-top: 1px solid #eee;
+}

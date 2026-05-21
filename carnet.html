@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Mon carnet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .carnet-header {
+      background: linear-gradient(160deg, #3a2a1a, #6b4a2a);
+      color: white;
+      padding: 48px 20px 24px;
+    }
+    .carnet-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .carnet-header p { font-size: 13px; opacity: 0.7; }
+
+    /* Sections */
+    .carnet-section {
+      padding: 20px 20px 4px;
+    }
+    .carnet-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #1a3a5c;
+      margin-bottom: 14px;
+    }
+
+    /* ===== PROGRESSION ===== */
+    .musee-progress {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .mp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .mp-nom {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .mp-count { font-size: 12px; color: #aaa; }
+    .mp-bar {
+      height: 8px;
+      background: #f0ece6;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .mp-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .mp-fill.louvre   { background: #1a3a5c; }
+    .mp-fill.orsay    { background: #8b3a3a; }
+    .mp-fill.pompidou { background: #1a6b3a; }
+
+    .total-badge {
+      background: #f4f0ea;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .total-badge .total-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .total-badge .total-label { font-size: 13px; color: #888; }
+
+    /* ===== COUPS DE CŒUR ===== */
+    .favoris-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .favori-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: transform 0.15s;
+    }
+    .favori-card:active { transform: scale(0.97); }
+    .favori-img {
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      background: #e8e0d4;
+    }
+    .favori-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .favori-info { padding: 8px 10px 10px; }
+    .favori-artiste {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .favori-musee { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+    /* ===== LEÇONS ===== */
+    .lecon-card {
+      background: linear-gradient(135deg, #1a3a5c, #2a5a8c);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .lecon-card .lc-artiste {
+      font-size: 11px;
+      opacity: 0.6;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .lecon-card .lc-titre {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #c9a84c;
+    }
+    .lecon-card .lc-texte {
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    /* ===== MOTS MYSTÈRES ===== */
+    .mot-card {
+      background: #1a3a5c;
+      color: white;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .mot-card .mc-mot {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #c9a84c;
+      min-width: 100px;
+    }
+    .mot-card .mc-explication {
+      font-size: 12px;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+
+    /* État vide */
+    .vide {
+      text-align: center;
+      color: #bbb;
+      font-style: italic;
+      font-size: 13px;
+      padding: 24px 0;
+    }
+
+    /* Oeuvres vues */
+    .vue-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin-bottom: 8px;
+      transition: transform 0.15s;
+    }
+    .vue-card:active { transform: scale(0.98); }
+    .vue-img {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: #e8e0d4;
+    }
+    .vue-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .vue-info { flex: 1; padding: 8px 0; }
+    .vue-artiste { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; }
+    .vue-date { font-size: 11px; color: #aaa; margin-top: 2px; }
+    .vue-arrow { font-size: 18px; color: #ddd; padding-right: 12px; }
+  </style>
+</head>
+<body>
+
+  <header class="carnet-header">
+    <a href="index.html" class="back-btn">‹ Accueil</a>
+    <h1>📒 Mon carnet</h1>
+    <p>Votre voyage dans les musées</p>
+  </header>
+
+  <!-- PROGRESSION -->
+  <div class="carnet-section">
+    <h2>Ma progression</h2>
+    <div class="total-badge">
+      <div class="total-num" id="totalVues">0</div>
+      <div class="total-label">œuvre(s) découverte(s) sur 52</div>
+    </div>
+    <div class="musee-progress">
+      <div class="mp-header">
+        <span class="mp-nom">🏛️ Louvre</span>
+        <span class="mp-count" id="countLouvre">0 / 18</span>
+      </div>
+      <div class="mp-bar"><div class="mp-fill louvre" id="barLouvre" style="width:0%"></div></div>
+    </div>
+    <div class="musee-progress">
+      <div class="mp-header">
+        <span class="mp-nom">🚉 Orsay</span>
+        <span class="mp-count" id="countOrsay">0 / 16</span>
+      </div>
+      <div class="mp-bar"><div class="mp-fill orsay" id="barOrsay" style="width:0%"></div></div>
+    </div>
+    <div class="musee-progress">
+      <div class="mp-header">
+        <span class="mp-nom">🎨 Pompidou</span>
+        <span class="mp-count" id="countPompidou">0 / 18</span>
+      </div>
+      <div class="mp-bar"><div class="mp-fill pompidou" id="barPompidou" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- SCORE QUIZ -->
+  <div class="carnet-section">
+    <h2>🃏 Score quiz</h2>
+    <div id="scoreQuizBloc" style="background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.07);display:flex;gap:0;align-items:center;justify-content:space-around;text-align:center;">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#2a8c4a" id="sqReconnu">—</div>
+        <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Reconnus</div>
+      </div>
+      <div style="font-size:28px;color:#e0d8ce">/</div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#1a3a5c" id="sqTotal">—</div>
+        <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Tentatives</div>
+      </div>
+      <div style="font-size:28px;color:#e0d8ce">=</div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#c9a84c" id="sqPct">—</div>
+        <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Réussite</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ŒUVRES RECONNUES -->
+  <div class="carnet-section">
+    <h2>🎯 Œuvres reconnues au quiz</h2>
+    <div class="favoris-grid" id="reconnusGrid">
+      <div class="vide" style="grid-column:1/-1">Les œuvres que vous reconnaissez au quiz apparaîtront ici.</div>
+    </div>
+  </div>
+
+  <!-- COUPS DE CŒUR -->
+  <div class="carnet-section">
+    <h2>❤️ Mes coups de cœur</h2>
+    <div class="favoris-grid" id="favorisGrid">
+      <div class="vide" style="grid-column:1/-1">Appuyez sur ❤️ dans une fiche pour l'ajouter ici.</div>
+    </div>
+  </div>
+
+  <!-- ŒUVRES VUES -->
+  <div class="carnet-section">
+    <h2>✅ Œuvres vues</h2>
+    <div id="vuesList">
+      <div class="vide">Appuyez sur ✓ dans une fiche pour marquer une visite.</div>
+    </div>
+  </div>
+
+  <!-- LEÇONS DE DADÉ -->
+  <div class="carnet-section">
+    <h2>💬 Mes leçons de Dadé</h2>
+    <div id="leconsList">
+      <div class="vide">Les leçons des œuvres vues apparaîtront ici.</div>
+    </div>
+  </div>
+
+  <!-- MOTS MYSTÈRES -->
+  <div class="carnet-section" style="padding-bottom:40px">
+    <h2>🔍 Mes mots mystères</h2>
+    <div id="motsList">
+      <div class="vide">Les mots mystères des œuvres vues apparaîtront ici.</div>
+    </div>
+  </div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const museeNoms = {
+      louvre: 'Louvre', orsay: 'Orsay', pompidou: 'Pompidou'
+    };
+    const totaux = { louvre: 18, orsay: 16, pompidou: 18 };
+
+    const vues    = Profil.getVues();
+    const favoris = Profil.getFavoris();
+
+    // Score quiz
+    const scoreKey  = 'mona_score_' + Profil.getActif();
+    const scoreData = JSON.parse(localStorage.getItem(scoreKey) || '{"reconnu":0,"total":0,"ids":{}}');
+    if (scoreData.total > 0) {
+      const pct = Math.round(scoreData.reconnu / scoreData.total * 100);
+      document.getElementById('sqReconnu').textContent = scoreData.reconnu;
+      document.getElementById('sqTotal').textContent   = scoreData.total;
+      document.getElementById('sqPct').textContent     = pct + '%';
+    } else {
+      document.getElementById('sqPct').textContent     = '—';
+      document.getElementById('sqReconnu').textContent = '0';
+      document.getElementById('sqTotal').textContent   = '0';
+    }
+
+    // Œuvres reconnues
+    const reconnusIds = Object.keys(scoreData.ids || {}).map(Number);
+    const oeuvresReconnues = OEUVRES.filter(o => reconnusIds.includes(o.id));
+    const reconnusGrid = document.getElementById('reconnusGrid');
+    if (oeuvresReconnues.length > 0) {
+      reconnusGrid.innerHTML = oeuvresReconnues.map(o => `
+        <a href="fiche.html?id=${o.id}" class="favori-card">
+          <div class="favori-img"><img src="${o.image}" alt="${o.artiste}" onerror="this.parentElement.innerHTML='🖼️'"></div>
+          <div class="favori-info">
+            <div class="favori-artiste">${o.artiste}</div>
+            <div class="favori-musee">${museeNoms[o.musee]}</div>
+          </div>
+        </a>`).join('');
+    } else {
+      reconnusGrid.innerHTML = '<div class="vide" style="grid-column:1/-1">Les œuvres que vous reconnaissez au quiz apparaîtront ici.</div>';
+    }
+
+    // Afficher le prénom actif dans le titre
+    const actif = Profil.getActif();
+    if (actif) {
+      document.querySelector('.carnet-header h1').textContent = '📒 Carnet de ' + actif;
+    }
+
+    // -- PROGRESSION --
+    const vuesParMusee = { louvre: 0, orsay: 0, pompidou: 0 };
+    OEUVRES.forEach(o => {
+      if (vues[o.id]) vuesParMusee[o.musee]++;
+    });
+
+    const totalVues = Object.values(vuesParMusee).reduce((a, b) => a + b, 0);
+    document.getElementById('totalVues').textContent = totalVues;
+
+    ['louvre', 'orsay', 'pompidou'].forEach(m => {
+      const n = vuesParMusee[m], t = totaux[m];
+      document.getElementById('count' + m.charAt(0).toUpperCase() + m.slice(1)).textContent = n + ' / ' + t;
+      document.getElementById('bar'   + m.charAt(0).toUpperCase() + m.slice(1)).style.width = (n / t * 100) + '%';
+    });
+
+    // -- COUPS DE CŒUR --
+    const grid = document.getElementById('favorisGrid');
+    const oeuvresFavoris = OEUVRES.filter(o => favoris.includes(o.id));
+    if (oeuvresFavoris.length > 0) {
+      grid.innerHTML = oeuvresFavoris.map(o => `
+        <a href="fiche.html?id=${o.id}" class="favori-card">
+          <div class="favori-img"><img src="${o.image}" alt="${o.artiste}" onerror="this.parentElement.innerHTML='🖼️'"></div>
+          <div class="favori-info">
+            <div class="favori-artiste">${o.artiste}</div>
+            <div class="favori-musee">${museeNoms[o.musee]}</div>
+          </div>
+        </a>`).join('');
+    }
+
+    // -- ŒUVRES VUES --
+    const vuesList = document.getElementById('vuesList');
+    const oeuvresVues = OEUVRES.filter(o => vues[o.id]).sort((a, b) =>
+      new Date(vues[b.id].date) - new Date(vues[a.id].date)
+    );
+    if (oeuvresVues.length > 0) {
+      vuesList.innerHTML = oeuvresVues.map(o => {
+        const d = new Date(vues[o.id].date);
+        const date = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+        return `
+          <a href="fiche.html?id=${o.id}" class="vue-card">
+            <div class="vue-img"><img src="${o.image}" alt="${o.artiste}" onerror="this.parentElement.innerHTML='🖼️'"></div>
+            <div class="vue-info">
+              <div class="vue-artiste">${o.artiste}</div>
+              <div class="vue-date">Vue le ${date}</div>
+            </div>
+            <div class="vue-arrow">›</div>
+          </a>`;
+      }).join('');
+    }
+
+    // -- LEÇONS --
+    const leconsList = document.getElementById('leconsList');
+    if (oeuvresVues.length > 0) {
+      leconsList.innerHTML = oeuvresVues.map(o => `
+        <div class="lecon-card">
+          <div class="lc-artiste">${o.artiste}</div>
+          <div class="lc-titre">${o.lecon_titre}</div>
+          <div class="lc-texte">${o.lecon_texte}</div>
+        </div>`).join('');
+    }
+
+    // -- MOTS MYSTÈRES --
+    const motsList = document.getElementById('motsList');
+    if (oeuvresVues.length > 0) {
+      motsList.innerHTML = oeuvresVues.map(o => `
+        <div class="mot-card">
+          <div class="mc-mot">${o.mot_mystere_mot}</div>
+          <div class="mc-explication">${o.mot_mystere_texte}</div>
+        </div>`).join('');
+    }
+  </script>
+</body>
+</html>

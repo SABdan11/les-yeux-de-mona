@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Musée</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="page-header" id="museeHeader">
+    <a href="index.html" class="back-btn">‹ Accueil</a>
+    <h1 class="page-title" id="museeNom"></h1>
+    <div class="page-count" id="museeCount"></div>
+  </header>
+
+  <div id="parcoursBtn"></div>
+  <div class="oeuvres-list" id="oeuvresList"></div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const museeId = params.get('id') || 'louvre';
+
+    const musees = {
+      louvre:   { nom: 'Musée du Louvre',   couleur: '#1a3a5c' },
+      orsay:    { nom: 'Musée d\'Orsay',     couleur: '#8b3a3a' },
+      pompidou: { nom: 'Centre Pompidou',    couleur: '#1a6b3a' }
+    };
+
+    const musee = musees[museeId];
+    document.getElementById('museeNom').textContent = musee.nom;
+    document.getElementById('museeHeader').style.background = musee.couleur;
+
+    // Bouton jeu de piste (Louvre uniquement pour l'instant)
+    if (museeId === 'louvre') {
+      document.getElementById('parcoursBtn').innerHTML = `
+        <a href="parcours_louvre.html" style="display:flex;align-items:center;gap:12px;margin:16px 16px 0;background:#1a3a5c;color:white;border-radius:12px;padding:14px 18px;text-decoration:none;">
+          <span style="font-size:24px">🗺️</span>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700">Jeu de piste</div>
+            <div style="font-size:12px;opacity:0.75;margin-top:2px">Suivez l'itinéraire dans le musée</div>
+          </div>
+          <span style="margin-left:auto;font-size:20px;opacity:0.6">›</span>
+        </a>`;
+    }
+
+    const oeuvres = OEUVRES.filter(o => o.musee === museeId);
+    document.getElementById('museeCount').textContent = oeuvres.length + ' œuvre' + (oeuvres.length > 1 ? 's' : '');
+
+    const list = document.getElementById('oeuvresList');
+    oeuvres.forEach(o => {
+      list.innerHTML += `
+        <a href="fiche.html?id=${o.id}" class="oeuvre-card">
+          <div class="oeuvre-img">
+            <img src="${o.image}" alt="${o.titre}" onerror="this.parentElement.innerHTML='🖼️'">
+          </div>
+          <div class="oeuvre-info">
+            <div class="oeuvre-num">Fiche ${o.id}</div>
+            <div class="oeuvre-artiste">${o.artiste}</div>
+            <div class="oeuvre-titre">${o.titre}</div>
+            <div class="oeuvre-date">${o.date} · ${o.technique}</div>
+          </div>
+          <div class="oeuvre-arrow">›</div>
+        </a>`;
+    });
+
+    if (oeuvres.length === 0) {
+      list.innerHTML = '<p class="empty">Fiches en cours de préparation…</p>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .quiz-header {
+      background: linear-gradient(160deg, #1a3a5c, #2a5a8c);
+      color: white;
+      padding: 48px 20px 24px;
+    }
+    .quiz-header .back-btn { display: block; margin-bottom: 12px; }
+    .quiz-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .quiz-header p { font-size: 13px; opacity: 0.7; }
+
+    /* Progression */
+    .quiz-progress {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: #e8e0d4;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #c9a84c;
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+    .progress-label {
+      font-size: 13px;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    /* Zone de carte */
+    .quiz-zone {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Flashcard */
+    .flashcard-wrap {
+      width: 100%;
+      max-width: 400px;
+      height: 460px;
+      perspective: 1000px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .flashcard {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .flashcard.flipped { transform: rotateY(180deg); }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    }
+
+    /* RECTO — image */
+    .card-recto {
+      background: #1a3a5c;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-recto .card-img {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .card-recto .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .card-recto .card-hint {
+      background: rgba(0,0,0,0.45);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* VERSO — infos */
+    .card-verso {
+      background: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .verso-header {
+      background: #1a3a5c;
+      color: white;
+      padding: 20px;
+    }
+
+    .verso-artiste {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .verso-titre {
+      font-size: 12px;
+      opacity: 0.75;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .verso-body {
+      flex: 1;
+      padding: 16px 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .verso-ligne {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .verso-ligne label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #c9a84c;
+    }
+
+    .verso-ligne span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .verso-lecon {
+      background: #f4f0ea;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 4px;
+    }
+
+    .verso-lecon .lecon-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a3a5c;
+      margin-bottom: 4px;
+    }
+
+    .verso-lecon .lecon-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: #1a3a5c;
+      font-style: italic;
+    }
+
+    /* Score en cours */
+    .score-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 12px;
+      padding: 0 2px;
+    }
+    .score-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .score-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .score-num.reconnu { color: #2a8c4a; }
+    .score-num.rate    { color: #e05555; }
+    .score-num.total   { color: #1a3a5c; }
+    .score-label { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+    .score-sep { font-size: 20px; color: #e0d8ce; }
+
+    /* Boutons */
+    .quiz-actions {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .btn-action {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .btn-action:active { transform: scale(0.97); }
+
+    .btn-fiche {
+      background: #f4f0ea;
+      color: #1a3a5c;
+      flex: 0 0 auto;
+      padding: 14px 16px;
+    }
+
+    .btn-retour {
+      background: #f4f0ea;
+      color: #555;
+      flex: 0 0 auto;
+      padding: 14px 16px;
+    }
+
+    /* Footer intégré au verso */
+    .verso-footer {
+      display: flex;
+      gap: 8px;
+      padding: 10px 12px;
+      border-top: 1px solid #f0ece6;
+      background: white;
+    }
+    .verso-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #e0d8ce;
+      border-radius: 8px;
+      background: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      cursor: pointer;
+    }
+    .verso-btn-fiche {
+      background: #1a3a5c;
+      color: white;
+      border-color: #1a3a5c;
+    }
+
+    /* Boutons éval — masqués avant flip */
+    .btn-eval { display: none; }
+    .btn-reconnu {
+      background: #2a8c4a;
+      color: white;
+    }
+    .btn-rate {
+      background: #e05555;
+      color: white;
+    }
+
+    /* Instruction flip */
+    .flip-hint {
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+      margin-top: -4px;
+      margin-bottom: 4px;
+    }
+
+    /* Score final */
+    .quiz-fin {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      text-align: center;
+      gap: 14px;
+    }
+    .quiz-fin .fin-emoji { font-size: 52px; }
+    .quiz-fin h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #1a3a5c;
+    }
+
+    .score-session {
+      background: #f4f0ea;
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .ss-item { text-align: center; }
+    .ss-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .ss-num.ok  { color: #2a8c4a; }
+    .ss-num.ko  { color: #e05555; }
+    .ss-label { font-size: 11px; color: #888; margin-top: 2px; }
+
+    .score-cumul {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+    }
+    .score-cumul strong { color: #1a3a5c; }
+
+    .quiz-fin .btn-recommencer {
+      background: #1a3a5c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="quiz-header">
+    <a href="index.html" class="back-btn">‹ Accueil</a>
+    <h1>🃏 Quiz</h1>
+    <p>Retournez la carte pour découvrir l'œuvre</p>
+  </header>
+
+  <div class="quiz-progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label" id="progressLabel"></div>
+  </div>
+
+  <div class="quiz-zone" id="quizZone">
+
+    <!-- Score en cours -->
+    <div class="score-bar">
+      <div class="score-item">
+        <div class="score-num reconnu" id="scoreReconnu">0</div>
+        <div class="score-label">Reconnus</div>
+      </div>
+      <div class="score-sep">·</div>
+      <div class="score-item">
+        <div class="score-num rate" id="scoreRate">0</div>
+        <div class="score-label">Pas encore</div>
+      </div>
+      <div class="score-sep">·</div>
+      <div class="score-item">
+        <div class="score-num total" id="scoreRestant">0</div>
+        <div class="score-label">Restantes</div>
+      </div>
+    </div>
+
+    <div class="flashcard-wrap" id="flashcardWrap">
+      <div class="flashcard" id="flashcard">
+
+        <!-- RECTO -->
+        <div class="card-face card-recto">
+          <div class="card-img">
+            <img id="cardImage" src="" alt="">
+          </div>
+          <div class="card-hint">Touchez pour révéler</div>
+        </div>
+
+        <!-- VERSO -->
+        <div class="card-face card-verso">
+          <div class="verso-header">
+            <div class="verso-artiste" id="versoArtiste"></div>
+            <div class="verso-titre" id="versoTitre"></div>
+          </div>
+          <div class="verso-body">
+            <div class="verso-ligne"><label>Date</label><span id="versoDate"></span></div>
+            <div class="verso-ligne"><label>Technique</label><span id="versoTechnique"></span></div>
+            <div class="verso-ligne"><label>Époque</label><span id="versoEpoque"></span></div>
+            <div class="verso-ligne"><label>Musée · Salle</label><span id="versoMusee"></span></div>
+            <div class="verso-lecon">
+              <div class="lecon-label">La leçon de Dadé</div>
+              <div class="lecon-val" id="versoLecon"></div>
+            </div>
+          </div>
+          <div class="verso-footer">
+            <button class="verso-btn" id="btnRetour">↩ Recto</button>
+            <button class="verso-btn verso-btn-fiche" id="btnFiche">📄 Fiche</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="flip-hint" id="flipHint">Touchez la carte pour la retourner</p>
+
+    <!-- Avant flip : rien -->
+    <div class="quiz-actions" id="actionsAvant" style="display:none"></div>
+
+    <!-- Après flip : auto-évaluation (2 boutons seulement) -->
+    <div class="quiz-actions btn-eval" id="actionsApres">
+      <button class="btn-action btn-rate"    id="btnRate">✗ Pas encore</button>
+      <button class="btn-action btn-reconnu" id="btnReconnu">✓ Reconnu !</button>
+    </div>
+
+  </div>
+
+  <!-- ÉCRAN DE FIN -->
+  <div class="quiz-fin" id="quizFin">
+    <div class="fin-emoji">🎉</div>
+    <h2>Session terminée !</h2>
+    <div class="score-session">
+      <div class="ss-item">
+        <div class="ss-num ok" id="finReconnu">0</div>
+        <div class="ss-label">Reconnus</div>
+      </div>
+      <div class="score-sep" style="font-size:24px;color:#ddd">/</div>
+      <div class="ss-item">
+        <div class="ss-num" style="color:#1a3a5c" id="finTotal">0</div>
+        <div class="ss-label">Cartes jouées</div>
+      </div>
+    </div>
+    <div class="score-cumul" id="scoreCumul"></div>
+    <button class="btn-recommencer" id="btnRecommencer">Rejouer 🔄</button>
+  </div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const musees = {
+      louvre:   'Musée du Louvre',
+      orsay:    "Musée d'Orsay",
+      pompidou: 'Centre Pompidou'
+    };
+
+    function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+
+    let deck  = shuffle(OEUVRES);
+    let index = 0;
+    let sessionReconnu = 0;
+    let sessionRate    = 0;
+    let estRetourne    = false;
+
+    // Clé score cumulatif par profil
+    function keyScore() { return 'mona_score_' + Profil.getActif(); }
+    function getScore()  { return JSON.parse(localStorage.getItem(keyScore()) || '{"reconnu":0,"total":0}'); }
+    function saveScore(s){ localStorage.setItem(keyScore(), JSON.stringify(s)); }
+
+    const flashcard     = document.getElementById('flashcard');
+    const progressFill  = document.getElementById('progressFill');
+    const progressLabel = document.getElementById('progressLabel');
+    const quizZone      = document.getElementById('quizZone');
+    const quizFin       = document.getElementById('quizFin');
+    const actionsAvant  = document.getElementById('actionsAvant');
+    const actionsApres  = document.getElementById('actionsApres');
+    const flipHint      = document.getElementById('flipHint');
+
+    function majScoreAffiche() {
+      document.getElementById('scoreReconnu').textContent = sessionReconnu;
+      document.getElementById('scoreRate').textContent    = sessionRate;
+      document.getElementById('scoreRestant').textContent = deck.length - index - 1;
+    }
+
+    function chargerCarte(o) {
+      document.getElementById('cardImage').src = o.image;
+      document.getElementById('cardImage').alt = o.titre;
+      document.getElementById('versoArtiste').textContent   = o.artiste;
+      document.getElementById('versoTitre').textContent     = '« ' + o.titre + ' »';
+      document.getElementById('versoDate').textContent      = o.date;
+      document.getElementById('versoTechnique').textContent = o.technique;
+      document.getElementById('versoEpoque').textContent    = o.frise_titre;
+      document.getElementById('versoMusee').textContent     = musees[o.musee] + ' · ' + o.salle;
+      document.getElementById('versoLecon').textContent     = o.lecon_titre;
+      // Reset
+      flashcard.classList.remove('flipped');
+      estRetourne = false;
+      actionsAvant.style.display = 'flex';
+      actionsApres.style.display = 'none';
+      flipHint.style.display = 'block';
+      // Progression
+      progressFill.style.width  = ((index + 1) / deck.length * 100) + '%';
+      progressLabel.textContent = (index + 1) + ' / ' + deck.length;
+      majScoreAffiche();
+    }
+
+    function evaluer(reconnu) {
+      if (reconnu) sessionReconnu++; else sessionRate++;
+      const s = getScore();
+      s.reconnu += reconnu ? 1 : 0;
+      s.total   += 1;
+      if (!s.ids) s.ids = {};
+      if (reconnu) s.ids[deck[index].id] = true;
+      else delete s.ids[deck[index].id];
+      saveScore(s);
+      // Carte suivante
+      index++;
+      if (index >= deck.length) {
+        quizZone.style.display = 'none';
+        quizFin.style.display  = 'flex';
+        document.getElementById('finReconnu').textContent = sessionReconnu;
+        document.getElementById('finTotal').textContent   = sessionReconnu + sessionRate;
+        const cumul = getScore();
+        const pct   = cumul.total > 0 ? Math.round(cumul.reconnu / cumul.total * 100) : 0;
+        document.getElementById('scoreCumul').innerHTML =
+          `Score cumulatif : <strong>${cumul.reconnu} reconnus sur ${cumul.total} tentatives</strong> (${pct}%)`;
+        return;
+      }
+      chargerCarte(deck[index]);
+    }
+
+    // Flip
+    document.getElementById('flashcardWrap').addEventListener('click', () => {
+      if (estRetourne) return;
+      flashcard.classList.add('flipped');
+      estRetourne = true;
+      actionsAvant.style.display = 'none';
+      actionsApres.style.display = 'flex';
+      flipHint.style.display = 'none';
+    });
+
+    document.getElementById('btnFiche').addEventListener('click', () => {
+      window.location.href = 'fiche.html?id=' + deck[index].id + '&from=quiz';
+    });
+    document.getElementById('btnRetour').addEventListener('click', () => {
+      flashcard.classList.remove('flipped');
+      estRetourne = false;
+      actionsApres.style.display = 'none';
+      flipHint.style.display = 'block';
+    });
+    document.getElementById('btnReconnu').addEventListener('click', () => evaluer(true));
+    document.getElementById('btnRate').addEventListener('click',    () => evaluer(false));
+
+    document.getElementById('btnRecommencer').addEventListener('click', () => {
+      deck           = shuffle(OEUVRES);
+      index          = 0;
+      sessionReconnu = 0;
+      sessionRate    = 0;
+      quizFin.style.display  = 'none';
+      quizZone.style.display = 'flex';
+      chargerCarte(deck[index]);
+    });
+
+    chargerCarte(deck[index]);
+  </script>
+</body>
+</html>

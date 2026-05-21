@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Dans le roman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .roman-header {
+      background: linear-gradient(160deg, #2c1a3a, #5a2a7a);
+      color: white;
+      padding: 48px 20px 24px;
+    }
+    .roman-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .roman-header p { font-size: 13px; opacity: 0.7; }
+
+    /* Progression globale */
+    .roman-progress {
+      background: white;
+      padding: 16px 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .rp-bar {
+      flex: 1;
+      height: 8px;
+      background: #f0ece6;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .rp-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #c9a84c, #e8c86a);
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .rp-label { font-size: 13px; color: #888; white-space: nowrap; }
+
+    /* Grille des semaines */
+    .semaines-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding: 16px;
+    }
+
+    /* Tuile semaine */
+    .semaine-tuile {
+      aspect-ratio: 3/4;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background: #e8e0d4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Avec fiche + vue */
+    .semaine-tuile.vue {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Avec fiche mais pas encore vue */
+    .semaine-tuile.dispo {
+      opacity: 0.55;
+    }
+
+    /* Sans fiche */
+    .semaine-tuile.locked {
+      background: #f0ece6;
+      opacity: 0.4;
+    }
+
+    .tuile-img {
+      flex: 1;
+      overflow: hidden;
+    }
+    .tuile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* Numéro de semaine */
+    .tuile-num {
+      position: absolute;
+      top: 5px;
+      left: 6px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    /* Badge "vue" */
+    .tuile-vue {
+      position: absolute;
+      top: 5px;
+      right: 6px;
+      background: #2a8c4a;
+      color: white;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    /* Bas de la tuile : artiste */
+    .tuile-info {
+      background: rgba(0,0,0,0.55);
+      padding: 5px 6px;
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+    }
+    .tuile-artiste {
+      font-size: 9px;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+    }
+
+    /* Tuile locked sans image */
+    .locked-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      gap: 4px;
+    }
+    .locked-content .lock-num {
+      font-size: 10px;
+      color: #aaa;
+      font-weight: 700;
+    }
+    .locked-content .lock-artiste {
+      font-size: 8px;
+      color: #bbb;
+      text-align: center;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="roman-header">
+    <a href="index.html" class="back-btn">‹ Accueil</a>
+    <h1>📖 Dans le roman</h1>
+    <p>52 semaines avec Mona et Dadé</p>
+  </header>
+
+  <div class="roman-progress">
+    <div class="rp-bar"><div class="rp-fill" id="rpFill" style="width:0%"></div></div>
+    <div class="rp-label" id="rpLabel">0 / 52 œuvres</div>
+  </div>
+
+  <div class="semaines-grid" id="semainesGrid"></div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+
+    // Les 52 semaines dans l'ordre du roman
+    // id_oeuvre = id dans OEUVRES (null si fiche pas encore disponible)
+    const SEMAINES = [
+      { sem: 1,  id: 1,  artiste: 'Botticelli' },
+      { sem: 2,  id: 2,  artiste: 'Léonard de Vinci' },
+      { sem: 3,  id: null, artiste: 'Raphaël' },
+      { sem: 4,  id: null, artiste: 'Titien' },
+      { sem: 5,  id: null, artiste: 'Michel-Ange' },
+      { sem: 6,  id: null, artiste: 'Frans Hals' },
+      { sem: 7,  id: null, artiste: 'Rembrandt' },
+      { sem: 8,  id: null, artiste: 'Vermeer' },
+      { sem: 9,  id: null, artiste: 'Poussin' },
+      { sem: 10, id: null, artiste: 'Champaigne' },
+      { sem: 11, id: null, artiste: 'Watteau' },
+      { sem: 12, id: null, artiste: 'Canaletto' },
+      { sem: 13, id: null, artiste: 'Gainsborough' },
+      { sem: 14, id: null, artiste: 'M. Gérard' },
+      { sem: 15, id: null, artiste: 'David' },
+      { sem: 16, id: null, artiste: 'Benoist' },
+      { sem: 17, id: null, artiste: 'Goya' },
+      { sem: 18, id: null, artiste: 'Friedrich' },
+      { sem: 19, id: null, artiste: 'Turner' },
+      { sem: 20, id: null, artiste: 'Courbet' },
+      { sem: 21, id: null, artiste: 'Fantin-Latour' },
+      { sem: 22, id: null, artiste: 'Rosa Bonheur' },
+      { sem: 23, id: null, artiste: 'Whistler' },
+      { sem: 24, id: null, artiste: 'Cameron' },
+      { sem: 25, id: null, artiste: 'Manet' },
+      { sem: 26, id: null, artiste: 'Monet' },
+      { sem: 27, id: null, artiste: 'Degas' },
+      { sem: 28, id: null, artiste: 'Cézanne' },
+      { sem: 29, id: null, artiste: 'Burne-Jones' },
+      { sem: 30, id: null, artiste: 'Van Gogh' },
+      { sem: 31, id: null, artiste: 'C. Claudel' },
+      { sem: 32, id: null, artiste: 'Klimt' },
+      { sem: 33, id: null, artiste: 'Hammershøi' },
+      { sem: 34, id: null, artiste: 'Mondrian' },
+      { sem: 35, id: null, artiste: 'Kandinsky' },
+      { sem: 36, id: null, artiste: 'Duchamp' },
+      { sem: 37, id: null, artiste: 'Malévitch' },
+      { sem: 38, id: null, artiste: "O'Keeffe" },
+      { sem: 39, id: null, artiste: 'Magritte' },
+      { sem: 40, id: null, artiste: 'Brancusi' },
+      { sem: 41, id: null, artiste: 'Picasso' },
+      { sem: 42, id: null, artiste: 'Pollock' },
+      { sem: 43, id: null, artiste: 'Niki de St Phalle' },
+      { sem: 44, id: null, artiste: 'Hartung' },
+      { sem: 45, id: null, artiste: 'Bergman' },
+      { sem: 46, id: null, artiste: 'Basquiat' },
+      { sem: 47, id: null, artiste: 'L. Bourgeois' },
+      { sem: 48, id: null, artiste: 'Abramović' },
+      { sem: 49, id: null, artiste: 'Frida Kahlo' },
+      { sem: 50, id: null, artiste: 'Joan Mitchell' },
+      { sem: 51, id: null, artiste: 'Boltanski' },
+      { sem: 52, id: null, artiste: 'Soulages' },
+    ];
+
+    const vues  = Profil.getVues();
+    const grid  = document.getElementById('semainesGrid');
+    let nbVues  = 0;
+
+    SEMAINES.forEach(s => {
+      const oeuvre  = s.id ? OEUVRES.find(o => o.id === s.id) : null;
+      const estVue  = oeuvre && !!vues[oeuvre.id];
+      if (estVue) nbVues++;
+
+      let html = '';
+
+      if (oeuvre) {
+        const classe = estVue ? 'vue' : 'dispo';
+        html = `
+          <a href="fiche.html?id=${oeuvre.id}" class="semaine-tuile ${classe}">
+            <div class="tuile-num">${s.sem}</div>
+            ${estVue ? '<div class="tuile-vue">✓</div>' : ''}
+            <div class="tuile-img">
+              <img src="${oeuvre.image}" alt="${oeuvre.artiste}" onerror="this.parentElement.innerHTML='🖼️'">
+            </div>
+            <div class="tuile-info">
+              <div class="tuile-artiste">${oeuvre.artiste}</div>
+            </div>
+          </a>`;
+      } else {
+        html = `
+          <div class="semaine-tuile locked">
+            <div class="locked-content">
+              <div class="lock-num">S.${s.sem}</div>
+              <div class="lock-artiste">${s.artiste}</div>
+            </div>
+          </div>`;
+      }
+
+      grid.innerHTML += html;
+    });
+
+    // Progression
+    const pct = Math.round(nbVues / 52 * 100);
+    document.getElementById('rpFill').style.width  = pct + '%';
+    document.getElementById('rpLabel').textContent = nbVues + ' / 52 œuvres vues';
+
+  </script>
+</body>
+</html>

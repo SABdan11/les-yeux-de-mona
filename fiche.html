@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Yeux de Mona — Fiche</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="ficheContainer"></div>
+
+  <script src="js/profil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="data/oeuvres.js"></script>
+  <script>
+    const params   = new URLSearchParams(window.location.search);
+    const id       = parseInt(params.get('id'));
+    const fromQuiz = params.get('from') === 'quiz';
+
+    (function() {
+        const data = OEUVRES;
+        const o = data.find(x => x.id === id);
+        if (!o) { document.body.innerHTML = '<p style="padding:24px">Fiche introuvable.</p>'; return; }
+
+        const musees = {
+          louvre:   { nom: 'Musée du Louvre',   couleur: '#1a3a5c' },
+          orsay:    { nom: 'Musée d\'Orsay',     couleur: '#8b3a3a' },
+          pompidou: { nom: 'Centre Pompidou',    couleur: '#1a6b3a' }
+        };
+        const musee = musees[o.musee];
+
+        const voit = o.ce_quon_voit.map(p => `<p>${p}</p>`).join('');
+        const questions = o.grandparent_questions.map((q, i) => `<li>${q}</li>`).join('');
+        const backBtn = fromQuiz
+          ? '<a href="quiz.html" class="back-btn">‹ Retour au quiz</a>'
+          : '<a href="javascript:history.back()" class="back-btn">‹ Retour</a>';
+
+        document.getElementById('ficheContainer').innerHTML = `
+
+          <!-- HEADER -->
+          <header class="fiche-header" style="background:${musee.couleur}">
+            ${fromQuiz ? '' : backBtn}
+            <div class="fiche-num">Fiche n°${o.id}</div>
+            <h1 class="fiche-artiste">${o.artiste}</h1>
+            <div class="fiche-titre-oeuvre">« ${o.titre} »</div>
+          </header>
+
+          <!-- ACTIONS HAUT -->
+          <div class="fiche-actions">
+            ${fromQuiz ? '<a href="quiz.html" class="btn-vue" style="flex:1;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">‹ Retour au quiz</a>' : ''}
+            <button class="btn-vue" id="btnVueTop" style="flex:1">✓ J'ai vu cette œuvre</button>
+          </div>
+
+          <!-- IMAGE -->
+          <div class="fiche-image">
+            <img src="${o.image}" alt="${o.titre}">
+          </div>
+
+          <!-- FRISE -->
+          <div class="frise-band">
+            <div class="frise-label">Sur la frise de l'histoire de l'art</div>
+            <div class="frise-titre">${o.frise_titre}</div>
+            <div class="frise-desc">${o.frise_desc}</div>
+          </div>
+
+          <div class="fiche-body">
+
+            <!-- IDENTITÉ -->
+            <div class="identite-bloc">
+              <div class="id-grid">
+                <div class="id-item"><label>Artiste</label><span>${o.artiste} (${o.dates_artiste})</span></div>
+                <div class="id-item"><label>Date</label><span>${o.date}</span></div>
+                <div class="id-item"><label>Technique</label><span>${o.technique}</span></div>
+                <div class="id-item"><label>Mouvement</label><span>${o.mouvement}</span></div>
+                <div class="id-item"><label>Musée</label><span>${musee.nom}</span></div>
+                <div class="id-item"><label>Salle</label><span>${o.salle}</span></div>
+              </div>
+              <div class="id-desc">${o.description_academique}</div>
+            </div>
+
+            <!-- CE QU'ON VOIT -->
+            <div class="fiche-section">
+              <h2>🎨 Ce qu'on voit</h2>
+              <div class="section-content">${voit}</div>
+            </div>
+
+            <!-- LEÇON DE DADÉ -->
+            <div class="lecon-bloc">
+              <div class="lecon-label">La leçon de Dadé</div>
+              <div class="lecon-titre">${o.lecon_titre}</div>
+              <p>${o.lecon_texte}</p>
+            </div>
+
+            <!-- GRAND-PARENT -->
+            <div class="grandparent-bloc">
+              <h2>👴 Pour le grand-parent</h2>
+              <div class="gp-methode">La méthode de Dadé</div>
+              <p class="gp-texte">${o.grandparent_methode}</p>
+              <ol>${questions}</ol>
+              <div class="gp-conseil">${o.grandparent_conseil}</div>
+            </div>
+
+            <!-- MOT MYSTÈRE -->
+            <div class="mot-mystere-bloc">
+              <div class="mm-label">Le mot mystère</div>
+              <div class="mm-mot">${o.mot_mystere_mot}</div>
+              <p>${o.mot_mystere_texte}</p>
+            </div>
+
+            <!-- ANECDOTE -->
+            <div class="anecdote-bloc">
+              <h2>💡 Le savais-tu ?</h2>
+              <p>${o.anecdote}</p>
+            </div>
+
+          </div>
+
+          <div class="fiche-actions">
+            ${fromQuiz ? '<a href="quiz.html" class="btn-vue" style="flex:1;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">‹ Retour au quiz</a>' : ''}
+            <button class="btn-vue" id="btnVue" style="flex:1">✓ J'ai vu cette œuvre</button>
+          </div>
+          <footer class="fiche-footer">Les Yeux de Mona · Guide de visite · Fiche ${o.id}/52</footer>
+        `;
+
+        // --- Gestion vues (par profil) ---
+        const btnsVue = [document.getElementById('btnVueTop'), document.getElementById('btnVue')];
+
+        function setVue(actif) {
+          const label = actif ? '✓ Œuvre vue !' : '✓ J\'ai vu cette œuvre';
+          btnsVue.forEach(b => { b.classList.toggle('actif', actif); b.textContent = label; });
+        }
+
+        setVue(!!Profil.getVues()[o.id]);
+
+        btnsVue.forEach(btn => btn.addEventListener('click', () => {
+          const v = Profil.getVues();
+          const estVue = !!v[o.id];
+          if (estVue) delete v[o.id]; else v[o.id] = { date: new Date().toISOString() };
+          Profil.saveVues(v);
+          setVue(!estVue);
+        }));
+
+    })();
+  </script>
+</body>
+</html>
