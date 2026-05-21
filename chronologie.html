@@ -181,6 +181,82 @@
       padding: 8px 0;
     }
 
+    /* Frise synthétique */
+    .frise-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      user-select: none;
+    }
+    .frise-toggle-titre {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .frise-toggle-icon {
+      font-size: 18px;
+      color: #c9a84c;
+      transition: transform 0.3s;
+    }
+    .frise-toggle-icon.open { transform: rotate(180deg); }
+
+    .frise-table-wrap {
+      display: none;
+      overflow-x: auto;
+      background: #fafafa;
+      border-bottom: 2px solid #c9a84c;
+    }
+    .frise-table-wrap.open { display: block; }
+
+    .frise-table {
+      width: 100%;
+      min-width: 460px;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .frise-table thead th {
+      background: #1a3a5c;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .frise-table tbody tr {
+      border-bottom: 1px solid #ede8e0;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .frise-table tbody tr:hover { background: #f4f0ea; }
+    .frise-table tbody tr:last-child { border-bottom: none; }
+    .frise-table td {
+      padding: 8px 10px;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .frise-table td:first-child {
+      white-space: nowrap;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+    .frise-table .frise-dates {
+      font-size: 10px;
+      color: #c9a84c;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 1px;
+    }
+    .frise-table .frise-nom { color: #1a3a5c; font-weight: 700; font-size: 12px; }
+    .frise-table .frise-artistes { color: #666; font-size: 11px; }
+    .frise-table .frise-ideal { color: #888; font-size: 11px; font-style: italic; }
+
   </style>
 </head>
 <body>
@@ -190,6 +266,24 @@
     <h1>📅 Par époque</h1>
     <p>La grande frise de l'histoire de l'art</p>
   </header>
+
+  <!-- FRISE SYNTHÉTIQUE DÉPLIABLE -->
+  <div class="frise-toggle" id="friseToggle" onclick="toggleFrise()">
+    <span class="frise-toggle-titre">📋 La frise de l'histoire de l'art</span>
+    <span class="frise-toggle-icon" id="friseIcon">▼</span>
+  </div>
+  <div class="frise-table-wrap" id="friseTableWrap">
+    <table class="frise-table">
+      <thead>
+        <tr>
+          <th>Période</th>
+          <th>Artistes du roman</th>
+          <th>Idéal esthétique</th>
+        </tr>
+      </thead>
+      <tbody id="friseTableBody"></tbody>
+    </table>
+  </div>
 
   <div class="timeline" id="timeline"></div>
 
@@ -204,75 +298,50 @@
       pompidou: 'Pompidou'
     };
 
+    // Toggle frise
+    function toggleFrise() {
+      const wrap = document.getElementById('friseTableWrap');
+      const icon = document.getElementById('friseIcon');
+      wrap.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+
     // Toutes les périodes dans l'ordre chronologique
     const PERIODES = [
       {
+        id: 'periode-0',
         dates: 'XVe – XVIe siècle',
         nom: 'Renaissance Italienne',
         ideal: 'Humanisme triomphant, redécouverte de l\'Antiquité gréco-romaine, rigueur mathématique de la perspective linéaire et harmonie divine.',
         artistes: ['Botticelli', 'De Vinci', 'Raphaël', 'Titien', 'Michel-Ange']
       },
-      {
-        dates: 'XVIIe siècle',
-        nom: 'Âge d\'or Hollandais',
-        ideal: 'Valorisation de la vie quotidienne bourgeoise, intimité domestique, étude psychologique et maîtrise du clair-obscur.',
-        artistes: ['Frans Hals', 'Rembrandt', 'Vermeer']
-      },
-      {
-        dates: 'XVIIe siècle',
-        nom: 'Classicisme & Baroque',
-        ideal: 'Ordre souverain de la raison géométrique, rigueur morale janséniste et méditation poétique sur la condition mortelle.',
-        artistes: ['Poussin', 'Champaigne']
-      },
-      {
-        dates: 'XVIIIe siècle',
-        nom: 'Rococo & Siècle des Lumières',
-        ideal: 'Fêtes galantes, élégance mondaine et insouciante, précision géographique et émancipation par le savoir.',
-        artistes: ['Watteau', 'Canaletto', 'Gainsborough', 'Marguerite Gérard']
-      },
-      {
-        dates: '1780 – 1850',
-        nom: 'Néoclassicisme & Romantisme',
-        ideal: 'Héroïsme patriotique, dignité morale civique, puis basculement vers le triomphe de la passion intérieure et de la nature sublime.',
-        artistes: ['David', 'Benoist', 'Friedrich', 'Turner']
-      },
-      {
-        dates: 'Milieu XIXe siècle',
-        nom: 'Réalisme',
-        ideal: 'Peinture brute et franche de la condition humaine populaire et des provinces, sans aucune idéalisation académique.',
-        artistes: ['Courbet', 'Rosa Bonheur']
-      },
-      {
-        dates: '1870 – 1900',
-        nom: 'Impressionnisme & Post-Impressionnisme',
-        ideal: 'Recherche sur le motif en plein air, fugacité des conditions de lumière, fragmentation de la touche et libération de la couleur.',
-        artistes: ['Manet', 'Monet', 'Degas', 'Cézanne', 'Van Gogh']
-      },
-      {
-        dates: '1880 – 1910',
-        nom: 'Symbolisme & Transition',
-        ideal: 'Exploration des paysages intérieurs de l\'âme, allégories métaphysiques existentielles et acheminement vers la pureté géométrique.',
-        artistes: ['Burne-Jones', 'Claudel', 'Klimt', 'Hammershøi', 'Mondrian']
-      },
-      {
-        dates: 'Première moitié XXe siècle',
-        nom: 'Avant-Gardes & Abstraction',
-        ideal: 'Rupture totale avec l\'illusionnisme figuratif, subversion des objets du quotidien, surréalisme et conceptualisation radicale.',
-        artistes: ['Kandinsky', 'Duchamp', 'Malévitch', 'O\'Keeffe', 'Magritte', 'Brancusi', 'Picasso']
-      },
-      {
-        dates: 'Milieu XXe siècle',
-        nom: 'Expressionnisme Abstrait',
-        ideal: 'Geste physique pur et viscéral, sacralisation du support, libération immédiate de l\'énergie émotive de l\'artiste.',
-        artistes: ['Pollock', 'Hartung', 'Bergman', 'Joan Mitchell']
-      },
-      {
-        dates: 'Fin XXe – XXIe siècle',
-        nom: 'Art Contemporain',
-        ideal: 'Installations mémorielles et immersives, combat féministe et identitaire, mythologies personnelles et quête de l\'Outrenoir absolu.',
-        artistes: ['Niki de Saint Phalle', 'Basquiat', 'Louise Bourgeois', 'Abramović', 'Frida Kahlo', 'Boltanski', 'Soulages']
-      }
+      { id:'periode-1', dates: 'XVIIe siècle', nom: 'Âge d\'or Hollandais', ideal: 'Valorisation de la vie quotidienne bourgeoise, intimité domestique, étude psychologique et maîtrise du clair-obscur.', artistes: ['Frans Hals', 'Rembrandt', 'Vermeer'] },
+      { id:'periode-2', dates: 'XVIIe siècle', nom: 'Classicisme & Baroque', ideal: 'Ordre souverain de la raison géométrique, rigueur morale janséniste et méditation poétique sur la condition mortelle.', artistes: ['Poussin', 'Champaigne'] },
+      { id:'periode-3', dates: 'XVIIIe siècle', nom: 'Rococo & Siècle des Lumières', ideal: 'Fêtes galantes, élégance mondaine et insouciante, précision géographique et émancipation par le savoir.', artistes: ['Watteau', 'Canaletto', 'Gainsborough', 'Marguerite Gérard'] },
+      { id:'periode-4', dates: '1780 – 1850', nom: 'Néoclassicisme & Romantisme', ideal: 'Héroïsme patriotique, dignité morale civique, puis basculement vers le triomphe de la passion intérieure et de la nature sublime.', artistes: ['David', 'Benoist', 'Friedrich', 'Turner'] },
+      { id:'periode-5', dates: 'Milieu XIXe siècle', nom: 'Réalisme', ideal: 'Peinture brute et franche de la condition humaine populaire et des provinces, sans aucune idéalisation académique.', artistes: ['Courbet', 'Rosa Bonheur'] },
+      { id:'periode-6', dates: '1870 – 1900', nom: 'Impressionnisme & Post-Impressionnisme', ideal: 'Recherche sur le motif en plein air, fugacité des conditions de lumière, fragmentation de la touche et libération de la couleur.', artistes: ['Manet', 'Monet', 'Degas', 'Cézanne', 'Van Gogh'] },
+      { id:'periode-7', dates: '1880 – 1910', nom: 'Symbolisme & Transition', ideal: 'Exploration des paysages intérieurs de l\'âme, allégories métaphysiques existentielles et acheminement vers la pureté géométrique.', artistes: ['Burne-Jones', 'Claudel', 'Klimt', 'Hammershøi', 'Mondrian'] },
+      { id:'periode-8', dates: 'Première moitié XXe s.', nom: 'Avant-Gardes & Abstraction', ideal: 'Rupture totale avec l\'illusionnisme figuratif, subversion des objets du quotidien, surréalisme et conceptualisation radicale.', artistes: ['Kandinsky', 'Duchamp', 'Malévitch', 'O\'Keeffe', 'Magritte', 'Brancusi', 'Picasso'] },
+      { id:'periode-9', dates: 'Milieu XXe siècle', nom: 'Expressionnisme Abstrait', ideal: 'Geste physique pur et viscéral, sacralisation du support, libération immédiate de l\'énergie émotive de l\'artiste.', artistes: ['Pollock', 'Hartung', 'Bergman', 'Joan Mitchell'] },
+      { id:'periode-10', dates: 'Fin XXe – XXIe siècle', nom: 'Art Contemporain', ideal: 'Installations mémorielles et immersives, combat féministe et identitaire, mythologies personnelles et quête de l\'Outrenoir absolu.', artistes: ['Niki de Saint Phalle', 'Basquiat', 'Louise Bourgeois', 'Abramović', 'Frida Kahlo', 'Boltanski', 'Soulages'] }
     ];
+
+    // Générer le tableau de la frise
+    const tbody = document.getElementById('friseTableBody');
+    PERIODES.forEach((p, i) => {
+      const tr = document.createElement('tr');
+      tr.onclick = () => {
+        document.getElementById(p.id || 'periode-' + i).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('friseTableWrap').classList.remove('open');
+        document.getElementById('friseIcon').classList.remove('open');
+      };
+      tr.innerHTML = `
+        <td><span class="frise-dates">${p.dates}</span><span class="frise-nom">${p.nom}</span></td>
+        <td><span class="frise-artistes">${p.artistes.join(' · ')}</span></td>
+        <td><span class="frise-ideal">${p.ideal}</span></td>`;
+      tbody.appendChild(tr);
+    });
 
     const timeline = document.getElementById('timeline');
 
@@ -318,7 +387,7 @@
       });
 
       timeline.innerHTML += `
-        <div class="periode">
+        <div class="periode" id="${periode.id || 'periode-' + PERIODES.indexOf(periode)}">
           <div class="periode-dot"></div>
           <div class="periode-content">
             <div class="periode-header">
