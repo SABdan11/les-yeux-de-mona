@@ -129,5 +129,38 @@ const OEUVRES = [
     "mot_mystere_mot": "La phantasia",
     "mot_mystere_texte": "Ce mot grec, repris par les penseurs de la Renaissance, désigne la faculté de l'esprit à former des images intérieures — ce qu'on appelle aujourd'hui l'imagination. Pour les artistes vénitiens du XVIe siècle, la phantasia n'était pas une fantaisie capricieuse : c'était une puissance créatrice sérieuse, presque divine. Voir des choses que les autres ne voient pas, et leur donner une forme — c'est exactement ce que fait un peintre.",
     "anecdote": "Pendant des siècles, ce tableau a été attribué à Giorgione — le maître de Titien, mort de la peste en 1510 à seulement trente-deux ans. C'est Giorgione qui avait inventé le thème de la femme nue dans la nature, et les deux peintres travaillaient si étroitement ensemble qu'il était parfois impossible de distinguer leurs mains. Le tableau n'est pas signé. Les historiens d'art débattent encore aujourd'hui. Ce qui est certain, c'est que Titien avait une vingtaine d'années quand il fut peint — et qu'il allait devenir le plus grand coloriste de la Renaissance, vivant jusqu'à quatre-vingt-huit ans, honoré par les rois et les empereurs d'Europe entière."
+  },
+  {
+    "id": 5,
+    "musee": "louvre",
+    "artiste": "Michel-Ange",
+    "dates_artiste": "1475–1564",
+    "titre": "L'Esclave mourant",
+    "technique": "Marbre",
+    "date": "vers 1513–1515",
+    "mouvement": "Renaissance italienne — Haute Renaissance",
+    "frise_titre": "Renaissance Italienne — XVe – XVIe siècle",
+    "frise_desc": "Beauté tourmentée, énergie contraire, aspiration de l'âme à se libérer de la matière.",
+    "salle": "Aile Denon, salle 403",
+    "image": "images/michel.jpg",
+    "description_academique": "Commandé par le pape Jules II pour orner son tombeau monumental, L'Esclave mourant fait partie d'un projet pharaonique que Michel-Ange ne put jamais mener à bien. Avec son pendant, L'Esclave rebelle, il orna d'abord les collections des Médicis de Florence, fut offert au roi de France Henri II, puis entra au Louvre en 1794. C'est l'une des sculptures les plus saisissantes du monde occidental.",
+    "ce_quon_voit": [
+      "La galerie de sculpture italienne de l'aile Denon est une salle que beaucoup de visiteurs traversent comme un corridor, pressés d'aller vers les peintures. Pourtant, au milieu de cet espace presque spectral, se dressent deux silhouettes de marbre blanc qui arrêtent le souffle.",
+      "L'Esclave mourant mesure deux mètres vingt-huit. Un jeune homme nu, à la musculature parfaite, semble traversé d'une secousse intérieure. La tête, couronnée de cheveux bouclés, bascule doucement contre l'épaule droite, les yeux fermés, la bouche légèrement entrouverte. Le bras droit se replie en travers de la poitrine, la paume posée sur le cœur, comme pour l'écouter. Le bras gauche part en arrière vers la nuque dans un geste d'abandon total. La jambe gauche repose sur un bloc de marbre plus large et pivote légèrement, créant un déhanchement d'une douceur presque liquide. On ne sait pas s'il souffre ou s'il s'abandonne à quelque chose d'infiniment doux.",
+      "Aux pieds de la statue, regardez attentivement : un amas de pierre brute et informe. Et au sommet de cet amas, à peine ébauchée, une petite tête de singe. Presque personne ne la remarque au premier coup d'œil."
+    ],
+    "lecon_titre": "Délivre-toi de la matière",
+    "lecon_texte": "Michel-Ange aimait dire que la figure existait déjà dans le bloc de marbre — qu'il n'avait qu'à enlever ce qui la cachait. C'est une idée étrange et belle : et si, toi aussi, tu portais déjà en toi ce que tu vas devenir ? Ce qui te retient, c'est la matière — les peurs, les habitudes, les regards des autres. Se libérer, ce n'est pas fuir : c'est tailler, patiemment, tout ce qui n'est pas toi. La beauté n'attend pas d'être créée. Elle attend d'être libérée.",
+    "lecon_mot_cle": "la beauté attend d'être libérée",
+    "grandparent_methode": "Laissez l'enfant tourner autour de la statue — il ne faut pas la regarder de face seulement. La pose change selon l'angle. Posez-vous à hauteur d'enfant d'abord, puis aidez-le à regarder le visage de près si c'est possible.",
+    "grandparent_questions": [
+      "« Est-ce qu'il est heureux ou triste, à ton avis ? »",
+      "« Tu vois la tête de singe en bas ? Pourquoi est-ce qu'elle est là, selon toi ? »",
+      "« Michel-Ange disait que la statue était déjà dans le marbre. Qu'est-ce que ça veut dire pour toi ? »"
+    ],
+    "grandparent_conseil": "Tournez lentement autour de la sculpture avec l'enfant — la pose semble différente selon l'angle. Et montrez-lui l'Esclave rebelle juste à côté : même taille, même époque, mais posture et expression radicalement opposées.",
+    "mot_mystere_mot": "La terribilità",
+    "mot_mystere_texte": "Ce mot italien désigne la qualité particulière de Michel-Ange : une beauté intense, presque effrayante, qui dépasse la grâce tranquille. Ses contemporains l'utilisaient pour décrire la puissance écrasante de ses œuvres — cette sensation d'être face à quelque chose de plus grand que soi, entre l'émerveillement et le vertige. Michel-Ange lui-même résumait son rapport au monde en un vers : « Ma joie, c'est la mélancolie. »",
+    "anecdote": "Michel-Ange était connu pour son caractère ombrageux et solitaire. Il travailla seul à la chapelle Sixtine, refusant tout assistant. Il amassait des fortunes, disait-on, sans jamais les dépenser — entassant ses pièces d'or sous son lit. Son père jugeait honteux le métier de sculpteur, trop proche du travail manuel. Et pourtant, un de ses condisciples de jeunesse, agacé par son arrogance, lui expédia un coup de poing qui lui déforma le nez pour le reste de sa vie. Michel-Ange vécut jusqu'à quatre-vingt-huit ans — un âge extraordinaire pour l'époque — en travaillant jusqu'aux dernières semaines."
   }
 ];
