@@ -428,6 +428,39 @@ const OEUVRES = [
     "anecdote": "Le chat dans ce tableau n'a pas été peint par Marguerite Gérard. C'est Fragonard lui-même — son maître et beau-frère — qui a posé quelques coups de pinceau pour ajouter ce matou souple sous le tabouret. C'est pourquoi son nom figure sur le cartel du tableau aux côtés de celui de son élève. Fragonard a donc participé à l'œuvre qui documente sa propre présence dans l'atelier, cachée dans le reflet de la boule. Le maître s'est glissé dans le tableau de son élève — comme une signature secrète."
   },
   {
+    "id": 15,
+    "musee": "louvre",
+    "artiste": "Jacques-Louis David",
+    "dates_artiste": "1748–1825",
+    "titre": "Le Serment des Horaces",
+    "technique": "Huile sur toile",
+    "date": "1785",
+    "mouvement": "Néoclassicisme — XVIIIe siècle",
+    "frise_titre": "Néoclassicisme — XVIIIe siècle",
+    "frise_desc": "L'Antiquité comme modèle pour l'avenir : raison, civisme et idéal des Lumières contre l'arbitraire et les privilèges.",
+    "salle": "Aile Denon, salle 702",
+    "image": "images/david.png",
+    "description_academique": "Commandé en 1783 pour Louis XVI, Le Serment des Horaces fut livré deux ans plus tard — plus grand que prévu, ce qui déplut. Le tableau représente un épisode de la Rome antique du VIIe siècle avant notre ère : trois frères romains prêtent serment devant leur père, prêts à combattre les trois frères Curiaces d'Albe pour régler un conflit entre les deux villes. Le tragique : les deux familles sont liées par le mariage. Quatre ans après la peinture de ce serment, la Révolution française éclaterait.",
+    "ce_quon_voit": [
+      "C'est un tableau immense — plus de trois mètres de haut sur quatre mètres vingt de large. Il écrase littéralement le spectateur. L'espace représenté est celui de l'Antiquité : sol en pavés gris et brique, trois grandes arches sur colonnes doriques s'ouvrant sur une obscurité profonde, murs en pierre taillée. Tout est sévère, net, géométrique. La lumière vient de gauche et frappe avec violence.",
+      "À gauche, trois jeunes guerriers — casques à cimier, toges aux couleurs rouge, bleu et blanc, sandales à lanières. Ils ont exactement la même posture : jambes écartées à soixante degrés, un bras tendu à l'horizontale, paume vers le bas. Leurs bras convergent vers les trois épées que brandit face à eux un homme âgé aux cheveux et barbe gris — leur père. Son visage anguleux est puissamment éclairé, ses yeux levés vers le ciel. À droite, trois femmes dévastées : corps affaissés, têtes basses. L'une enlace deux enfants dans ses bras. Les deux autres appuient leurs têtes l'une contre l'autre en silence. Et parmi les enfants, un petit blond aux boucles épaisses regarde la scène avec des yeux grands ouverts.",
+      "Tout répond à tout : trois guerriers, trois épées, trois arches, trois femmes. Une symétrie absolue qui fait penser à une sculpture plus qu'à une peinture. De près, on distingue les veines sur les pieds, le mortier entre les pierres. David a tout dessiné, tout mesuré, tout voulu."
+    ],
+    "lecon_titre": "Que l'antique te serve d'avenir",
+    "lecon_texte": "David n'aimait pas le passé pour s'y réfugier. Il l'aimait pour s'en armer. Connaître l'histoire des Romains, des Grecs, des grandes civilisations — ce n'est pas de la nostalgie. C'est apprendre ce que des êtres humains ont été capables de faire, de sacrifier, de construire. Pour ensuite faire pareil, ou mieux. L'enfant blond au fond du tableau regarde le serment de ses oncles avec des yeux écarquillés. Il ne comprend pas encore tout. Mais il retient. Et c'est lui qui portera les valeurs de cette scène dans l'avenir.",
+    "lecon_mot_cle": "connaître le passé pour construire l'avenir",
+    "grandparent_methode": "Laissez l'enfant être d'abord impressionné par la taille du tableau — c'est voulu. Puis invitez-le à compter : trois guerriers, trois épées, trois arches, trois femmes. La symétrie est un message en elle-même.",
+    "grandparent_questions": [
+      "« Tu comptes les personnages ? Qu'est-ce que tu remarques ? »",
+      "« Les femmes à droite et les guerriers à gauche ont l'air très différents. Qui te touche le plus, et pourquoi ? »",
+      "« Tu vois le petit enfant blond, presque caché ? Pourquoi David l'a mis là, selon toi ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble le petit enfant blond au fond à droite, presque caché dans les bras d'une femme — il regarde la scène du serment, curieux malgré le drame. Et regardez les pieds des guerriers de très près : David a peint chaque veine, chaque muscle, avec une précision d'anatomiste.",
+    "mot_mystere_mot": "Le néoclassicisme",
+    "mot_mystere_texte": "Le néoclassicisme, c'est un courant artistique né au XVIIIe siècle qui prend l'Antiquité grecque et romaine comme modèle idéal. Pas pour copier bêtement les anciens — mais pour retrouver leurs valeurs : la clarté, la rigueur, le sens du sacrifice et du bien commun. Ce mouvement naît aussi d'une découverte archéologique : en 1748, l'année même de la naissance de David, on commence les fouilles de Pompéi. Soudain, l'Antiquité n'est plus seulement dans les livres — elle ressort de terre, vivante et concrète.",
+    "anecdote": "En 1785, David peint des guerriers qui tendent les bras et jurent de mourir pour Rome. Quatre ans plus tard, le 20 juin 1789, dans la salle du Jeu de Paume à Versailles, des centaines de représentants du peuple lèvent le bras exactement de la même façon et jurent de ne pas se séparer avant d'avoir donné une Constitution à la France. C'est le Serment du Jeu de Paume — le déclencheur de la Révolution française. David le peignit lui-même. Le tableau des Horaces n'avait pas prévu la Révolution : il l'avait répétée."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
