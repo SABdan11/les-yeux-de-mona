@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 21,
+    "musee": "orsay",
+    "artiste": "Henri Fantin-Latour",
+    "dates_artiste": "1836–1904",
+    "titre": "Hommage à Delacroix",
+    "technique": "Huile sur toile",
+    "date": "1864",
+    "mouvement": "Réalisme — XIXe siècle",
+    "frise_titre": "Réalisme & transition — XIXe siècle",
+    "frise_desc": "Entre le romantisme qui s'achève et l'impressionnisme qui s'annonce, une génération de peintres cherche sa voie — suggestive, sobre, tendue vers la modernité.",
+    "salle": "Musée d'Orsay, salle 14",
+    "image": "images/latour.png",
+    "description_academique": "Peint en 1864, un an après la mort d'Eugène Delacroix, ce tableau réunit dix personnalités de la vie artistique et littéraire parisienne autour du portrait central du maître disparu. Fantin-Latour, alors âgé de vingt-huit ans, glisse son autoportrait au premier plan gauche, palette à la main. Delacroix lui-même n'est pas peint de mémoire : Fantin s'est fondé sur une photographie, car aucun portrait à l'huile ne le montrait de cette façon. Le tableau mesure 160 × 250 cm.",
+    "ce_quon_voit": [
+      "Au centre, dominant tout, le portrait de Delacroix dans un cadre doré repose sur un mur neutre. Sous lui, un bouquet de fleurs roses sur une petite table ronde. Autour, dix hommes — tous en élégants costumes sombres, cheveux légèrement négligés, regards majoritairement frontaux. L'atmosphère est celle d'un salon littéraire : intense, concentrée, presque silencieuse.",
+      "Au premier plan gauche, un jeune homme dans une ample chemise blanche tient une palette maculée : c'est Fantin-Latour lui-même, vingt-huit ans. À droite, Baudelaire — lèvres crispées, comme muettes — et Champfleury, bras croisés. Debout au centre, un homme se lève appuyé sur une canne, de profil mais la tête tournée vers nous. Debout à côté de Fantin, de profil, Whistler — l'Américain qui va bouleverser la peinture.",
+      "Et puis il y a lui — blond-roux flamboyant, plus ébouriffé que les autres, veste ouverte sur son gilet, lavallière lilas, une main dans la poche. Il se tient légèrement en retrait, l'air d'un homme sûr de lui qui n'a pas besoin de forcer son attention. Henry l'a laissé pour la fin. Ce jeune homme — Delacroix avait été le seul à voter pour son tableau refusé au Salon de 1859 — s'appelle Édouard Manet."
+    ],
+    "lecon_titre": "Les morts sont parmi les vivants",
+    "lecon_texte": "Fantin-Latour a peint Delacroix avec les mêmes proportions que les vivants qui l'entourent. Pas plus petit, pas plus grand. Parce que pour lui, Delacroix n'a pas quitté la pièce. Il est là. Les gens que nous aimons et qui disparaissent ne nous abandonnent pas — ils deviennent une présence différente, une voix qu'on continue d'entendre. Ce que ce tableau dit aussi, c'est que les morts ne demandent pas qu'on les imite. Ils demandent qu'on soit dignes de ce qu'ils furent — aussi courageux, aussi libres, aussi vivants qu'eux.",
+    "lecon_mot_cle": "les absents continuent de nous parler",
+    "grandparent_methode": "Laissez l'enfant chercher qui est qui dans le tableau — c'est une enquête. Puis montrez-lui que Delacroix est peint exactement à la même taille que les vivants. Demandez-lui ce qu'il ressent à l'idée que les morts puissent rester présents.",
+    "grandparent_questions": [
+      "« Est-ce que tu trouves des différences entre Delacroix et les hommes vivants dans le tableau ? »",
+      "« Fantin a mis son autoportrait dans son propre tableau. Qu'est-ce que ça dit de lui ? »",
+      "« Quelqu'un que tu aimais et qui n'est plus là — est-ce qu'il t'arrive de l'entendre encore ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble le jeune homme blond-roux à la lavallière lilas — c'est Édouard Manet, dont on verra les tableaux plus tard. Et cherchez Baudelaire, à l'extrême droite du premier plan : lèvres serrées, regard fixe. Le plus grand poète du siècle, figé dans son deuil. Fantin avait aussi peint un autre tableau célèbre, Un coin de table, où l'on peut voir Arthur Rimbaud adolescent — alors complètement inconnu — assis à côté de Verlaine.",
+    "mot_mystere_mot": "L'autoportrait",
+    "mot_mystere_texte": "Un autoportrait, c'est un portrait que l'artiste fait de lui-même — en se regardant dans un miroir, ou en se représentant de mémoire. C'est un exercice très ancien et très particulier : on est à la fois le peintre et le modèle. Fantin-Latour a glissé son autoportrait dans son propre tableau de groupe : il est là, palette à la main, parmi les grands de son époque, se plaçant lui-même dans l'histoire. Rembrandt, que vous avez peut-être vu au Louvre, a réalisé des dizaines d'autoportraits tout au long de sa vie — certains comme un journal intime peint, d'autres comme un manifeste. L'autoportrait est toujours une question : « Qui suis-je, et comment est-ce que je veux être vu ? »",
+    "anecdote": "En 1859, un jeune peintre inconnu présente au jury du Salon officiel un tableau représentant un ivrogne — Le Buveur d'absinthe. Tous les membres du jury le refusent, trouvant l'œuvre vulgaire. Tous sauf un. Ce seul défenseur du tableau, c'est Delacroix — le maître du romantisme, qu'on aurait cru aux antipodes de ce réalisme cru. Mais Delacroix avait compris : ce jeune homme avait l'esprit rebelle. Ce jeune homme, c'était Édouard Manet. Dans le tableau de Fantin, il se tient debout, blond-roux, lavallière lilas, main dans la poche — l'air de quelqu'un qui sait très bien qu'il va faire du bruit."
+  },
+  {
     "id": 20,
     "musee": "orsay",
     "artiste": "Gustave Courbet",
