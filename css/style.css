@@ -78,7 +78,7 @@ a { text-decoration: none; color: inherit; }
 .app-header {
   background: linear-gradient(160deg, #1a3a5c, #2a5a8c);
   color: white;
-  padding: 48px 24px 36px;
+  padding: 20px 24px 18px;
   text-align: center;
 }
 
@@ -250,7 +250,7 @@ a { text-decoration: none; color: inherit; }
 /* ===== PAGE MUSÉE ===== */
 .page-header {
   color: white;
-  padding: 48px 20px 24px;
+  padding: 20px 20px 16px;
   position: relative;
 }
 
@@ -358,7 +358,7 @@ a { text-decoration: none; color: inherit; }
 /* ===== PAGE FICHE ===== */
 .fiche-header {
   color: white;
-  padding: 48px 20px 24px;
+  padding: 20px 20px 16px;
 }
 
 .fiche-num {
