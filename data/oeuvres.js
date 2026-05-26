@@ -395,6 +395,39 @@ const OEUVRES = [
     "anecdote": "Gainsborough était l'un des peintres les plus célèbres d'Angleterre — portraitiste de la famille royale, rival du grand Joshua Reynolds. Mais son vrai amour, ce n'était pas les portraits. C'était les paysages. Il le répétait à qui voulait l'entendre : « Je suis fatigué des portraits et je rêve de prendre mon violoncelle et de partir vers quelque village tranquille pour y peindre des paysages. » Il peignait des portraits pour gagner sa vie, et des paysages pour son âme. Il était aussi musicien — il jouait du violon, du hautbois et du violoncelle, et disait que la peinture et la musique étaient pour lui la même chose."
   },
   {
+    "id": 14,
+    "musee": "louvre",
+    "artiste": "Marguerite Gérard",
+    "dates_artiste": "1761–1837",
+    "titre": "L'Élève intéressante",
+    "technique": "Huile sur toile",
+    "date": "vers 1787",
+    "mouvement": "École française — XVIIIe siècle",
+    "frise_titre": "Rococo et Lumières — XVIIIe siècle",
+    "frise_desc": "Légèreté, plaisir et mélancolie secrète : l'art comme art de vivre, sur fond de libertinage et de fêtes en apesanteur.",
+    "salle": "Aile Denon, salle 734",
+    "image": "images/marguerite.png",
+    "description_academique": "Peint vers 1787, L'Élève intéressante est l'une des premières œuvres importantes de Marguerite Gérard, élève et belle-sœur de Fragonard. Le tableau regorge de détails : une jeune femme examine une gravure dans un atelier encombré d'objets, d'animaux et d'œuvres d'art. Mais l'énigme centrale est dans le titre : qui est l'élève intéressante ? La réponse, cachée dans le reflet d'une boule métallique à gauche du tableau, révèle que c'est Marguerite Gérard elle-même — sous l'œil de son maître Fragonard.",
+    "ce_quon_voit": [
+      "Un tableau dense, presque silencieux, plein de choses à regarder. Une jeune femme en longue robe de satin blanc à paniers est assise de profil, tournée vers la gauche. Elle examine avec attention une grande gravure encadrée qu'elle tient entre les mains — une scène où deux amoureux courent vers une coupe tenue par des angelots.",
+      "Autour d'elle, un atelier en désordre luxueux. À sa droite, un tabouret de velours bleu frangé où dort un épagneul Cavalier King Charles. Sous le tabouret, un chat souple s'est faufilé et agace la queue du chien. Devant elle, un guéridon Louis XV recouvert d'un brocart rouge froissé — et dessus, deux petits angelots sculptés se disputent un cœur, coiffés d'un chapeau à plume beaucoup trop grand pour eux. Derrière, des figurines, un pot de pétales orange, des feuilles roulées. Aux murs dans l'ombre, des tableaux indistincts.",
+      "Mais le détail le plus troublant est dans le coin inférieur gauche, presque caché : une lourde boule métallique posée sur un tapis. Sa surface convexe réfléchit toute la partie de l'atelier que l'on ne voit pas — et là, minuscule mais parfaitement lisible, une femme peint à son chevalet, sous le regard d'un homme debout dans son dos."
+    ],
+    "lecon_titre": "Il n'existe pas de sexe faible",
+    "lecon_texte": "Au XVIIIe siècle, on disait que les femmes étaient le « sexe faible » — trop délicates pour les grandes choses, incapables des sujets sérieux, bonnes tout au plus pour des travaux propres et sans danger. Marguerite Gérard avait vingt-six ans quand elle peignit ce tableau. Elle y a tout mis : la maîtrise des matières, la subtilité des reflets, l'humour des détails, la complexité des espaces. Elle a démontré, par son seul pinceau, qu'il n'existe pas de hiérarchie entre les sexes. Et elle l'a fait dans une époque qui refusait de le croire.",
+    "lecon_mot_cle": "démontrer par son travail, pas par ses mots",
+    "grandparent_methode": "Laissez l'enfant chercher seul tous les détails — les animaux, les objets, les reflets. Ce tableau se découvre par couches, comme une enquête. Attendez qu'il trouve la boule métallique avant de lui expliquer ce qu'elle contient.",
+    "grandparent_questions": [
+      "« Tu vois les deux animaux sous le tabouret ? Qu'est-ce qui se passe entre eux ? »",
+      "« Il y a un tableau dans le tableau — et même un tableau dans le tableau dans le tableau. Tu les trouves ? »",
+      "« Dans la boule métallique, il y a quelqu'un qui peint. Tu arrives à voir qui c'est ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la boule métallique dans le coin gauche — et dans son reflet, les quatre silhouettes de l'atelier. L'homme debout derrière la femme qui peint, c'est Fragonard, le maître. Et le chat sous le tabouret ? C'est lui qui l'a peint — c'est le seul détail du tableau qui est de la main de Fragonard.",
+    "mot_mystere_mot": "La mise en abyme",
+    "mot_mystere_texte": "La mise en abyme, c'est quand une œuvre contient en elle-même sa propre image — comme un miroir dans un miroir. Dans ce tableau, il y a une gravure d'un autre tableau (Fragonard), et dans la boule métallique le reflet d'une scène de peinture. Tableau dans le tableau, image dans l'image, reflet dans le reflet. Le terme vient de l'héraldique : en blason, « en abyme » désigne un écu miniature placé au centre d'un grand écu. Marguerite Gérard joue à ce jeu avec une virtuosité qui laisse sans voix.",
+    "anecdote": "Le chat dans ce tableau n'a pas été peint par Marguerite Gérard. C'est Fragonard lui-même — son maître et beau-frère — qui a posé quelques coups de pinceau pour ajouter ce matou souple sous le tabouret. C'est pourquoi son nom figure sur le cartel du tableau aux côtés de celui de son élève. Fragonard a donc participé à l'œuvre qui documente sa propre présence dans l'atelier, cachée dans le reflet de la boule. Le maître s'est glissé dans le tableau de son élève — comme une signature secrète."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
