@@ -293,13 +293,30 @@
       color: white;
     }
 
-    /* Instruction flip */
-    .flip-hint {
-      font-size: 12px;
-      color: #aaa;
+    /* Hint navigation swipe */
+    .swipe-hint {
+      font-size: 11px;
+      color: #bbb;
       text-align: center;
-      margin-top: -4px;
-      margin-bottom: 4px;
+      margin-top: -8px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Boutons navigation + retourner */
+    .btn-nav {
+      background: #f4f0ea;
+      color: #1a3a5c;
+      flex: 0 0 44px;
+      padding: 14px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .btn-nav:disabled { opacity: 0.2; cursor: default; }
+    .btn-flip {
+      background: #1a3a5c;
+      color: white;
+      flex: 1;
     }
 
     /* Score final */
@@ -399,7 +416,7 @@
           <div class="card-img">
             <img id="cardImage" src="" alt="">
           </div>
-          <div class="card-hint">Touchez pour révéler</div>
+          <div class="card-hint">← Glisser pour naviguer →</div>
         </div>
 
         <!-- VERSO -->
@@ -427,10 +444,14 @@
       </div>
     </div>
 
-    <p class="flip-hint" id="flipHint">Touchez la carte pour la retourner</p>
+    <p class="swipe-hint">← Glisser · Retourner · Glisser →</p>
 
-    <!-- Avant flip : rien -->
-    <div class="quiz-actions" id="actionsAvant" style="display:none"></div>
+    <!-- Avant flip : nav + retourner -->
+    <div class="quiz-actions" id="actionsAvant" style="display:none">
+      <button class="btn-action btn-nav" id="btnPrev" disabled>‹</button>
+      <button class="btn-action btn-flip" id="btnFlip">↩ Retourner</button>
+      <button class="btn-action btn-nav" id="btnNext">›</button>
+    </div>
 
     <!-- Après flip : auto-évaluation (2 boutons seulement) -->
     <div class="quiz-actions btn-eval" id="actionsApres">
@@ -489,12 +510,16 @@
     const quizFin       = document.getElementById('quizFin');
     const actionsAvant  = document.getElementById('actionsAvant');
     const actionsApres  = document.getElementById('actionsApres');
-    const flipHint      = document.getElementById('flipHint');
 
     function majScoreAffiche() {
       document.getElementById('scoreReconnu').textContent = sessionReconnu;
       document.getElementById('scoreRate').textContent    = sessionRate;
       document.getElementById('scoreRestant').textContent = deck.length - index - 1;
+    }
+
+    function majNavBtns() {
+      document.getElementById('btnPrev').disabled = (index === 0);
+      document.getElementById('btnNext').disabled = (index === deck.length - 1);
     }
 
     function chargerCarte(o) {
@@ -512,11 +537,18 @@
       estRetourne = false;
       actionsAvant.style.display = 'flex';
       actionsApres.style.display = 'none';
-      flipHint.style.display = 'block';
       // Progression
       progressFill.style.width  = ((index + 1) / deck.length * 100) + '%';
       progressLabel.textContent = (index + 1) + ' / ' + deck.length;
       majScoreAffiche();
+      majNavBtns();
+    }
+
+    function passerCarte(dir) {
+      const ni = index + dir;
+      if (ni < 0 || ni >= deck.length) return;
+      index = ni;
+      chargerCarte(deck[index]);
     }
 
     function evaluer(reconnu) {
@@ -544,15 +576,42 @@
       chargerCarte(deck[index]);
     }
 
-    // Flip
+    // Flip via tap carte
     document.getElementById('flashcardWrap').addEventListener('click', () => {
       if (estRetourne) return;
       flashcard.classList.add('flipped');
       estRetourne = true;
       actionsAvant.style.display = 'none';
       actionsApres.style.display = 'flex';
-      flipHint.style.display = 'none';
     });
+
+    // Flip via bouton
+    document.getElementById('btnFlip').addEventListener('click', (e) => {
+      e.stopPropagation();
+      flashcard.classList.add('flipped');
+      estRetourne = true;
+      actionsAvant.style.display = 'none';
+      actionsApres.style.display = 'flex';
+    });
+
+    // Navigation flèches
+    document.getElementById('btnPrev').addEventListener('click', (e) => { e.stopPropagation(); passerCarte(-1); });
+    document.getElementById('btnNext').addEventListener('click', (e) => { e.stopPropagation(); passerCarte(1); });
+
+    // Swipe gauche/droite
+    let touchStartX = 0, touchStartY = 0;
+    const wrap = document.getElementById('flashcardWrap');
+    wrap.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    wrap.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (Math.abs(dx) > 50 && Math.abs(dx) > dy * 1.5) {
+        dx < 0 ? passerCarte(1) : passerCarte(-1);
+      }
+    }, { passive: true });
 
     document.getElementById('btnFiche').addEventListener('click', () => {
       window.location.href = 'fiche.html?id=' + deck[index].id + '&from=quiz';
@@ -562,7 +621,7 @@
       flashcard.classList.remove('flipped');
       estRetourne = false;
       actionsApres.style.display = 'none';
-      flipHint.style.display = 'block';
+      actionsAvant.style.display = 'flex';
     });
     document.getElementById('btnReconnu').addEventListener('click', () => evaluer(true));
     document.getElementById('btnRate').addEventListener('click',    () => evaluer(false));
