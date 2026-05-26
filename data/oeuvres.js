@@ -296,6 +296,39 @@ const OEUVRES = [
     "anecdote": "Philippe de Champaigne était le portraitiste officiel du cardinal de Richelieu — l'homme le plus puissant de France après le roi. Il fut le seul artiste autorisé à peindre Richelieu dans ses habits de cardinal, et il le peignit des dizaines de fois. Ces portraits officiels, imposants, destinés à orner les palais et à impressionner les ambassadeurs, lui valurent gloire et fortune. Et puis, à soixante ans, il peignit ce tableau-ci : deux femmes silencieuses dans une cellule grise. C'est le plus grand de tous ses tableaux."
   },
   {
+    "id": 11,
+    "musee": "louvre",
+    "artiste": "Antoine Watteau",
+    "dates_artiste": "1684–1721",
+    "titre": "Pierrot, dit autrefois Gilles",
+    "technique": "Huile sur panneau de bois",
+    "date": "vers 1718–1719",
+    "mouvement": "Fête galante — Rococo",
+    "frise_titre": "Rococo et Fêtes Galantes — XVIIIe siècle",
+    "frise_desc": "Légèreté, plaisir et mélancolie secrète : l'art comme art de vivre, sur fond de libertinage et de fêtes en apesanteur.",
+    "salle": "Aile Richelieu, salle 921",
+    "image": "images/watteau.png",
+    "description_academique": "Peint vers 1718–1719, ce grand tableau sur bois a longtemps été appelé « Gilles » avant d'être renommé « Pierrot ». Il représente le personnage naïf et mélancolique de la commedia dell'arte, entouré de ses compagnons de scène. L'œuvre, dont les bords ont été découpés à une époque inconnue, est passée inaperçue du vivant de Watteau. Elle fut redécouverte en 1802 chez un brocanteur du Carrousel par Vivant Denon — qui deviendrait la même année le premier directeur du musée du Louvre.",
+    "ce_quon_voit": [
+      "Le tableau est imposant — près d'un mètre quatre-vingts de hauteur. Au premier coup d'œil, un seul personnage retient le regard : un grand garçon en blanc, debout, légèrement décentré sur la gauche. Tout autour de lui, le musée continue de vivre, mais lui ne bouge pas.",
+      "Il porte un immense costume de satin blanc — pantalon bouffant aux mollets, veste à quinze boutons gonflée entre les épaules, une calotte et un chapeau à bord large qui lui fait comme une auréole. Ses pieds en V sont chaussés de souliers ornés de rubans roses. Ses bras pendent le long du corps sans but. Son visage est pâle, les sourcils légèrement levés, les paupières tombantes, les joues et le nez roses. Il vous regarde — ou plutôt il regarde à travers vous, vers quelque chose que vous ne verrez pas. Derrière lui, à environ un mètre en retrait, cinq personnages dont on ne voit que le buste : à gauche, un homme en noir coiffé d'une fraise blanche chevauchant un âne ricane vers nous. À droite, trois personnages serrés — un homme ahuri aux cheveux en flammes, un homme en rouge à l'air sceptique qui tient la bride de l'âne, et entre eux une jeune femme rouquette au regard doux. Sur le bord droit, dans la végétation, un buste de faune surveille la scène.",
+      "Le grand garçon en blanc est Pierrot. Sa mission est de faire rire. Et pourtant, ses bras tombent. Il a l'air épuisé d'être lui-même."
+    ],
+    "lecon_titre": "En toute fête sourd une défaite",
+    "lecon_texte": "Pierrot est entouré de gens qui s'amusent. C'est son métier de les divertir. Mais ses bras pendent, ses yeux sont ailleurs. Il est fatigué — non pas d'avoir trop travaillé, mais d'avoir trop souri sans en avoir envie. Watteau nous dit quelque chose d'important : on ne peut pas être heureux sur commande. L'obligation de faire la fête, de paraître gai, de ne jamais montrer qu'on est triste — c'est épuisant. Parfois, la chose la plus courageuse est simplement de dire : je ne suis pas d'humeur. Ce n'est pas grave. Ça passera.",
+    "lecon_mot_cle": "on ne peut pas être heureux sur commande",
+    "grandparent_methode": "Laissez l'enfant regarder le grand garçon blanc en silence. Puis demandez-lui comment il se sent face à ce personnage. C'est un tableau qui parle directement aux enfants — ils reconnaissent souvent quelque chose en Pierrot.",
+    "grandparent_questions": [
+      "« Pierrot est entouré de gens — il est seul pourtant. Comment c'est possible ? »",
+      "« Ses bras pendent. Qu'est-ce que ça veut dire, selon toi, quand quelqu'un laisse ses bras comme ça ? »",
+      "« Toi, quand tu dois être joyeux mais que tu n'en as pas envie, tu fais comment ? »"
+    ],
+    "grandparent_conseil": "Montrez à l'enfant l'homme en noir sur l'âne, à gauche : il ricane, arrogant et ridicule — c'est le Docteur de la commedia dell'arte. Et regardez ensemble l'âne : lui aussi nous regarde avec son œil noir et luisant. Le tableau est plein de détails drôles cachés autour du triste Pierrot.",
+    "mot_mystere_mot": "La commedia dell'arte",
+    "mot_mystere_texte": "La commedia dell'arte était un théâtre populaire né en Italie au XVIe siècle, où des acteurs jouaient toujours les mêmes personnages-types : Pierrot le naïf, Arlequin le malin, le Docteur le prétentieux, le Capitaine le fanfaron... Sans texte écrit à l'avance, tout reposait sur l'improvisation, les acrobaties et l'outrance des gestes. Ces spectacles drôles et parfois cruels faisaient basculer le monde sens dessus dessous : le plus petit pouvait y ridiculiser le plus puissant. Watteau en était passionné.",
+    "anecdote": "Pendant près d'un siècle, ce tableau avait disparu. On le retrouva en 1802 chez un brocanteur installé place du Carrousel, à Paris. Pour attirer les passants, le vendeur avait écrit au crayon blanc sur la toile un bout de chanson populaire : « Que Pierrot serait content s'il avait l'art de vous plaire. » Un homme s'arrêta, fut séduit, paya 150 francs et emporta le tableau. Cet homme s'appelait Vivant Denon. Cette même année, Napoléon Bonaparte le nomma premier directeur du musée du Louvre. Le Pierrot de Watteau est ainsi entré au Louvre dans les bras de l'homme qui l'inventait."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
