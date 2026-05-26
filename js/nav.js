@@ -187,9 +187,4 @@
     rafraichirListe();
   };
 
-  // Ouvrir automatiquement si page quiz et pas de joueur
-  if (page === 'quiz.html' && !Profil.getActif()) {
-    window.addEventListener('load', () => window.ouvrirJoueur(true));
-  }
-
 })();
