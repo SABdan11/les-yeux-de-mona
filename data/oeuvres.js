@@ -162,5 +162,38 @@ const OEUVRES = [
     "mot_mystere_mot": "La terribilità",
     "mot_mystere_texte": "Ce mot italien désigne la qualité particulière de Michel-Ange : une beauté intense, presque effrayante, qui dépasse la grâce tranquille. Ses contemporains l'utilisaient pour décrire la puissance écrasante de ses œuvres — cette sensation d'être face à quelque chose de plus grand que soi, entre l'émerveillement et le vertige. Michel-Ange lui-même résumait son rapport au monde en un vers : « Ma joie, c'est la mélancolie. »",
     "anecdote": "Michel-Ange était connu pour son caractère ombrageux et solitaire. Il travailla seul à la chapelle Sixtine, refusant tout assistant. Il amassait des fortunes, disait-on, sans jamais les dépenser — entassant ses pièces d'or sous son lit. Son père jugeait honteux le métier de sculpteur, trop proche du travail manuel. Et pourtant, un de ses condisciples de jeunesse, agacé par son arrogance, lui expédia un coup de poing qui lui déforma le nez pour le reste de sa vie. Michel-Ange vécut jusqu'à quatre-vingt-huit ans — un âge extraordinaire pour l'époque — en travaillant jusqu'aux dernières semaines."
+  },
+  {
+    "id": 6,
+    "musee": "louvre",
+    "artiste": "Frans Hals",
+    "dates_artiste": "~1582–1666",
+    "titre": "La Bohémienne",
+    "technique": "Huile sur bois",
+    "date": "vers 1628",
+    "mouvement": "Âge d'or hollandais",
+    "frise_titre": "Âge d'or Hollandais — XVIIe siècle",
+    "frise_desc": "Vie quotidienne, vérité psychologique, maîtrise du clair-obscur et célébration de la spontanéité humaine.",
+    "salle": "Aile Richelieu, salle 837",
+    "image": "images/franz.jpg",
+    "description_academique": "Peinte vers 1628, La Bohémienne est l'une des œuvres les plus célèbres de Frans Hals et l'un des portraits les plus vivants du Louvre. Ni commandée, ni identifiée — on ne sait pas qui est cette jeune femme. Hals la saisit dans un instant de joie spontanée, avec une technique de touche rapide et visible qui anticipera l'impressionnisme de deux siècles et demi.",
+    "ce_quon_voit": [
+      "C'est un petit tableau — à peine 58 centimètres de hauteur — souvent accroché parmi d'autres dans la grande salle des peintures hollandaises de l'aile Richelieu. Mais il est impossible de passer devant sans s'arrêter.",
+      "Une jeune femme de trois quarts vous regarde en souriant. Pas un sourire poli, pas un sourire de commande : un sourire vrai, espiègle, qui semble dire qu'elle vient d'entendre quelque chose d'amusant — ou qu'elle est sur le point de dire quelque chose qu'elle n'aurait peut-être pas dû. Ses cheveux bruns bouclés s'échappent en mèches folles. Sa blouse blanche est largement ouverte. Son gilet brun-rougeâtre est à moitié défait. Elle ne pose pas : elle est là, vivante.",
+      "Approchez-vous : de près, le tableau semble presque inachevé. Les coups de pinceau sont larges, rapides, visibles — on voit la main du peintre dans chaque touche. Reculez d'un mètre : tout se met en place instantanément, et la femme semble prête à bouger. C'est le miracle de Frans Hals."
+    ],
+    "lecon_titre": "La joie ne s'excuse pas",
+    "lecon_texte": "Cette jeune femme rit — franchement, sans se demander si c'est le bon moment ou si les autres la regardent. Frans Hals a compris quelque chose d'essentiel : la joie vraie ne calcule pas. Elle éclate. Elle ne demande pas la permission. Ce que les autres pensent de ton rire, de ton enthousiasme, de ta façon d'être — c'est leur problème, pas le tien. La spontanéité, c'est une forme de courage.",
+    "lecon_mot_cle": "la joie ne s'excuse pas",
+    "grandparent_methode": "Laissez l'enfant s'approcher très près du tableau pour voir les coups de pinceau, puis reculez ensemble jusqu'à deux mètres. Le contraste est saisissant — c'est le meilleur moyen de comprendre la technique de Hals sans aucune explication.",
+    "grandparent_questions": [
+      "« Est-ce que tu penses qu'elle rit de quelque chose qu'on lui a dit, ou de quelque chose qu'elle a elle-même pensé ? »",
+      "« Regarde de très près les coups de pinceau. Et maintenant recule. Qu'est-ce qui se passe ? »",
+      "« Est-ce que tu penses qu'elle savait qu'on la peignait, ou pas ? »"
+    ],
+    "grandparent_conseil": "Demandez à l'enfant d'essayer de reproduire exactement son sourire. C'est presque impossible — ce sourire-là est unique, instable, sur le point de changer. C'est justement ça que Hals a réussi à attraper.",
+    "mot_mystere_mot": "La touche",
+    "mot_mystere_texte": "En peinture, la touche désigne la manière dont le peintre pose sa peinture sur la toile — ou sur le bois. Frans Hals travaillait très vite, avec des coups de pinceau larges et décidés, sans jamais corriger ni lisser. De près, ça ressemble presque à des griffures. De loin, c'est d'une vie extraordinaire. Deux siècles et demi plus tard, les impressionnistes — Monet, Renoir, Manet — découvrirent ses tableaux et s'écrièrent : c'est nous qui avons tout inventé, sauf lui.",
+    "anecdote": "Frans Hals vécut plus de quatre-vingts ans dans la ville de Haarlem, aux Pays-Bas. Sa vie fut aussi désordonnée que sa peinture : de nombreux enfants, des dettes chroniques, deux mariages. À la fin de sa vie, il était si pauvre que la ville de Haarlem lui versait une pension de charité. Mais il continua à peindre jusqu'au bout — et ses derniers portraits, peints à plus de quatre-vingts ans, comptent parmi les plus puissants de toute l'histoire de la peinture."
   }
 ];
