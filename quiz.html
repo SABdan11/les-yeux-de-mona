@@ -112,22 +112,31 @@
       color: white;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 8px;
       padding: 7px 12px;
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      gap: 10px;
     }
+    .card-nav-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0 4px;
+      line-height: 1;
+    }
+    .card-nav-btn:disabled { opacity: 0.2; cursor: default; }
+    .card-nav-btn:not(:disabled):active { color: white; }
     .card-flip-btn {
       background: rgba(255,255,255,0.18);
       border: 1px solid rgba(255,255,255,0.35);
       color: white;
       font-size: 12px;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 5px 14px;
       border-radius: 6px;
       cursor: pointer;
-      white-space: nowrap;
       font-family: 'Open Sans', sans-serif;
     }
     .card-flip-btn:active { background: rgba(255,255,255,0.30); }
@@ -218,24 +227,27 @@
       align-items: center;
       width: 100%;
       max-width: 400px;
-      margin-bottom: 8px;
-      padding: 0 2px;
+      margin-bottom: 6px;
+      padding: 4px 8px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
     }
     .score-item {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1px;
+      align-items: baseline;
+      gap: 5px;
     }
     .score-num {
       font-family: 'Playfair Display', serif;
-      font-size: 16px;
+      font-size: 22px;
       font-weight: 700;
+      line-height: 1;
     }
     .score-num.reconnu { color: #2a8c4a; }
     .score-num.rate    { color: #e05555; }
     .score-num.total   { color: #1a3a5c; }
-    .score-label { font-size: 9px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+    .score-label { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; }
     .score-sep { font-size: 14px; color: #e0d8ce; }
 
     /* Boutons */
@@ -320,21 +332,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Boutons navigation + retourner */
-    .btn-nav {
-      background: #f4f0ea;
-      color: #1a3a5c;
-      flex: 0 0 44px;
-      padding: 14px 0;
-      font-size: 20px;
-      font-weight: 700;
-    }
-    .btn-nav:disabled { opacity: 0.2; cursor: default; }
-    .btn-flip {
-      background: #1a3a5c;
-      color: white;
-      flex: 1;
-    }
 
     /* Score final */
     .quiz-fin {
@@ -433,8 +430,9 @@
             <img id="cardImage" src="" alt="">
           </div>
           <div class="card-hint">
-            <span>← Glisser pour naviguer →</span>
+            <button id="btnPrev" class="card-nav-btn" disabled>‹</button>
             <button id="btnFlip" class="card-flip-btn">↩ Retourner</button>
+            <button id="btnNext" class="card-nav-btn">›</button>
           </div>
         </div>
 
@@ -464,13 +462,7 @@
     </div>
 
 
-    <!-- Avant flip : navigation uniquement -->
-    <div class="quiz-actions" id="actionsAvant" style="display:none">
-      <button class="btn-action btn-nav" id="btnPrev" disabled>‹</button>
-      <button class="btn-action btn-nav" id="btnNext">›</button>
-    </div>
-
-    <!-- Après flip : auto-évaluation (2 boutons seulement) -->
+<!-- Après flip : auto-évaluation (2 boutons seulement) -->
     <div class="quiz-actions btn-eval" id="actionsApres">
       <button class="btn-action btn-rate"    id="btnRate">✗ Pas encore</button>
       <button class="btn-action btn-reconnu" id="btnReconnu">✓ Reconnu !</button>
@@ -525,8 +517,8 @@
     const progressLabel = document.getElementById('progressLabel');
     const quizZone      = document.getElementById('quizZone');
     const quizFin       = document.getElementById('quizFin');
-    const actionsAvant  = document.getElementById('actionsAvant');
     const actionsApres  = document.getElementById('actionsApres');
+    const cardHint      = document.querySelector('.card-hint');
 
     function majScoreAffiche() {
       document.getElementById('scoreReconnu').textContent = sessionReconnu;
@@ -552,8 +544,8 @@
       // Reset
       flashcard.classList.remove('flipped');
       estRetourne = false;
-      actionsAvant.style.display = 'flex';
       actionsApres.style.display = 'none';
+      cardHint.style.display = 'flex';
       // Progression
       progressFill.style.width  = ((index + 1) / deck.length * 100) + '%';
       progressLabel.textContent = (index + 1) + ' / ' + deck.length;
@@ -598,7 +590,7 @@
       if (estRetourne) return;
       flashcard.classList.add('flipped');
       estRetourne = true;
-      actionsAvant.style.display = 'none';
+      cardHint.style.display = 'none';
       actionsApres.style.display = 'flex';
     });
 
@@ -607,7 +599,7 @@
       e.stopPropagation();
       flashcard.classList.add('flipped');
       estRetourne = true;
-      actionsAvant.style.display = 'none';
+      cardHint.style.display = 'none';
       actionsApres.style.display = 'flex';
     });
 
@@ -638,7 +630,7 @@
       flashcard.classList.remove('flipped');
       estRetourne = false;
       actionsApres.style.display = 'none';
-      actionsAvant.style.display = 'flex';
+      cardHint.style.display = 'flex';
     });
     document.getElementById('btnReconnu').addEventListener('click', () => evaluer(true));
     document.getElementById('btnRate').addEventListener('click',    () => evaluer(false));
