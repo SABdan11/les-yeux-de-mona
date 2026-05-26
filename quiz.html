@@ -558,7 +558,8 @@
     document.getElementById('btnFiche').addEventListener('click', () => {
       window.location.href = 'fiche.html?id=' + deck[index].id + '&from=quiz';
     });
-    document.getElementById('btnRetour').addEventListener('click', () => {
+    document.getElementById('btnRetour').addEventListener('click', (e) => {
+      e.stopPropagation();
       flashcard.classList.remove('flipped');
       estRetourne = false;
       actionsApres.style.display = 'none';
