@@ -118,22 +118,21 @@
       justify-content: space-between;
     }
     .card-nav-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.12);
-      border: 1.5px solid rgba(255,255,255,0.45);
+      background: none;
+      border: none;
       color: white;
-      font-size: 18px;
+      font-size: 26px;
+      font-weight: 300;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 4px 10px;
+      line-height: 1;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.7);
       flex-shrink: 0;
-      transition: background 0.15s;
+      transition: opacity 0.15s;
+      letter-spacing: -1px;
     }
     .card-nav-btn:disabled { opacity: 0.18; cursor: default; }
-    .card-nav-btn:not(:disabled):active { background: rgba(255,255,255,0.28); }
+    .card-nav-btn:not(:disabled):active { opacity: 0.6; }
     .card-flip-btn {
       background: white;
       border: none;
@@ -436,9 +435,9 @@
             <img id="cardImage" src="" alt="">
           </div>
           <div class="card-hint">
-            <button id="btnPrev" class="card-nav-btn" disabled>←</button>
+            <button id="btnPrev" class="card-nav-btn" disabled>❮</button>
             <button id="btnFlip" class="card-flip-btn">↺ Retourner</button>
-            <button id="btnNext" class="card-nav-btn">→</button>
+            <button id="btnNext" class="card-nav-btn">❯</button>
           </div>
         </div>
 
