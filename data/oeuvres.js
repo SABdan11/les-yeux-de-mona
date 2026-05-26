@@ -1218,5 +1218,71 @@ const OEUVRES = [
     "mot_mystere_mot": "Le suprématisme",
     "mot_mystere_texte": "Le suprématisme est un mouvement artistique inventé par Malevitch vers 1915. Le nom vient du latin supremus, « le plus haut », et du français -isme. Pour Malevitch, la sensation pure — la perception directe d'une couleur, d'une forme, d'une ligne — est supérieure à toute représentation du monde réel. Au lieu de peindre un arbre ou un visage, il peint ce qu'il ressent : la verticalité, l'équilibre, la tension entre deux forces. Le suprématisme, c'est l'art réduit à son squelette — et dans ce squelette, il voit tout l'univers. Le Carré noir sur fond blanc (1915) et la Croix noire (1915) sont les deux œuvres les plus célèbres de ce mouvement. Malevitch disait qu'il voulait libérer l'art de « l'esclavage de la nature ».",
     "anecdote": "Malevitch est mort en 1935 d'un cancer, à cinquante-six ans, dans des conditions difficiles — surveillé par le régime soviétique, ses abstractions interdites depuis plusieurs années. Mais il avait demandé que son cercueil soit peint d'un carré noir. Et que son corps soit enterré sous un arbre dans un champ, avec, posé sur sa tombe, un cube blanc. Ses amis ont respecté ses volontés. Même dans la mort, Malevitch continuait à peindre — à réduire l'existence à ses formes les plus pures. Le carré noir pour la fin. Le cube blanc pour l'infini."
+  },
+  {
+    "id": 38,
+    "musee": "pompidou",
+    "artiste": "Georgia O'Keeffe",
+    "dates_artiste": "1887–1986",
+    "titre": "Stries rouges, jaunes et noires",
+    "technique": "Huile sur toile",
+    "date": "vers 1924",
+    "mouvement": "Modernisme américain",
+    "frise_titre": "Modernisme américain — XXe siècle",
+    "frise_desc": "Georgia O'Keeffe invente un langage pictural proprement américain : aussi bien la démesure des grands espaces sauvages que la vibration intime des formes naturelles, toujours au bord de l'abstraction.",
+    "salle": "Niveau 4, galerie 4",
+    "image": "images/okeffe.png",
+    "description_academique": "Georgia O'Keeffe (1887–1986), artiste américaine d'origine irlandaise et hongroise, est l'une des figures fondatrices de l'art moderne aux États-Unis. Après avoir rompu avec les conventions de son maître new-yorkais, elle développe un style personnel, abstrait et biomorphique, qui transforme les paysages et les fleurs en masses sinueuses aux contours organiques. Cette œuvre évoque le lac George au pied des monts Adirondacks : des stries ondoyantes de rouge, de jaune et d'orangé se fondent en paysage et en anatomie. O'Keeffe fut parmi les premières artistes à affirmer un regard résolument féminin sur le monde naturel.",
+    "ce_quon_voit": [
+      "Des vagues de couleurs chaudes — rouge, orangé, jaune, rose — ondulent de gauche à droite dans tout le tableau. Ce n'est pas tout à fait un paysage, et pas tout à fait une abstraction. Quelque chose ressemble à un ciel enflammé en haut, quelque chose à un massif rocheux gris-noir au milieu, et en bas, des nappes de couleurs chaudes comme le reflet d'un lac en fusion. Tout ondoie, tout se courbe, tout respire — il n'y a pas une seule ligne droite. La surface du tableau semble vivante, presque en mouvement.",
+      "Si on regarde attentivement le bas du tableau, quelque chose d'étrange apparaît : les nappes de couleurs évoquent non seulement de l'eau, mais aussi des formes anatomiques. Des courbes qui ressemblent à des lèvres. Des galbes qui font penser à de la peau. Des teintes chair qui se mêlent au rouge et à l'orangé. O'Keeffe appelle ça le « biomorphisme » — les formes du monde naturel qui ressemblent aux formes du corps humain. La montagne et le lac se fondent dans l'anatomie ; l'anatomie se fond dans le paysage. Tout est fait de la même matière.",
+      "O'Keeffe avait grandi en Amérique, pays de vastes espaces sauvages, de lacs immenses, de déserts et de ciels interminables. Elle avait étudié à New York avec les plus grands professeurs, puis elle avait décidé de tout oublier pour repartir de zéro — trouver son propre langage. Elle était convaincue que la nature et le corps humain obéissent aux mêmes lois, qu'ils sont pris dans le même flux. Regarder un lac peut ressembler à regarder une peau. Regarder un ciel peut ressembler à regarder une douleur. Le monde entier est une seule et même chair."
+    ],
+    "lecon_titre": "Le monde est une chair",
+    "lecon_texte": "Georgia O'Keeffe nous dit que le monde et nous-mêmes ne faisons qu'un. La montagne, le lac, le ciel, notre peau, notre sang — tout ça obéit aux mêmes lois, tout ça est fait de la même matière. La frontière entre nous et le monde n'est pas aussi nette qu'on le croit. Quand on regarde un paysage très longtemps, on peut commencer à le sentir comme on sent son propre corps. Et quand on regarde notre propre corps, on peut y voir des paysages. Le monde est une chair — et on en fait partie.",
+    "lecon_mot_cle": "nous et le monde sommes faits de la même matière — il n'y a pas de frontière vraie",
+    "grandparent_methode": "Demandez à l'enfant de regarder les formes du bas du tableau — est-ce qu'elles lui rappellent quelque chose d'autre qu'un lac ? Puis demandez-lui d'où vient le vert des feuilles quand les arbres jaunissent en automne. Laissez la question ouverte — et écoutez la réponse. C'est exactement ce que faisait O'Keeffe : poser des questions sur ce qui disparaît et sur ce qui reste.",
+    "grandparent_questions": [
+      "« Tu vois des courbes, des ondulations partout. Est-ce que ce tableau te fait penser à autre chose qu'un paysage ? »",
+      "« O'Keeffe dit que la nature ressemble à un corps humain. Est-ce que tu as déjà vu une forme dans la nature qui te rappelait quelque chose d'humain ? »",
+      "« Où s'en vont les couleurs quand les feuilles tombent ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la fine strie grise entre le ciel orangé et les nappes chaudes du bas — ce massif rocheux sombre qui divise le tableau. C'est la seule zone froide de toute la composition. Il sépare deux chaleurs : le ciel et le reflet du lac. Demandez à l'enfant si cette strie froide lui semble triste ou nécessaire. Pour O'Keeffe, c'est elle qui donne leur force aux deux côtés lumineux.",
+    "mot_mystere_mot": "Le biomorphisme",
+    "mot_mystere_texte": "Le biomorphisme, c'est une façon de peindre ou de sculpter où les formes s'inspirent à la fois des formes du vivant (corps humains, animaux, plantes) et des formes abstraites — sans tout à fait être l'un ou l'autre. Le mot vient du grec bios (la vie) et morphê (la forme). Dans un tableau biomorphique, une fleur peut ressembler à un organe, un lac peut ressembler à une peau, une montagne peut ressembler à un genou. O'Keeffe était une grande maîtresse du biomorphisme. Ses fleurs géantes, vues en gros plan, sont à la fois botaniques et anatomiques. Ses paysages du Nouveau-Mexique ressemblent à des cartographies du corps humain. Le biomorphisme dit quelque chose d'important : que la frontière entre les formes du monde et les formes de la vie n'est pas fixe.",
+    "anecdote": "Georgia O'Keeffe vécut jusqu'à quatre-vingt-dix-huit ans — presque un siècle de peinture et d'aventure. À soixante-quinze ans, elle apprit à piloter un avion, pour pouvoir voir d'en haut les paysages qu'elle aimait peindre. À quatre-vingt-huit ans, alors qu'elle commençait à perdre la vue, elle dicta ses mémoires. Et quand elle ne put plus tenir un pinceau, elle continua à créer des sculptures à la main, en modelant l'argile. Elle disait qu'elle n'avait pas besoin de voir pour savoir ce qu'elle faisait — ses doigts se souvenaient. Elle mourut dans le Nouveau-Mexique, dans sa maison de Abiquiú, entourée de déserts et de ciels immenses. Le paradis des couleurs était là."
+  },
+  {
+    "id": 39,
+    "musee": "pompidou",
+    "artiste": "René Magritte",
+    "dates_artiste": "1898–1967",
+    "titre": "Le Modèle rouge",
+    "technique": "Huile sur toile",
+    "date": "1935",
+    "mouvement": "Surréalisme",
+    "frise_titre": "Surréalisme — années 1920–1940",
+    "frise_desc": "Les surréalistes veulent que le rêve déborde sur la réalité. Ils peignent l'inconscient avec la précision des maîtres anciens — pour que l'hallucination ressemble exactement à la vie.",
+    "salle": "Niveau 4, galerie 5",
+    "image": "images/magritte.png",
+    "description_academique": "René Magritte (1898–1967) est le plus célèbre peintre surréaliste belge. Le Modèle rouge (1935) représente une paire de bottines en cuir brun dont les orteils se transforment progressivement en pieds humains, avec une transition anatomiquement précise — veines, ongles, peau rosée. Le fond est fait d'une palissade en bois noueuse et d'un sol caillouteux aux tons charbonneux. Le surréalisme, mouvement fondé par André Breton en 1924, voulait que l'inconscient — non la conscience rationnelle — soit reconnu comme « le fonctionnement réel de la pensée ».",
+    "ce_quon_voit": [
+      "Deux chaussures semi-montantes posées côte à côte, vues légèrement d'en haut et de trois quarts. En cuir brun, avec des lacets défaits. Mais si on regarde les orteils, quelque chose d'étrange se passe : le cuir se transforme en peau humaine, avec des veines visibles, des ongles un peu longs, légèrement sales. La transition est parfaitement naturelle, progressive, convaincante. Ces chaussures sont à moitié des bottines et à moitié des pieds. Ou ces pieds sont à moitié des bottines. Derrière, une palissade en bois usé avec des nœuds qui ressemblent à des yeux. En bas, des cailloux et de la terre sombre.",
+      "Ce tableau s'appelle Le Modèle rouge — mais il n'y a pas de rouge. Les tonalités sont charbonneuses, froides, presque lugubres. Il n'y a pas de corps non plus — seulement des chaussures-pieds. Alors qui est le « modèle rouge » ? Quelqu'un d'absent. Un fantôme. Magritte a dit lui-même que ce tableau faisait allusion à la fabrication des chaussures en cuir — le cuir est de la peau tannée. Ces bottines sont donc, littéralement, de la peau humaine sous une autre forme. C'est de l'humour noir, surréaliste et un peu macabre.",
+      "Magritte peignait comme un peintre classique — avec une technique très précise, des proportions parfaites, une touche fine. Mais ce qu'il montrait n'avait rien de classique. Il juxtaposait des choses qui ne devraient pas aller ensemble, dans des paysages très réels. C'était l'ambition du surréalisme : que le rêve ressemble exactement à la réalité, et que la réalité soit contaminée par le rêve. L'« inquiétante étrangeté » ne vient pas de quelque chose de flou ou de vague — elle vient d'une image parfaitement nette qui ne devrait pas exister."
+    ],
+    "lecon_titre": "Écoute ton inconscient",
+    "lecon_texte": "Les surréalistes pensaient que notre vrai fonctionnement n'est pas dans ce qu'on dit ou ce qu'on fait consciemment — mais dans ce qui monte du fond, sans qu'on le contrôle : les rêves, les angoisses, les désirs inavoués, les associations bizarres. Écouter son inconscient, c'est prêter attention à ces signaux-là. Pas les censurer, pas les avoir honte — les entendre. Quand une image te fait peur ou te met mal à l'aise, ça dit quelque chose de vrai sur toi. Magritte le savait : il peignait des tableaux nets et précis qui allaient droit chercher quelque chose dans ton inconscient, sans te demander la permission.",
+    "lecon_mot_cle": "ce qui te trouble dit quelque chose de vrai sur toi",
+    "grandparent_methode": "Demandez à l'enfant sa première réaction devant ce tableau — est-ce que ça lui fait peur, que ça le dérange, que ça l'amuse ? Accueillez cette réaction sans la corriger. Puis expliquez que Magritte l'aurait trouvée très intéressante — parce que c'est exactement ce qu'il cherchait à provoquer. Demandez : d'où vient ce malaise ?",
+    "grandparent_questions": [
+      "« Qu'est-ce qui te trouble le plus dans ce tableau — les chaussures-pieds, les nœuds du bois qui ressemblent à des yeux, ou autre chose ? »",
+      "« Magritte dit que ce tableau parle de la fabrication des chaussures en cuir. Le cuir, c'est de la peau. Est-ce que ça change quelque chose pour toi ? »",
+      "« Si tu devais peindre un de tes rêves de manière très réaliste — pas floue, très nette — qu'est-ce que tu peindrais ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la transition exacte entre le cuir et la peau — à quel endroit précis ça bascule ? Magritte a placé cette jointure au niveau de l'os naviculaire, à mi-chemin du pied. Et il a peint le basculement comme une zone d'ombre et de lumière entremêlées — le passage entre deux états. C'est là que se concentre toute la force du tableau.",
+    "mot_mystere_mot": "Le surréalisme",
+    "mot_mystere_texte": "Le surréalisme est un mouvement artistique et littéraire fondé à Paris en 1924 par le poète André Breton. Le mot « surréalisme » signifie « au-dessus de la réalité » — au-delà de ce qu'on perçoit normalement. Les surréalistes, inspirés par les théories de Freud sur l'inconscient, voulaient libérer l'art de toute logique et de toute morale, pour laisser parler le fond de l'esprit. Leurs œuvres mêlent des images réelles représentées avec précision dans des combinaisons impossibles : une femme avec des mains à la place des pieds (Dalí), des montres qui fondent sur une branche d'arbre (Dalí encore), des chaussures qui se transforment en pieds (Magritte). L'incongruité totale, rendue avec la technique des maîtres — c'est ça, le surréalisme.",
+    "anecdote": "René Magritte vivait à Bruxelles une vie extrêmement ordinaire. Il habitait une maison bourgeoise, portait un chapeau melon, allait au bureau le matin, rentrait le soir. Ses voisins ne savaient pas vraiment qu'il était peintre. Dans son salon, il avait un chevalet et des toiles — et il peignait le soir, après le dîner, calmement, comme on lirait le journal. Ses tableaux les plus hallucinants et les plus inquiétants étaient peints dans cet environnement absolument banal. Il disait que le mystère, ce n'est pas quelque chose d'extraordinaire — c'est ce qui se cache dans le quotidien. L'inquiétant, c'est ce qu'on voit tous les jours sans vraiment le voir."
   }
 ];
