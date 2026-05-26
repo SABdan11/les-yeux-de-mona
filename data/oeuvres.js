@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 26,
+    "musee": "orsay",
+    "artiste": "Claude Monet",
+    "dates_artiste": "1840–1926",
+    "titre": "La Gare Saint-Lazare",
+    "technique": "Huile sur toile",
+    "date": "1877",
+    "mouvement": "Impressionnisme — XIXe siècle",
+    "frise_titre": "Impressionnisme — XIXe siècle",
+    "frise_desc": "Peindre le fugitif, la lumière changeante, l'impression plutôt que le détail. Ce qui compte n'est pas ce que l'on voit, mais comment on le perçoit — en un instant.",
+    "salle": "Musée d'Orsay, salle 34",
+    "image": "images/monet.png",
+    "description_academique": "Monet peignit sept versions de l'intérieur de la gare Saint-Lazare en 1877, après avoir obtenu une autorisation officielle pour installer son chevalet sur les quais. Il demandait aux cheminots de faire fumer les locomotives, de les faire avancer et reculer, pour multiplier les effets de vapeur et de lumière. Ce tableau est conservé au musée d'Orsay, dans les réserves duquel Mona et Henry eurent le privilège de le découvrir grâce à la conservatrice Hélène Stein.",
+    "ce_quon_voit": [
+      "Une grande verrière triangulaire domine le premier plan — un triangle isocèle dont l'angle supérieur est d'environ 120 degrés, soutenu par deux fins pieds et une grille centrale en acier. Cette marquise cadre la scène comme une fenêtre sur la modernité. Sous elle, les voies ferrées s'étendent en un réseau sinueux vers la ligne d'horizon, obstruée par un viaduc d'acier et des immeubles aux façades claires.",
+      "Trois trains. Celui de gauche, de dos, statique. Les deux autres avancent en fumant. La locomotive centrale est le barycentre de la composition — quelques coups de peinture noire, sommairement esquissée, mais parfaitement présente. À droite, une silhouette humaine debout sur la voie, entourée de formes incertaines — voyageurs, cheminots, badauds. Aucun visage identifiable. Les personnages se dissolvent dans la vapeur.",
+      "Et la vapeur elle-même : laiteuse, blanche pour la plupart. Mais celle du centre est bleue — du bleu de cobalt et du blanc de céruse. La lumière s'y réfracte subtilement. Sur les murs clairs des immeubles, en haut à gauche, le même jaune de chrome que Turner — mais dilué de blanc, comme une réminiscence lointaine. Tout tremble, tout fluctue. Les coups de pinceau sont rapides, rythmés, fragmentés : la touche elle-même porte l'accélération du monde."
+    ],
+    "lecon_titre": "Tout fuit, tout passe",
+    "lecon_texte": "« Panta rhei » — en grec ancien, cela signifie « tout fuit, tout passe ». Le philosophe Héraclite d'Éphèse l'écrivit il y a 2 500 ans. Monet le peint en 1877. La vapeur qui s'échappe, la lumière qui change à chaque seconde, les silhouettes qui se dissolvent — tout dit la même chose : rien n'est fixe, rien n'est stable, tout est toujours en train de devenir autre chose. L'impressionnisme, c'est cela : capter l'instant avant qu'il disparaisse. Peindre la vie exactement comme elle est — fugitive.",
+    "lecon_mot_cle": "capter l'instant avant qu'il disparaisse",
+    "grandparent_methode": "Invitez l'enfant à chercher les couleurs de la vapeur. Elle dira « grise ». Puis montrez-lui que Monet l'a peinte en bleu. Demandez pourquoi. Puis regardez ensemble les silhouettes humaines qui se dissolvent : on ne voit plus les visages. La modernité efface les individus.",
+    "grandparent_questions": [
+      "« De quelle couleur est la fumée dans la vraie vie ? Et dans le tableau de Monet ? Pourquoi, selon toi ? »",
+      "« Les personnes dans le tableau ont l'air de disparaître dans la vapeur. Qu'est-ce que ça dit sur la vie dans une grande ville ? »",
+      "« Monet a peint sept fois cette même gare. Pourquoi peindre sept fois la même chose ? »"
+    ],
+    "grandparent_conseil": "Expliquez l'anecdote du chevalet en plein air : Monet avait obtenu une permission spéciale pour peindre sur les quais. Il demandait aux cheminots de faire fumer les locomotives exprès, de les faire avancer et reculer — il était comme un metteur en scène avec des trains pour acteurs. Et parlez des Nymphéas : Monet finit sa vie à Giverny, presque aveugle, à peindre ses jardins. Même sans voir clairement, il continuait de peindre. Il faut chercher les Nymphéas dans une autre salle de l'Orsay.",
+    "mot_mystere_mot": "La série",
+    "mot_mystere_texte": "Une « série » en peinture, c'est quand un artiste peint plusieurs fois le même sujet — au même endroit, à des heures ou des saisons différentes — pour montrer comment la lumière le transforme. Monet est le maître de la série : sept gares Saint-Lazare en 1877, quarante façades de la cathédrale de Rouen entre 1892 et 1894 (dont il dit : « Tout change, quoique pierre »), puis des dizaines de Nymphéas jusqu'à sa mort. L'idée : ce n'est pas le sujet qui compte, c'est la lumière qui le baigne. Et la lumière ne se répète jamais.",
+    "anecdote": "L'impressionnisme a commencé par une insulte. En 1874, un critique d'art du nom de Louis Leroy assiste à l'exposition de Monet et de ses amis. Devant une toile intitulée Impression, soleil levant, il ironise sur ces « impressionnistes » qui font des flous et des esquisses inachevées. Il pense les ridiculiser. Monet eut une idée bien plus intelligente que de se défendre : il récupéra le mot comme une bannière. Il retourna l'insulte en fierté. Aujourd'hui, l'impressionnisme est le courant artistique le plus aimé au monde."
+  },
+  {
     "id": 25,
     "musee": "orsay",
     "artiste": "Édouard Manet",
