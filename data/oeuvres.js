@@ -96,5 +96,38 @@ const OEUVRES = [
     "mot_mystere_mot": "La sprezzatura",
     "mot_mystere_texte": "Ce mot italien du XVIe siècle désigne l'art de faire les choses difficiles avec une apparente facilité, sans jamais montrer l'effort. C'était le code des courtisans de la Renaissance : quoi qu'il arrive, garder son élégance. Raphaël en était le maître absolu — ses tableaux demandaient des mois de labeur et donnent le sentiment d'avoir été peints en un souffle.",
     "anecdote": "Raphaël mourut le jour même de ses trente-sept ans, en 1520, foudroyé par la fièvre. La légende dit que son amour passionné pour une femme l'avait épuisé. Il laissait une fortune de seize mille ducats — une somme colossale pour l'époque. Giorgio Vasari, qui écrivit la vie des grands peintres dans son livre Le Vite, raconta que Raphaël était si bon et si charmant que même les animaux venaient à lui — comme dans le mythe d'Orphée."
+  },
+  {
+    "id": 4,
+    "musee": "louvre",
+    "artiste": "Titien",
+    "dates_artiste": "~1488–1576",
+    "titre": "Le Concert champêtre",
+    "technique": "Huile sur toile",
+    "date": "vers 1509",
+    "mouvement": "Renaissance italienne — École vénitienne",
+    "frise_titre": "Renaissance Italienne — XVe – XVIe siècle",
+    "frise_desc": "Couleur triomphante, lumière dorée et sensualité vénitienne au service de la beauté du monde.",
+    "salle": "Aile Denon, salle 710",
+    "image": "images/titien.jpg",
+    "description_academique": "Peint vers 1509, Le Concert champêtre est l'une des œuvres les plus mystérieuses du Louvre. Longtemps attribué à Giorgione, le maître de Titien, il est aujourd'hui rendu à ce dernier, qui n'avait qu'une vingtaine d'années. La scène énigmatique — deux hommes habillés en compagnie de deux femmes nues dans un paysage pastoral — a fasciné des générations de peintres, d'Édouard Manet à Pablo Picasso.",
+    "ce_quon_voit": [
+      "Le tableau est grand — presque un mètre sur un mètre vingt — et pourtant il dégage une douceur intime, comme si l'on surprenait une scène privée. On est dans l'aile Denon, dans une salle consacrée à la peinture italienne du XVIe siècle.",
+      "Sur une herbe d'un vert intense, deux jeunes hommes sont assis côte à côte. Celui de gauche, aux cheveux noirs et au béret de velours, porte un manteau de soie rouge vif ; il tient un luth et semble avoir cessé de jouer un instant, les yeux dans le vague. Celui de droite, aux cheveux bouclés et aux pieds nus, est vêtu d'un gilet de cuir brun ; il lui dit quelque chose à voix basse, complice. Entre eux et autour d'eux, deux femmes nues. L'une, assise de dos, tient une flûte à bout de bras sans jouer — elle regarde au loin. L'autre, debout près d'un puits de pierre, verse de l'eau d'une carafe de cristal translucide. Elles semblent appartenir à un autre monde, à peine conscientes de la présence des hommes.",
+      "Derrière eux, un berger mène ses moutons vers la droite. Plus loin encore, un paysage qui s'évanouit dans la lumière dorée de fin d'après-midi : des arbres épars, des maisons basses, une rivière, une cascade lointaine. Le ciel vire au rose et à l'ocre. C'est l'heure suspendue entre le jour et la nuit, quand tout semble plus beau qu'il ne l'est vraiment."
+    ],
+    "lecon_titre": "Fais confiance à l'imagination",
+    "lecon_texte": "Les deux femmes nues n'existent pas vraiment — elles sont la phantasia des deux musiciens, les figures que la musique fait naître dans leur esprit. C'est le secret du tableau : l'imagination ne s'explique pas, elle se montre. Et quand tu laisses libre cours à la tienne — dans un dessin, dans un rêve, dans un jeu — tu crées quelque chose que personne d'autre ne peut créer à ta place. L'imagination appelle l'imagination. Plus tu l'exerces, plus elle grandit.",
+    "lecon_mot_cle": "l'imagination appelle l'imagination",
+    "grandparent_methode": "Laissez l'enfant regarder en silence. Ce tableau est plein d'une énigme qui n'a pas de réponse définitive — et c'est très bien ainsi. Invitez-le à observer, à comparer, à se poser des questions plutôt qu'à trouver une explication.",
+    "grandparent_questions": [
+      "« Tu remarques quelque chose d'étrange dans ce tableau ? Les hommes sont habillés, et les femmes… ? »",
+      "« Quel instrument tient le jeune homme à gauche ? Est-ce qu'il joue en ce moment ? »",
+      "« À ton avis, les deux femmes font partie du même monde que les musiciens, ou pas ? »"
+    ],
+    "grandparent_conseil": "Attirez l'attention de l'enfant sur la carafe de cristal que tient la femme debout : elle verse de l'eau, mais le puits est derrière elle. Où va cette eau ? Et regardez ensemble le berger au fond — presque personne ne le remarque au premier coup d'œil.",
+    "mot_mystere_mot": "La phantasia",
+    "mot_mystere_texte": "Ce mot grec, repris par les penseurs de la Renaissance, désigne la faculté de l'esprit à former des images intérieures — ce qu'on appelle aujourd'hui l'imagination. Pour les artistes vénitiens du XVIe siècle, la phantasia n'était pas une fantaisie capricieuse : c'était une puissance créatrice sérieuse, presque divine. Voir des choses que les autres ne voient pas, et leur donner une forme — c'est exactement ce que fait un peintre.",
+    "anecdote": "Pendant des siècles, ce tableau a été attribué à Giorgione — le maître de Titien, mort de la peste en 1510 à seulement trente-deux ans. C'est Giorgione qui avait inventé le thème de la femme nue dans la nature, et les deux peintres travaillaient si étroitement ensemble qu'il était parfois impossible de distinguer leurs mains. Le tableau n'est pas signé. Les historiens d'art débattent encore aujourd'hui. Ce qui est certain, c'est que Titien avait une vingtaine d'années quand il fut peint — et qu'il allait devenir le plus grand coloriste de la Renaissance, vivant jusqu'à quatre-vingt-huit ans, honoré par les rois et les empereurs d'Europe entière."
   }
 ];
