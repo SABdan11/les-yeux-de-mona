@@ -228,5 +228,38 @@ const OEUVRES = [
     "mot_mystere_mot": "Le clair-obscur",
     "mot_mystere_texte": "Le clair-obscur, c'est l'art de jouer avec la lumière et l'ombre dans un même tableau. Au lieu de tout éclairer uniformément, le peintre choisit ce qu'il veut montrer — et laisse le reste dans le noir. Rembrandt l'a appris d'un peintre italien révolutionnaire : le Caravage. En italien, ça s'appelle il chiaroscuro — et c'est encore plus beau à entendre. Avec Rembrandt, le noir n'est pas une absence : c'est une présence. Il enveloppe, il protège, il fait ressortir ce qui compte vraiment.",
     "anecdote": "Rembrandt a peint une quarantaine d'autoportraits tout au long de sa vie — plus que tout autre grand peintre de l'histoire. Mais il n'a jamais signé ni vendu aucun d'eux de son vivant : ils restaient dans son atelier, comme un journal intime en images. À Amsterdam, on peut encore visiter sa maison, le Rembrandthuis, exactement comme elle était de son temps. Les salles sont remplies des centaines d'objets qu'il collectionnait : armes anciennes, coquillages exotiques, costumes orientaux, têtes en plâtre. Tout ce qui pouvait nourrir son imagination."
+  },
+  {
+    "id": 8,
+    "musee": "louvre",
+    "artiste": "Johannes Vermeer",
+    "dates_artiste": "1632–1675",
+    "titre": "L'Astronome",
+    "technique": "Huile sur toile",
+    "date": "vers 1668",
+    "mouvement": "Âge d'or hollandais — XVIIe siècle",
+    "frise_titre": "Âge d'or Hollandais — XVIIe siècle",
+    "frise_desc": "Vie quotidienne, vérité psychologique, maîtrise du clair-obscur et célébration de la spontanéité humaine.",
+    "salle": "Aile Richelieu, salle 837",
+    "image": "images/vermer.jpg",
+    "description_academique": "Peint vers 1668, L'Astronome est l'un des rares tableaux de Vermeer à représenter un homme. La scène se déroule dans un cabinet de savant — vraisemblablement une petite pièce de la maison de Vermeer à Delft. Le tableau fait pendant à une autre toile de la même année, Le Géographe, qui représente probablement le même modèle avec un globe terrestre : ensemble, ils forment un diptyque dédié à la conquête du monde par la connaissance.",
+    "ce_quon_voit": [
+      "C'est un tout petit tableau — moins de 50 centimètres de côté. Il occupe discrètement sa place dans la grande galerie hollandaise. On pourrait presque passer devant sans le remarquer. Et pourtant, il arrête.",
+      "Un jeune homme aux cheveux longs châtains est assis de profil, tourné vers la gauche. Il se lève très légèrement de sa chaise en bois, comme happé par quelque chose. Sa main droite, les doigts écartés en compas, se pose délicatement sur un globe posé sur le bureau. Ce globe est couvert d'inscriptions mystérieuses — des constellations, des signes du zodiaque. Ce n'est pas la Terre : c'est le ciel. Son manteau ample, d'un vert qui a viré au bleu avec les siècles, retombe en plis doux. Sur le bureau, une lourde étoffe outremer à motifs fleuris enveloppe partiellement un astrolabe. Un livre épais est ouvert face à lui. À gauche, une fenêtre à carreaux laisse entrer une lumière douce et chaude. Au fond, une armoire couverte d'une carte géographique. Et sur le mur à droite, à moitié rogné par le bord du tableau, un autre tableau dans le tableau — de petites silhouettes grises, presque illisibles.",
+      "Tout est petit, dense, précis. Et pourtant on a l'impression d'être face à quelque chose d'immense. Comme si toute la curiosité humaine — toute la soif de comprendre l'univers — tenait dans cette seule pièce minuscule."
+    ],
+    "lecon_titre": "L'infiniment petit est infiniment grand",
+    "lecon_texte": "Ce tableau mesure à peine 50 centimètres. Pourtant, il contient le ciel entier — les étoiles, les constellations, le cosmos tout entier. Vermeer a compris quelque chose d'essentiel : la grandeur ne dépend pas de la taille. La plus grande aventure de l'histoire humaine — comprendre l'univers — peut tenir dans une petite pièce, sur un bureau encombré, dans la lumière d'une fenêtre. Les plus grandes questions se posent souvent dans les endroits les plus ordinaires. Et les plus petits détails peuvent révéler des mondes entiers.",
+    "lecon_mot_cle": "la grandeur ne dépend pas de la taille",
+    "grandparent_methode": "Laissez l'enfant s'approcher très près pour regarder les objets un par un : le globe, l'astrolabe, les livres, la carte. Tout est là, dans cette toute petite surface. Invitez-le ensuite à chercher le tableau caché dans le tableau.",
+    "grandparent_questions": [
+      "« Tu vois le globe sur le bureau — est-ce que tu reconnais des pays dessus ? Pourquoi ? »",
+      "« Regarde sa main. Qu'est-ce qu'il est en train de faire, à ton avis ? »",
+      "« Il y a un tableau dans le tableau — tu le trouves ? Qu'est-ce que tu vois dessus ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble le tableau caché dans le tableau, sur la droite — c'est Moïse sauvé des eaux, mais Vermeer le rend à peine lisible. Et faites remarquer à l'enfant la fenêtre à carreaux : c'est la même fenêtre que dans presque tous les tableaux de Vermeer. Il a peint la même petite pièce de sa maison de Delft des dizaines de fois.",
+    "mot_mystere_mot": "La camera obscura",
+    "mot_mystere_texte": "La camera obscura — « chambre noire » en latin — était une boîte fermée percée d'un tout petit trou. La lumière passait par ce trou et projetait sur la paroi d'en face l'image de ce qui se trouvait dehors, à l'envers et en miniature. Les peintres posaient un calque sur cette image projetée et traçaient les contours avec une précision impossible à l'œil nu. Vermeer s'en serait servi pour capturer la lumière et les lignes de perspective de sa chambre de Delft. C'est en quelque sorte l'ancêtre de notre appareil photo.",
+    "anecdote": "Vermeer est mort à 43 ans, en 1675, laissant onze enfants et d'énormes dettes. Sa femme dut vendre ses tableaux pour rembourser ses créanciers — dont le boulanger, qui en reçut deux en paiement de sa facture de pain ! Pendant près de deux siècles, Vermeer fut presque oublié. Ce n'est qu'en 1866 qu'un critique d'art français, Théophile Thoré — réfugié politique en exil —, redécouvrit son œuvre et lui rendit sa juste place dans l'histoire de l'art. Aujourd'hui, L'Astronome est l'un des tableaux les plus précieux du Louvre."
   }
 ];
