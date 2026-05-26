@@ -362,6 +362,39 @@ const OEUVRES = [
     "anecdote": "À partir de 1746, Canaletto quitta Venise pour l'Angleterre et y passa dix ans. Ses riches clients anglais — qui achetaient ses vedute de Venise depuis chez eux — voulurent le voir en personne. Il peignit Londres, la Tamise, Windsor Castle, les fêtes sur l'eau. Mais les Anglais étaient méfiants : certains ne croyaient pas que ce tableau si précis avait été peint par un seul homme. Ils soupçonnaient que « Canaletto » était en réalité plusieurs peintres cachés sous un même nom. Il dut organiser des séances publiques de peinture en plein air pour prouver qu'il existait vraiment."
   },
   {
+    "id": 13,
+    "musee": "louvre",
+    "artiste": "Thomas Gainsborough",
+    "dates_artiste": "1727–1788",
+    "titre": "Conversation dans un parc",
+    "technique": "Huile sur toile",
+    "date": "vers 1746–1747",
+    "mouvement": "École anglaise — XVIIIe siècle",
+    "frise_titre": "Rococo et Lumières — XVIIIe siècle",
+    "frise_desc": "Légèreté, plaisir et mélancolie secrète : l'art comme art de vivre, sur fond de libertinage et de fêtes en apesanteur.",
+    "salle": "Aile Denon, salle 733",
+    "image": "images/gainsborough.png",
+    "description_academique": "Peint vers 1746–1747, ce tableau est l'une des premières œuvres majeures de Thomas Gainsborough — il n'avait pas vingt ans. Il s'agirait d'un double autoportrait : le jeune homme en rouge serait Gainsborough lui-même, et la jeune femme en rose sa toute nouvelle épouse, Margaret Burr. Ce type de scène — un couple en plein air, dans un jardin à l'anglaise — est appelé « conversation piece », un genre typique de l'art britannique du XVIIIe siècle.",
+    "ce_quon_voit": [
+      "Un tableau intimiste — moins de 75 cm de hauteur — qui dégage pourtant un puissant sentiment d'espace. On est dans un jardin anglais : végétation libre, arbres qui débordent du cadre, une étendue d'eau à droite, et au fond une petite rotonde à colonnes corinthiennes. Le ciel est gris-argenté, la lumière douce.",
+      "Au centre, assis côte à côte sur un banc, un jeune couple. Lui : manteau rouge flamboyant déboutonné sur un gilet jaune, tricorne sombre, un livre tenu du bout des doigts contre ses genoux croisés, une épée discrète à la ceinture. Il s'est penché vers elle, la main ouverte tendue dans sa direction — il lui parle, lui dit quelque chose d'important. Elle : une immense robe à paniers rose qui bouffonne autour d'elle comme un cœur gonflé, cheveux bouclés sous un chapeau souple, un éventail ouvert dans sa main. Elle ne le regarde pas. Elle nous regarde, nous — avec un léger sourire complice, les joues légèrement roses.",
+      "On ne sait pas ce qu'il lui dit. On ne sait pas ce qu'elle pense. Mais les robes, la main tendue, l'éventail, le sourire vers nous — tout parle. Ce tableau est fait de sentiments qui s'expriment sans un mot."
+    ],
+    "lecon_titre": "Laisse les sentiments s'exprimer",
+    "lecon_texte": "Le garçon en rouge tend la main vers son amoureuse. Il lui parle — peut-être avec ses propres mots, peut-être avec ceux d'un poème. Et elle répond à sa façon : en rougissant légèrement, en s'éventant, en nous regardant avec ce sourire complice qui dit tout. Gainsborough avait compris très jeune que converser n'est pas une futilité — c'est un principe vital. Dire ce qu'on ressent, par tous les moyens, même maladroitement : c'est ce qui fait que les êtres humains se trouvent, se reconnaissent, s'aiment.",
+    "lecon_mot_cle": "converser est un principe vital",
+    "grandparent_methode": "Laissez l'enfant regarder ce couple et lui demander ce qu'il se passe entre eux — sans rien expliquer. Ce tableau parle d'abord aux émotions. Demandez-lui ce qu'il ressent, pas ce qu'il voit.",
+    "grandparent_questions": [
+      "« Il lui dit quoi, à ton avis, le jeune homme ? »",
+      "« Elle nous regarde, nous — pourquoi elle ne regarde pas lui ? »",
+      "« Gainsborough avait exactement ton âge quand il a peint ce tableau. Qu'est-ce que ça change, de savoir ça ? »"
+    ],
+    "grandparent_conseil": "Approchez-vous de la robe rose — de très près. Gainsborough peignait avec ses doigts et des éponges, pas seulement avec un pinceau : on voit les textures, les empâtements, la matière vivante. Et regardez l'éventail : c'est avec ça qu'on s'aérait pour éviter de rougir... ou qu'on montrait qu'on rougissait.",
+    "mot_mystere_mot": "L'admoniteur",
+    "mot_mystere_texte": "Dans un tableau, l'admoniteur (ou l'admonitrice) est un personnage qui nous regarde, nous — les spectateurs — plutôt que les autres personnages de la scène. C'est une invitation : « Entre dans le tableau. Mêle-toi à nous. » La jeune femme en rose est une admonitrice : son regard nous attrape et nous fait entrer dans leur conversation. C'est une technique très ancienne, qu'on retrouve dès la Renaissance — mais rarement avec autant de douceur et de naturel que chez Gainsborough.",
+    "anecdote": "Gainsborough était l'un des peintres les plus célèbres d'Angleterre — portraitiste de la famille royale, rival du grand Joshua Reynolds. Mais son vrai amour, ce n'était pas les portraits. C'était les paysages. Il le répétait à qui voulait l'entendre : « Je suis fatigué des portraits et je rêve de prendre mon violoncelle et de partir vers quelque village tranquille pour y peindre des paysages. » Il peignait des portraits pour gagner sa vie, et des paysages pour son âme. Il était aussi musicien — il jouait du violon, du hautbois et du violoncelle, et disait que la peinture et la musique étaient pour lui la même chose."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
