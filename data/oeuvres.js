@@ -63,5 +63,38 @@ const OEUVRES = [
     "mot_mystere_mot": "Le sfumato",
     "mot_mystere_texte": "Léonard de Vinci ajoutait, pendant des années, de minuscules couches de peinture transparente — presque invisibles — les unes par-dessus les autres. Sfumato vient de l'italien sfumare, qui signifie « estomper comme de la fumée ». Résultat : les contours du visage et du paysage sont flous, fondus, comme enveloppés d'un léger voile. C'est ce qui donne à La Joconde cette impression de vibration mystérieuse, comme si tout était en mouvement imperceptible.",
     "anecdote": "En 1911, un vitrier du Louvre nommé Vincenzo Peruggia se laissa enfermer dans le musée un soir de fermeture. Le lendemain matin, il décrocha simplement La Joconde du mur, la glissa sous ses vêtements… et rentra chez lui ! Le tableau disparut pendant deux ans avant d'être retrouvé en Italie. C'est ce scandale retentissant qui rendit La Joconde célèbre dans le monde entier. Avant le vol, elle n'était qu'un tableau parmi d'autres."
+  },
+  {
+    "id": 3,
+    "musee": "louvre",
+    "artiste": "Raphaël",
+    "dates_artiste": "1483–1520",
+    "titre": "La Vierge à l'Enfant avec le petit saint Jean-Baptiste — La Belle Jardinière",
+    "technique": "Huile sur bois",
+    "date": "1507",
+    "mouvement": "Renaissance italienne — Haute Renaissance",
+    "frise_titre": "Renaissance Italienne — XVe – XVIe siècle",
+    "frise_desc": "Humanisme triomphant, harmonie parfaite, équilibre infaillible et idéal de beauté divine.",
+    "salle": "Grande Galerie, aile Denon, salle 709",
+    "image": "images/raphael.jpg",
+    "description_academique": "Peinte en 1507 alors que Raphaël n'a que vingt-quatre ans, La Belle Jardinière incarne déjà la perfection de la Haute Renaissance. La composition pyramidale réunit la Vierge Marie, l'Enfant Jésus et le petit saint Jean-Baptiste dans un paysage bucolique d'une harmonie absolue. Elle entra dans les collections royales françaises au XVIe siècle et n'a jamais quitté Paris depuis.",
+    "ce_quon_voit": [
+      "Ce tableau de 1m22 de hauteur se trouve dans la Grande Galerie du Louvre — la plus vaste salle d'exposition du monde. Il ne cherche pas à impressionner. Il brille au contraire par une douceur discrète, un équilibre si parfait qu'on peut passer devant sans s'arrêter. C'est précisément là sa force cachée.",
+      "Une jeune femme est assise sur une grosse pierre dans un cadre champêtre. Sa robe rouge vif bordée de noir laisse voir une seule manche, d'un jaune satiné qui répond à sa chevelure rassemblée en chignon. Un ample manteau bleu couvre ses cuisses. Elle tourne le visage vers sa droite où se tient un petit garçon blond, nu, d'environ trois ans : il glisse sa main gauche dans la sienne tout en cherchant à saisir un livre qu'elle tient contre sa jambe — on en aperçoit seulement la tranche dorée. Accroupi en dessous, un second enfant en tunique de fortune porte sur l'épaule une croix composée de deux maigres tiges de bois, aussi haute que lui. Il observe le premier enfant avec une grande intensité. Un halo lumineux surmonte chacun des trois personnages.",
+      "À l'arrière-plan, des arbres très fins, un village avec son clocher, un lac bordé de petites montagnes vertes et grises. Le ciel est parcouru de nuages dans un dégradé de bleus — sombre en haut, presque blanc à l'horizon — qui passe exactement au niveau de la poitrine de la jeune femme. Une perspective impeccablement construite."
+    ],
+    "lecon_titre": "La Sprezzatura",
+    "lecon_texte": "La sprezzatura — mot italien intraduisible — c'est l'art de faire les choses difficiles avec une apparente facilité, sans jamais montrer l'effort. Pas l'indifférence : on ressent tout, mais on garde une élégance tranquille. Raphaël l'avait avec sa peinture — un labeur immense qui donne l'impression d'une facilité insolente. La Vierge l'a avec son destin — elle sait ce qui attend son fils, et pourtant elle sourit. C'est ce que certains appellent simplement la grâce.",
+    "lecon_mot_cle": "la grâce",
+    "grandparent_methode": "Laissez l'enfant regarder en silence. Ce tableau ne livre pas ses secrets immédiatement — c'est normal, même les adultes passent devant sans s'arrêter. Invitez-le à chercher les détails plutôt qu'à attendre une émotion forte.",
+    "grandparent_questions": [
+      "« Tu reconnais les trois personnages ? Qui sont-ils ? »",
+      "« Le petit garçon cherche à prendre quelque chose — tu vois quoi ? »",
+      "« La maman sait que son enfant va mourir un jour… et pourtant elle sourit. Comment tu expliques ça ? »"
+    ],
+    "grandparent_conseil": "Montrez à l'enfant le dégradé du ciel : sombre en haut, blanc à l'horizon. Et demandez-lui où passe exactement la ligne d'horizon — il sera surpris de voir qu'elle coupe la poitrine de la Vierge, exactement à mi-hauteur. Rien n'est laissé au hasard.",
+    "mot_mystere_mot": "La sprezzatura",
+    "mot_mystere_texte": "Ce mot italien du XVIe siècle désigne l'art de faire les choses difficiles avec une apparente facilité, sans jamais montrer l'effort. C'était le code des courtisans de la Renaissance : quoi qu'il arrive, garder son élégance. Raphaël en était le maître absolu — ses tableaux demandaient des mois de labeur et donnent le sentiment d'avoir été peints en un souffle.",
+    "anecdote": "Raphaël mourut le jour même de ses trente-sept ans, en 1520, foudroyé par la fièvre. La légende dit que son amour passionné pour une femme l'avait épuisé. Il laissait une fortune de seize mille ducats — une somme colossale pour l'époque. Giorgio Vasari, qui écrivit la vie des grands peintres dans son livre Le Vite, raconta que Raphaël était si bon et si charmant que même les animaux venaient à lui — comme dans le mythe d'Orphée."
   }
 ];
