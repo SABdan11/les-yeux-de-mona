@@ -273,14 +273,14 @@
         salle: 'Peintures du Nord · Salles 936–938',
         direction: '→ Continuer vers les salles du Nord · 4 min',
         oeuvres: [
-          { id: null, artiste: 'C. D. Friedrich', titre: "L'Arbre aux corbeaux", salle: 'Salle 936' },
+          { id: 18, artiste: 'C. D. Friedrich', titre: "L'Arbre aux corbeaux", salle: 'Salle 936' },
           { id: 19, artiste: 'J. M. W. Turner', titre: 'Paysage avec une rivière et une baie dans le lointain', salle: 'Salle 936' },
         ]
       },
     ];
 
     // Comptage des vues pour le Louvre
-    const idsLouvre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19];
+    const idsLouvre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
     const nbVus = idsLouvre.filter(id => vues[id]).length;
     document.getElementById('ppFill').style.width = (nbVus / 19 * 100) + '%';
     document.getElementById('ppLabel').textContent = nbVus + ' / 19 œuvres vues';

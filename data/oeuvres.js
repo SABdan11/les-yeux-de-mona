@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 18,
+    "musee": "louvre",
+    "artiste": "Caspar David Friedrich",
+    "dates_artiste": "1774–1840",
+    "titre": "L'Arbre aux corbeaux",
+    "technique": "Huile sur toile",
+    "date": "1822",
+    "mouvement": "Romantisme — XIXe siècle",
+    "frise_titre": "Romantisme — XIXe siècle",
+    "frise_desc": "Sturm und Drang — Tempête et passion : les romantiques célèbrent la puissance de la nature sauvage, la solitude de l'individu face à l'infini, et le droit à vivre en dehors de toute norme.",
+    "salle": "Aile Richelieu, salle 936",
+    "image": "images/friedrich.png",
+    "description_academique": "Peint en 1822, ce tableau est l'une des œuvres majeures du romantisme allemand. Friedrich y représente un tumulus — un tombeau — sur l'île de Rügen, au nord-est de l'Allemagne. Cette information se trouve dans une inscription manuscrite de l'auteur au dos de la toile : il s'agit de la sépulture d'un guerrier hun du Moyen Âge, désormais fondu dans la nature. Friedrich, né à Greifswald en 1774, passa une grande partie de sa vie à Dresde. Il mourut en 1840 dans l'indifférence, et fut redécouvert de façon posthume grâce à l'obstination de quelques historiens de l'art.",
+    "ce_quon_voit": [
+      "On est au sommet d'une falaise, au bord du vide. La terre bombée au premier plan forme un promontoire — une proue de bateau pointée vers l'infini. On ne voit pas la mer, et pourtant on la sent : dans les gammes de bleus et de violets qui s'étendent au loin, dans la ligne d'horizon haussée aux quatre dixièmes du tableau, dans la pression du vent sur l'arbre.",
+      "Cet arbre, justement — c'est lui qui domine tout. Un vieux chêne au tronc tordu, courbé par des décennies de tempêtes, cassé en certains endroits, s'épanouissant en ramifications moussues où flottent quelques grappes de feuilles rousses. À gauche, une souche et ses rejets. La forme de l'arbre zigzague comme un éclair. Et si l'on regarde attentivement, à mi-hauteur de la grande branche horizontale, une ramification plus petite reproduit presque exactement le profil de l'arbre entier — comme s'il se dupliquait en miniature au cœur de lui-même.",
+      "Dans le ciel orangé du crépuscule, au-dessus des deux falaises qui s'estompent dans le lointain, des oiseaux noirs. Certains se posent sur les branches, d'autres tournent autour de l'arbre. D'autres encore planent en escadrilles dans le ciel dégagé. Soixante-six corbeaux — Mona les a comptés. Au bas à gauche, cinq points blancs : peut-être des voiliers, très loin, sur la Baltique."
+    ],
+    "lecon_titre": "Ferme l'œil de ton corps",
+    "lecon_texte": "Friedrich disait à ses élèves : « Ferme l'œil de ton corps afin de voir ton tableau d'abord par l'œil de l'esprit. » C'est un paradoxe étrange pour un peintre : fermer les yeux pour voir. Mais il voulait dire quelque chose d'important : les grandes œuvres ne s'adressent pas seulement à la rétine. Elles cherchent à atteindre quelque chose de plus profond — un sentiment qu'on ne peut pas tout à fait nommer, une émotion qui ressemble à la fois à de la tristesse et du ravissement. Friedrich exigeait que l'artiste parte de cette vision intérieure pour créer, et que le spectateur ferme les yeux après avoir regardé — pour vérifier si le tableau a laissé une trace dans son âme.",
+    "lecon_mot_cle": "voir avec l'œil de l'esprit, pas seulement avec les yeux",
+    "grandparent_methode": "Après avoir regardé le tableau ensemble, demandez à l'enfant de fermer les yeux pendant quelques secondes. Puis demandez ce qu'il voit, ou ce qu'il ressent. Pas de bonne réponse — c'est l'expérience que Friedrich réclamait.",
+    "grandparent_questions": [
+      "« Tu fermes les yeux. Qu'est-ce qui reste dans ta tête — une image, une couleur, un sentiment ? »",
+      "« L'arbre est tordu par les tempêtes. Qu'est-ce que ça te dit sur la vie de celui qui l'a peint ? »",
+      "« Friedrich dit qu'un tableau n'est vraiment grand que s'il touche l'œil de l'esprit. Selon toi, ce tableau y parvient ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la ramification en miniature au cœur de l'arbre — à mi-hauteur de la grande branche horizontale, une branche plus petite reproduit presque le dessin de l'arbre entier. Friedrich a glissé là un secret visuel. Et retournez mentalement la toile : au dos, Friedrich a écrit que ce monticule de terre est en réalité un tombeau — la sépulture d'un guerrier hun, depuis longtemps fondu dans le paysage. Personne ne connaît son nom.",
+    "mot_mystere_mot": "Le Sturm und Drang",
+    "mot_mystere_texte": "Sturm und Drang — « Tempête et passion » en allemand — est le nom d'un mouvement artistique et littéraire né en Allemagne à la fin du XVIIIe siècle, précurseur du romantisme. Contre la froideur de la raison pure, il réclame la place des émotions les plus violentes, les plus intenses, les plus incontrôlables. Le vent qui tord un arbre, la mer en furie, un homme face à l'immensité du cosmos : voilà les sujets qui intéressent ces artistes. Friedrich en est la figure picturale la plus accomplie. À chaque tableau, il nous place face à quelque chose de plus grand que nous — et nous demande de ne pas en avoir peur.",
+    "anecdote": "Ce tableau avait un secret. Au dos de la toile, Friedrich a écrit de sa propre main que le monticule n'est pas une simple colline — c'est le tombeau d'un guerrier hun, un peuple du Moyen Âge, sur l'île de Rügen. Le héros enterré là n'a plus de nom. Son monument est désormais absorbé par la nature : recouvert de fougères, traversé par les racines du chêne, survolé par les corbeaux. Friedrich, lui aussi, fut longtemps enterré sous l'oubli. Cinquante ans après sa mort, personne au musée de Dresde ne se souvenait de lui, ni même de son nom. Puis on le redécouvrit, et on finit par l'aduler. Le guerrier hun et le peintre avaient en commun d'attendre, sous l'humus du temps, que quelqu'un veuille bien voir."
+  },
+  {
     "id": 19,
     "musee": "louvre",
     "artiste": "Joseph Mallord William Turner",
