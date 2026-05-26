@@ -183,12 +183,12 @@
   <header class="parcours-header">
     <a href="musees.html" class="back-btn">‹ Musées</a>
     <h1>🗺️ Jeu de piste — Louvre</h1>
-    <p>18 œuvres · Durée estimée : 2h30</p>
+    <p>19 œuvres · Durée estimée : 2h45</p>
   </header>
 
   <div class="parcours-progress">
     <div class="pp-bar"><div class="pp-fill" id="ppFill" style="width:0%"></div></div>
-    <div class="pp-label" id="ppLabel">0 / 18 œuvres vues</div>
+    <div class="pp-label" id="ppLabel">0 / 19 œuvres vues</div>
   </div>
 
   <div class="parcours-body" id="parcoursBody"></div>
@@ -239,7 +239,6 @@
           { id: 12, artiste: 'Canaletto', titre: 'Le Môle, vu du bassin de San Marco', salle: 'Salle 724' },
           { id: 13, artiste: 'Thomas Gainsborough', titre: 'Conversation dans un parc', salle: 'Salle 733' },
           { id: 14, artiste: 'Marguerite Gérard', titre: "L'Élève intéressante", salle: 'Salle 734' },
-          { id: null, artiste: 'C. D. Friedrich', titre: "L'Arbre aux corbeaux", salle: 'Salle 936' },
         ]
       },
       {
@@ -269,13 +268,22 @@
           { id: 11, artiste: 'Jean-Antoine Watteau', titre: 'Pierrot, dit Gilles', salle: 'Salle 921' },
         ]
       },
+      {
+        etape: 'Aile Richelieu — 3e étage',
+        salle: 'Peintures du Nord · Salles 936–938',
+        direction: '→ Continuer vers les salles du Nord · 4 min',
+        oeuvres: [
+          { id: null, artiste: 'C. D. Friedrich', titre: "L'Arbre aux corbeaux", salle: 'Salle 936' },
+          { id: 19, artiste: 'J. M. W. Turner', titre: 'Paysage avec une rivière et une baie dans le lointain', salle: 'Salle 936' },
+        ]
+      },
     ];
 
     // Comptage des vues pour le Louvre
-    const idsLouvre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+    const idsLouvre = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19];
     const nbVus = idsLouvre.filter(id => vues[id]).length;
-    document.getElementById('ppFill').style.width = (nbVus / 18 * 100) + '%';
-    document.getElementById('ppLabel').textContent = nbVus + ' / 18 œuvres vues';
+    document.getElementById('ppFill').style.width = (nbVus / 19 * 100) + '%';
+    document.getElementById('ppLabel').textContent = nbVus + ' / 19 œuvres vues';
 
     // Rendu
     const body = document.getElementById('parcoursBody');

@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 19,
+    "musee": "louvre",
+    "artiste": "Joseph Mallord William Turner",
+    "dates_artiste": "1775–1851",
+    "titre": "Paysage avec une rivière et une baie dans le lointain",
+    "technique": "Huile sur toile",
+    "date": "vers 1835–1845",
+    "mouvement": "Romantisme — XIXe siècle",
+    "frise_titre": "Romantisme — XIXe siècle",
+    "frise_desc": "Les romantiques cherchent le sublime : cette émotion qui dépasse la beauté et fait sentir la toute-puissance du cosmos face à la petitesse de l'être humain.",
+    "salle": "Aile Richelieu, salle 936",
+    "image": "images/turner.png",
+    "description_academique": "Ce tableau sans date ni signature a été retrouvé dans l'atelier de Turner après sa mort en 1851. Il représente le confluent de la rivière Wye et du fleuve Severn, dans le Pays de Galles — un site que Turner parcourut à pied à plusieurs reprises. Les ruines médiévales du château de Chepstow, pourtant visibles sur le flanc droit de la vallée, ont été entièrement submergées par les tempêtes de pigments dorés. L'œuvre illustre la technique tardive de Turner : fond clair, huile très diluée appliquée par touches et tamponnée, héritage transposé de sa pratique de l'aquarelle.",
+    "ce_quon_voit": [
+      "Une lumière extraordinaire envahit tout le tableau. Elle ne vient pas d'un seul endroit — elle semble émerger du tableau lui-même, comme si la toile cherchait à nous irradier. Des jaunes, des orangés, des blancs presque éblouissants près de la rivière, au centre de la composition. On cherche les contours, les bords nets, les formes définies — et on ne les trouve pas. Tout flotte, tout vibre, tout se fond dans tout.",
+      "Au premier plan, une parcelle de terre vague aux tonalités jaunes et orangées. À gauche, un petit monticule avec, suggéré par quelques virgules rouges, un personnage allongé — si petit qu'on pourrait le confondre avec une tache. À droite, deux troncs d'arbres tronqués par le cadre. Au centre, un sentier s'enfonce dans la profondeur puis disparaît derrière un rocher dans l'ombre. Plus loin, une rivière décrit deux méandres dans une vallée aux crêtes basses, ses reflets blancs se fondant dans le jaune pâle du ciel.",
+      "Dans la moitié haute du tableau, une gigantesque voile translucide de nuages occupe l'espace sans le boucher. Terre, eau et air se confondent sur la ligne d'horizon — un mirage peint. Turner a préparé sa toile sur un fond clair plutôt que sombre, transgressant les habitudes de son temps, pour laisser la lumière jaillir de l'intérieur. Ce tableau n'a ni date ni signature. On l'a retrouvé dans son atelier après sa mort. Peut-être était-il inachevé. Peut-être était-il exactement ce qu'il voulait."
+    ],
+    "lecon_titre": "Tout n'est que poussière",
+    "lecon_texte": "Regarde le petit personnage rouge au premier plan. Il est minuscule — un tas de poussière au milieu d'une tempête de lumière et de couleurs. C'est ce que Turner voulait nous faire ressentir : face aux puissances de la nature, face au cosmos, nous sommes infimes. Ce n'est pas une leçon de désespoir — c'est une leçon d'humilité et d'émerveillement. Turner s'enchaînait au mât des bateaux en pleine tempête pour sentir la houle. Il marchait des dizaines de kilomètres par jour pour trouver le sublime — cet instant où la beauté dépasse tout ce qu'on croyait possible. Il a voulu que ses tableaux fassent sentir cela. Et ils y parviennent encore.",
+    "lecon_mot_cle": "le sublime — quand la beauté dépasse toutes les limites",
+    "grandparent_methode": "Laissez l'enfant s'approcher très près, puis reculer. La distance change radicalement l'expérience. De près, c'est de la peinture — des touches épaisses, de la matière. De loin, c'est de la lumière. Demandez-lui à quelle distance il préfère regarder, et pourquoi.",
+    "grandparent_questions": [
+      "« Tu vois le petit personnage au premier plan ? Combien de temps ça te prend pour le trouver ? »",
+      "« Turner n'a pas signé ce tableau, ni mis de date. Il l'a gardé pour lui jusqu'à sa mort. Pourquoi, à ton avis ? »",
+      "« Si tu devais entrer dans ce tableau, à quel endroit tu mettrais les pieds en premier ? »"
+    ],
+    "grandparent_conseil": "Parlez ensemble de l'aquarelle : Turner peignait aussi à l'aquarelle (pigments dilués dans l'eau) et il a transposé cette légèreté, cette fluidité dans ses huiles. C'est pour ça que ce tableau ressemble à une énorme aquarelle. Et cherchez ensemble le sentier qui s'enfonce vers la rivière — il disparaît derrière une ombre. C'est une invitation à continuer, à avancer, même quand on ne voit pas où ça mène.",
+    "mot_mystere_mot": "Le sublime",
+    "mot_mystere_texte": "Le sublime, c'est une émotion très particulière : ce qu'on ressent devant quelque chose de si grand, si puissant, si démesuré que ça nous dépasse entièrement — une tempête en mer, une montagne, un gouffre, une lumière éblouissante. Ce n'est pas juste « beau ». C'est beau ET effrayant, beau ET écrasant. Au XVIIIe siècle, des philosophes comme Edmund Burke ont réfléchi à cette idée : le sublime, ce serait la beauté qui fait peur. Les peintres romantiques, Turner en tête, en ont fait leur grande obsession. Ils voulaient que leurs tableaux produisent cette sensation — que devant eux, on se sente à la fois minuscule et vivant comme jamais.",
+    "anecdote": "Turner adorait le chocolat. Il en mangeait des quantités déraisonnables — au point de s'en rendre régulièrement malade. Ce peintre qui s'enchaînait aux mâts des bateaux en pleine tempête pour peindre les naufrages, qui marchait quarante kilomètres par jour dans les Alpes et Venise, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite du Louvre — la dernière — Henry allait confier cette gourmandise à Mona pour lui laisser une image moins sombre du peintre. Avant qu'il puisse finir sa phrase, Mona l'avait déjà arrêté : « De l'agneau ? »"
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
