@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 25,
+    "musee": "orsay",
+    "artiste": "Édouard Manet",
+    "dates_artiste": "1832–1883",
+    "titre": "L'Asperge",
+    "technique": "Huile sur toile",
+    "date": "1880",
+    "mouvement": "Proto-impressionnisme — XIXe siècle",
+    "frise_titre": "Proto-impressionnisme — XIXe siècle",
+    "frise_desc": "Manet ne rejoignit jamais officiellement les impressionnistes — mais il en fut le père spirituel. Sa façon de montrer le coup de pinceau, de peindre la lumière sur le vif, changea tout.",
+    "salle": "Musée d'Orsay, salle 29",
+    "image": "images/manet.png",
+    "description_academique": "Ce minuscule tableau — 16 × 21 cm — naquit d'un geste de générosité. Charles Ephrussi, grand collectionneur parisien, avait commandé à Manet une botte d'asperges pour 800 francs. Émerveillé par le résultat, il envoya 1 000 francs. Manet peignit aussitôt cette asperge solitaire et la fit porter à Ephrussi avec un mot : « Il en manquait une à votre botte. » Le tableau est aujourd'hui conservé au musée d'Orsay. La botte originale est au Wallraf-Richartz Museum de Cologne.",
+    "ce_quon_voit": [
+      "Un plateau d'un blanc cassé tendant au gris fusain, parcouru d'une vingtaine de traînées horizontales — les traces du pinceau, visibles, assumées. Dans l'angle supérieur droit, une signature en forme de « m ». C'est presque tout.",
+      "Au premier plan, traversant le tableau en diagonale légèrement descendante de gauche à droite : une asperge. Sa queue blanche dépasse un peu du bord de la table. Sa tête violacée pointe de l'autre côté. La tranche du plateau court en diagonale ascendante à environ cinq centimètres du bas du cadre, laissant deviner en brun sombre la face externe du châssis.",
+      "On peut presque dénombrer les coups de pinceau : une quarantaine pour la tête violacée, quelques-uns plus allongés pour la tige blanche. Cent coups, grand maximum. Manet montre la peinture autant qu'il peint l'asperge. Les reflets blancs désignent le blanc de céruse, la teinte brun sombre montre la terre d'ombre si fine qu'on voit la trame de la toile en dessous. Les moyens de peindre deviennent eux-mêmes le sujet."
+    ],
+    "lecon_titre": "Less is more",
+    "lecon_texte": "Un collectionneur paie 200 francs de trop pour un tableau d'asperges. Manet peint une seule asperge supplémentaire et la lui offre avec un mot d'esprit. C'est un geste minuscule — mais il rayonne. Ce tableau nous dit qu'il y a au fond très peu à voir, et pourtant tout est là : la légèreté, la générosité, le talent de transformer un presque-rien en quelque chose de délicieux. « Less is more » — moins c'est plus. Il suffit d'un je-ne-sais-quoi, une asperge, un mot, une attention, et l'existence s'illumine.",
+    "lecon_mot_cle": "un geste simple peut illuminer le monde",
+    "grandparent_methode": "Invitez l'enfant à s'approcher très près. Montrez-lui les coups de pinceau — on peut presque les compter. Puis racontez l'histoire : les 1 000 francs, le mot de Manet. Demandez-lui ce qu'il pense de quelqu'un qui offre un tableau plutôt que de garder l'argent en trop.",
+    "grandparent_questions": [
+      "« Qu'est-ce que tu vois dans ce tableau, au premier regard ? »",
+      "« Manet aurait pu garder les 200 francs en plus. Il a préféré peindre une asperge et l'offrir. Qu'est-ce que ça dit de lui ? »",
+      "« Tu peux essayer de compter les coups de pinceau ? Qu'est-ce que ça change de savoir que ce tableau a demandé si peu de gestes ? »"
+    ],
+    "grandparent_conseil": "Faites-les s'approcher vraiment près — c'est un tout petit tableau (16 cm de haut). De loin, c'est une asperge. De très près, c'est de la peinture pure : des traînées de gris, une signature en forme de « m », la trame de la toile qui transparaît. Manet montre les moyens de peindre autant qu'il peint. Et parlez de la botte d'asperges originale — elle est en Allemagne, à Cologne. Cette asperge solitaire est la seule qui ait voyagé jusqu'à Paris.",
+    "mot_mystere_mot": "L'impressionnisme",
+    "mot_mystere_texte": "L'impressionnisme est un mouvement pictural né en France vers 1870. Le nom vient d'un tableau de Monet intitulé Impression, soleil levant — dont un critique se moqua en 1874, pensant l'insulter. Les peintres revendiquèrent alors le mot. Ce qui les unit : peindre sur le vif, à l'air libre, saisir la lumière et le mouvement plutôt que les détails, laisser le coup de pinceau visible. Manet n'a jamais exposé avec eux — il trouvait leurs expositions trop marginales — mais c'est lui qui, le premier, osa montrer la trace du pinceau, la construction de l'œuvre, le « faire » autant que le « sujet ». Il en fut le père sans en porter le nom.",
+    "anecdote": "Charles Ephrussi était un grand collectionneur viennois installé à Paris, figure de la vie artistique de la fin du XIXe siècle. Il commanda à Manet une botte d'asperges pour 800 francs. Tellement ravi du tableau, il glissa 1 000 francs dans l'enveloppe. Manet peignit aussitôt cette asperge solitaire et la fit livrer avec un mot : « Il en manquait une à votre botte. » Ephrussi fut l'ami de Proust, qui s'inspira de lui pour le personnage de Swann dans À la recherche du temps perdu. Cette toute petite asperge traverse donc l'histoire de l'art et celle de la littérature."
+  },
+  {
     "id": 24,
     "musee": "orsay",
     "artiste": "Julia Margaret Cameron",
