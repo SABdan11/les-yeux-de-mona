@@ -329,6 +329,39 @@ const OEUVRES = [
     "anecdote": "Pendant près d'un siècle, ce tableau avait disparu. On le retrouva en 1802 chez un brocanteur installé place du Carrousel, à Paris. Pour attirer les passants, le vendeur avait écrit au crayon blanc sur la toile un bout de chanson populaire : « Que Pierrot serait content s'il avait l'art de vous plaire. » Un homme s'arrêta, fut séduit, paya 150 francs et emporta le tableau. Cet homme s'appelait Vivant Denon. Cette même année, Napoléon Bonaparte le nomma premier directeur du musée du Louvre. Le Pierrot de Watteau est ainsi entré au Louvre dans les bras de l'homme qui l'inventait."
   },
   {
+    "id": 12,
+    "musee": "louvre",
+    "artiste": "Antonio Canaletto",
+    "dates_artiste": "1697–1768",
+    "titre": "Le Môle, vu du bassin de San Marco",
+    "technique": "Huile sur toile",
+    "date": "vers 1726–1728",
+    "mouvement": "Vedutisme — XVIIIe siècle",
+    "frise_titre": "Vedutisme et Lumières — XVIIIe siècle",
+    "frise_desc": "La vue exacte du monde comme art : lumière dorée, précision méticuleuse et celebration de la beauté des villes.",
+    "salle": "Aile Denon, salle 724",
+    "image": "images/canaletto.png",
+    "description_academique": "Peint vers 1726–1728, ce tableau représente le Môle de Venise — le grand quai qui borde le bassin de Saint-Marc — vu depuis le milieu de l'eau. On y reconnaît le Palais des Doges, les deux colonnes de la Piazzetta, la basilique Saint-Marc et son campanile. Canaletto est le maître incontesté de la veduta : la vue de ville réelle peinte avec une précision quasi photographique, grâce à l'usage d'une camera obscura portative. Ce tableau appartenait à une collection anglaise avant d'entrer au Louvre.",
+    "ce_quon_voit": [
+      "Un tableau en largeur — 47 cm de hauteur, 81 cm de large — qui donne immédiatement une sensation de panorama, d'espace ouvert. On a l'impression de se trouver sur un bateau, au milieu de l'eau, et de regarder vers la ville.",
+      "Un long quai s'étire sur presque toute la largeur du tableau, bordé de bateaux dont un élégant navire d'apparat à la proue sculptée. Sous un ciel bleu à peine voilé de brume blanche, les bâtiments s'élèvent en deux ou trois niveaux et se reflètent dans l'eau. Le plus imposant est le Palais des Doges : à la fois gothique et Renaissance, une vraie dentelle de marbre blanc en bas, un mur plein rougeoyant en haut. Son arête est presque exactement au centre du tableau. À sa gauche, sur la place, deux colonnes dressées portent l'une un lion ailé, l'autre un saint terrassant un dragon. Plus loin, les dômes dorés d'une basilique. Au premier plan, sur les flots, des gondoliers et des marins s'affairent — ils rament, amarrent, se parlent. On distingue leurs gestes, leurs silhouettes colorées. Et l'eau elle-même est peinte avec des centaines de minuscules ridules blanches en arc de cercle, comme solidifiée.",
+      "On ne se lasse pas de regarder. Chaque fois que l'œil s'arrête, il trouve un nouveau détail : une arcade, un balcon, une silhouette en jaune ou en rouge, un reflet. Canaletto a mis le monde sur pause — et ce monde figé est plus vivant que le vrai."
+    ],
+    "lecon_titre": "Mets le monde à l'arrêt",
+    "lecon_texte": "Canaletto utilisait sa camera obscura pour figer l'image de Venise — arrêter le mouvement, la lumière, l'agitation des bateaux et des gens. Pas pour se mettre à l'écart du monde, mais pour mieux le voir. Quand tout va trop vite, quand on est emporté par le bruit et l'agitation, il faut parfois appuyer sur pause. Regarder vraiment. Pas pour fuir — mais pour reprendre le contrôle. Maîtriser ce qu'on voit, c'est commencer à maîtriser ce qu'on vit.",
+    "lecon_mot_cle": "regarder vraiment, c'est reprendre le contrôle",
+    "grandparent_methode": "Laissez l'enfant s'approcher très près du tableau pour chercher les détails — les petites silhouettes, les ridules de l'eau, les colonnes avec leur lion. Puis reculez pour voir l'ensemble. Ce tableau se gagne en deux temps.",
+    "grandparent_questions": [
+      "« Tu comptes combien de bateaux différents sur l'eau ? »",
+      "« Regarde l'eau de près — comment Canaletto a-t-il peint les vagues ? »",
+      "« Sur la place, entre les deux colonnes, il se passait quelque chose de terrible autrefois. Tu vois ces colonnes ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble les deux colonnes de la Piazzetta : l'une porte un lion ailé (symbole de Venise), l'autre un saint terrassant un dragon. Et expliquez à l'enfant qu'entre ces deux colonnes, on exécutait autrefois les condamnés à mort — les Vénitiens eux-mêmes évitaient de passer entre elles.",
+    "mot_mystere_mot": "La veduta",
+    "mot_mystere_texte": "Veduta veut dire « vue » en italien. C'était un genre de peinture très à la mode à Venise au XVIIIe siècle : des tableaux représentant des villes, des monuments, des paysages avec une précision extraordinaire. C'était en quelque sorte l'ancêtre de la carte postale et de la photo touristique — mais en peinture, et beaucoup plus chère. Les collectionneurs anglais en raffolaient : ils achetaient des vedute de Venise pour rapporter chez eux un souvenir de leur voyage en Italie. Canaletto en fut le roi incontesté.",
+    "anecdote": "À partir de 1746, Canaletto quitta Venise pour l'Angleterre et y passa dix ans. Ses riches clients anglais — qui achetaient ses vedute de Venise depuis chez eux — voulurent le voir en personne. Il peignit Londres, la Tamise, Windsor Castle, les fêtes sur l'eau. Mais les Anglais étaient méfiants : certains ne croyaient pas que ce tableau si précis avait été peint par un seul homme. Ils soupçonnaient que « Canaletto » était en réalité plusieurs peintres cachés sous un même nom. Il dut organiser des séances publiques de peinture en plein air pour prouver qu'il existait vraiment."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
