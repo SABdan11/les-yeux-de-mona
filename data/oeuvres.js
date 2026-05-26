@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 24,
+    "musee": "orsay",
+    "artiste": "Julia Margaret Cameron",
+    "dates_artiste": "1815–1879",
+    "titre": "Mrs Herbert Duckworth",
+    "technique": "Photographie au collodion humide",
+    "date": "1872",
+    "mouvement": "Pictorialisme — XIXe siècle",
+    "frise_titre": "Photographie artistique — XIXe siècle",
+    "frise_desc": "Contre la photographie documentaire qui se contente d'enregistrer le réel, le pictorialisme veut que la photo soit un art — en travaillant lumière, flou et composition comme un peintre.",
+    "salle": "Musée d'Orsay, salle 16",
+    "image": "images/cameron.png",
+    "description_academique": "Cette photographie de 1872 représente Julia Jackson, nièce et filleule adorée de Julia Margaret Cameron. D'une extraordinaire beauté, elle posa pour les plus grands peintres victoriens. Elle épousa Herbert Duckworth, puis Leslie Stephen — et devint la mère de Virginia Woolf. C'est Virginia Woolf elle-même qui, au XXe siècle, exhuma et publia les photographies oubliées de sa grand-tante Cameron. Sans elle, cette œuvre serait restée dans l'obscurité.",
+    "ce_quon_voit": [
+      "Un visage de femme, cadré jusqu'aux épaules, en noir et blanc. Le fond sombre laisse fleurir une vingtaine de volants étincelants — des fleurs et des feuilles — qui encadrent le modèle comme une grande couronne naturelle. La tête est imperceptiblement basculée en arrière, le menton dressé : on a le sentiment d'une légère contre-plongée qui confère maintien et noblesse.",
+      "Le visage est ovale, presque parfait. Les traits sont rythmés par des courbes : l'arrondi des cheveux clairs, fendus d'une raie et maintenus par un fin bonnet ; les arcs des sourcils, des grandes paupières bombées ; des yeux d'une rondeur parfaite ; entre un nez arrondi et un menton ferme, l'ourlet des lèvres marqué d'un reflet lumineux. Elle ne sourit pas, et pourtant quelque chose de lumineux se dégage de la combinaison de ce regard ouvert et de cette bouche gracile.",
+      "La facture est légèrement granuleuse et comme ouatée par un flou discret. Les contours se délayent à peine — les cheveux, les pommettes, la constellation de fleurs. Ce flouté n'est pas un accident corrigé : Cameron l'a apprivoisé, maîtrisé, voulu. Ce qu'on y perd en précision, on le gagne en profondeur. C'est ce que les Anglais appellent « bigger than life » : dans le flou, afflue quelque chose de plus grand que la vie."
+    ],
+    "lecon_titre": "La vie afflue dans les flous",
+    "lecon_texte": "Cameron faisait des centaines d'essais pour une seule photo réussie. Et parfois, les accidents — un léger tremblement, un développement interrompu trop tôt — donnaient des images plus belles que les images nettes. Elle apprit à ne pas les corriger. À les apprivoiser. Ce flou qu'on lui reprochait comme un manque de rigueur, c'était en fait sa force : il enveloppait le sujet d'une aura qui dévoilait son âme plutôt que son visage. Dans la vie aussi, ce qui est flou, imprécis, encore en train de se former, n'est pas toujours une erreur. Parfois, c'est là que la vraie vie afflue.",
+    "lecon_mot_cle": "les accidents révèlent parfois ce que la précision cache",
+    "grandparent_methode": "Invitez l'enfant à regarder le visage de Mrs Duckworth pendant une longue minute, en silence. Puis demandez-lui ce qu'il ressent — pas ce qu'il voit. Joie ? Mélancolie ? Rêverie ? Cameron voulait que chacun y projette quelque chose de différent.",
+    "grandparent_questions": [
+      "« Qu'est-ce que tu ressens en la regardant ? Elle est triste, heureuse, fatiguée ? »",
+      "« La photo est légèrement floue. Ça te dérange ? Ou tu trouves ça beau ? »",
+      "« Cameron a fait des centaines de photos ratées pour en réussir une. Qu'est-ce que ça dit sur son travail ? »"
+    ],
+    "grandparent_conseil": "Expliquez à l'enfant le lien avec Virginia Woolf : la femme sur la photo est la grand-mère de l'une des plus grandes romancières du XXe siècle. C'est Virginia Woolf qui a retrouvé et publié les photos oubliées de Cameron. Sans elle, on n'aurait jamais connu cette « Joconde de la photographie ». Et parlez aussi de l'invention de la photo : Niépce en 1826, Daguerre en 1839. Cameron est l'une des premières à en faire un art.",
+    "mot_mystere_mot": "Le collodion humide",
+    "mot_mystere_texte": "Le collodion humide est le procédé photographique utilisé par Julia Margaret Cameron. Il consiste à enduire une plaque de verre d'un liquide visqueux — le collodion — qui, encore humide, devient sensible à la lumière. La plaque doit être préparée, exposée et développée en quelques minutes, avant qu'elle ne sèche. C'était une opération complexe, salissante, qui exigeait un vrai laboratoire. Pour une seule photo réussie, Cameron en ratait une centaine. Mais ce procédé offrait une finesse remarquable, des nuances de gris très riches — et ces accidents de flou qu'elle apprit à transformer en œuvres d'art.",
+    "anecdote": "Julia Margaret Cameron reçut son premier appareil photo en cadeau en 1863, à quarante-huit ans. Elle reconvertit sa réserve à charbon et son poulailler en studio. Ses voisins la voyaient courir dans le jardin, les mains tachées de produits chimiques, supplier ses modèles de rester immobiles encore quelques secondes. En onze ans, elle produisit des centaines de chefs-d'œuvre. Elle mourut en 1879 sans savoir qu'ils seraient oubliés pendant des décennies — et sans savoir que c'est sa propre petite-nièce, Virginia Woolf, qui les sortirait de l'ombre au XXe siècle. Le plus beau des héritages."
+  },
+  {
     "id": 23,
     "musee": "orsay",
     "artiste": "James Whistler",
