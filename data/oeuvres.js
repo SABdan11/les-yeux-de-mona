@@ -263,6 +263,39 @@ const OEUVRES = [
     "anecdote": "Vermeer est mort à 43 ans, en 1675, laissant onze enfants et d'énormes dettes. Sa femme dut vendre ses tableaux pour rembourser ses créanciers — dont le boulanger, qui en reçut deux en paiement de sa facture de pain ! Pendant près de deux siècles, Vermeer fut presque oublié. Ce n'est qu'en 1866 qu'un critique d'art français, Théophile Thoré — réfugié politique en exil —, redécouvrit son œuvre et lui rendit sa juste place dans l'histoire de l'art. Aujourd'hui, L'Astronome est l'un des tableaux les plus précieux du Louvre."
   },
   {
+    "id": 10,
+    "musee": "louvre",
+    "artiste": "Philippe de Champaigne",
+    "dates_artiste": "1602–1674",
+    "titre": "Ex-Voto de 1662",
+    "technique": "Huile sur toile",
+    "date": "1662",
+    "mouvement": "Classicisme français — XVIIe siècle",
+    "frise_titre": "Classicisme — XVIIe siècle",
+    "frise_desc": "Équilibre, raison et clarté au service d'une élévation morale : la beauté comme discipline intérieure.",
+    "salle": "Aile Richelieu, salle 825",
+    "image": "images/champaigne.png",
+    "description_academique": "Peint en 1662, l'Ex-Voto est l'œuvre la plus intime de Philippe de Champaigne. Pendant toute sa carrière, il fut le peintre officiel des puissants : Louis XIII, Richelieu, les grands du royaume. Mais à soixante ans, il peignit sa propre fille Catherine, religieuse à l'abbaye de Port-Royal, paralysée depuis deux ans. Ce tableau est une offrande de remerciement à Dieu pour le miracle de sa guérison — un ex-voto. C'est l'œuvre d'un père.",
+    "ce_quon_voit": [
+      "Le tableau est sobre, presque austère. Les couleurs sont à peine là — des gris, du blanc, du beige. Un coin de cellule monastique : plancher de bois, murs légèrement lézardés, une grande croix sans Christ sur le côté droit. Rien de spectaculaire. Et pourtant, quelque chose retient.",
+      "Deux religieuses. Celle de gauche, âgée, est agenouillée et prie, les mains jointes. Elle sourit très légèrement. Celle de droite, plus jeune, est à moitié allongée dans un fauteuil — son dos calé contre le dossier, ses jambes étendues à plat sur un repose-pied. On ne voit presque rien d'elle : une robe grise, un scapulaire avec une grande croix rouge cousue, des mains jointes pointées vers le bas, un visage pâle et ovale. Sur ses genoux, un petit reliquaire ouvert. Entre elles deux, un faisceau de lumière descend doucement — la ligne de gauche effleure le menton de la vieille, la ligne de droite touche le reliquaire. Sur le côté gauche du tableau, un long texte en latin commence par ces mots : « Christo uni medico animarum et corporum » — « Au Christ, l'unique médecin des âmes et des corps. »",
+      "Rien ne se passe. Et tout se passe. C'est la veille du miracle."
+    ],
+    "lecon_titre": "Crois toujours les miracles possibles",
+    "lecon_texte": "Ce qui est le plus beau dans ce tableau, c'est que ce n'est pas Catherine qui croit pour elle-même — c'est Agnès qui croit pour Catherine. Parfois, quand on n'a plus la force d'espérer, quelqu'un d'autre espère à notre place. Un parent, un ami, une personne qu'on n'attendait pas. C'est peut-être ça, un miracle : non pas une rupture des lois de la nature, mais la découverte que quelqu'un, quelque part, n'a pas cessé d'y croire pour nous.",
+    "lecon_mot_cle": "espérer pour l'autre",
+    "grandparent_methode": "Laissez l'enfant chercher seul les deux personnages et comprendre la scène avant d'expliquer. Ce tableau demande du silence. Demandez-lui d'abord ce qu'il ressent, avant ce qu'il voit.",
+    "grandparent_questions": [
+      "« Laquelle des deux femmes est malade, à ton avis ? Comment tu le vois ? »",
+      "« Il y a un faisceau de lumière entre elles. D'où vient-il, selon toi ? »",
+      "« La vieille femme sourit légèrement. Pourquoi, tu crois, alors que rien ne s'est encore passé ? »"
+    ],
+    "grandparent_conseil": "Attirez l'attention de l'enfant sur le reliquaire posé sur les genoux de Catherine : on ne sait pas exactement ce qu'il contient. Et montrez-lui la chaise en paille vide à droite — comme si une place était gardée pour le visiteur, pour nous.",
+    "mot_mystere_mot": "L'ex-voto",
+    "mot_mystere_texte": "Un ex-voto — de l'expression latine ex voto suscepto, « en accomplissement d'un vœu » — est un objet ou une œuvre offerte à Dieu, ou à un saint, en remerciement d'une grâce reçue. Dans les églises, on trouve souvent de petites plaques, des béquilles abandonnées, des tableaux modestes accrochés aux murs : autant de témoignages de personnes qui ont vécu quelque chose qu'elles ont considéré comme un miracle. Philippe de Champaigne a fait de l'ex-voto une grande œuvre d'art.",
+    "anecdote": "Philippe de Champaigne était le portraitiste officiel du cardinal de Richelieu — l'homme le plus puissant de France après le roi. Il fut le seul artiste autorisé à peindre Richelieu dans ses habits de cardinal, et il le peignit des dizaines de fois. Ces portraits officiels, imposants, destinés à orner les palais et à impressionner les ambassadeurs, lui valurent gloire et fortune. Et puis, à soixante ans, il peignit ce tableau-ci : deux femmes silencieuses dans une cellule grise. C'est le plus grand de tous ses tableaux."
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
