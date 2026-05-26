@@ -117,29 +117,37 @@
       padding: 7px 12px;
     }
     .card-nav-btn {
-      background: none;
-      border: none;
-      color: rgba(255,255,255,0.7);
-      font-size: 20px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: white;
+      font-size: 17px;
       font-weight: 700;
       cursor: pointer;
-      padding: 0 4px;
-      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s;
     }
     .card-nav-btn:disabled { opacity: 0.2; cursor: default; }
-    .card-nav-btn:not(:disabled):active { color: white; }
+    .card-nav-btn:not(:disabled):active { background: rgba(255,255,255,0.30); }
     .card-flip-btn {
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.22);
+      border: 1.5px solid rgba(255,255,255,0.5);
       color: white;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 20px;
       cursor: pointer;
       font-family: 'Open Sans', sans-serif;
+      letter-spacing: 0.3px;
+      transition: background 0.15s;
     }
-    .card-flip-btn:active { background: rgba(255,255,255,0.30); }
+    .card-flip-btn:active { background: rgba(255,255,255,0.38); }
 
     /* VERSO — infos */
     .card-verso {
@@ -223,24 +231,21 @@
     /* Score en cours */
     .score-bar {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      width: 100%;
-      max-width: 400px;
-      margin-bottom: 6px;
-      padding: 4px 8px;
+      padding: 10px 20px;
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-bottom: 1px solid #f0ece6;
     }
     .score-item {
       display: flex;
-      align-items: baseline;
-      gap: 5px;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
     }
     .score-num {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       line-height: 1;
     }
@@ -248,7 +253,7 @@
     .score-num.rate    { color: #e05555; }
     .score-num.total   { color: #1a3a5c; }
     .score-label { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; }
-    .score-sep { font-size: 14px; color: #e0d8ce; }
+    .score-sep { font-size: 18px; color: #e0d8ce; }
 
     /* Boutons */
     .quiz-actions {
@@ -401,25 +406,25 @@
     <div class="progress-label" id="progressLabel"></div>
   </div>
 
-  <div class="quiz-zone" id="quizZone">
-
-    <!-- Score en cours -->
-    <div class="score-bar">
-      <div class="score-item">
-        <div class="score-num reconnu" id="scoreReconnu">0</div>
-        <div class="score-label">Reconnus</div>
-      </div>
-      <div class="score-sep">·</div>
-      <div class="score-item">
-        <div class="score-num rate" id="scoreRate">0</div>
-        <div class="score-label">Pas encore</div>
-      </div>
-      <div class="score-sep">·</div>
-      <div class="score-item">
-        <div class="score-num total" id="scoreRestant">0</div>
-        <div class="score-label">Restantes</div>
-      </div>
+  <!-- Score en cours -->
+  <div class="score-bar">
+    <div class="score-item">
+      <div class="score-num reconnu" id="scoreReconnu">0</div>
+      <div class="score-label">Reconnus</div>
     </div>
+    <div class="score-sep">|</div>
+    <div class="score-item">
+      <div class="score-num rate" id="scoreRate">0</div>
+      <div class="score-label">Pas encore</div>
+    </div>
+    <div class="score-sep">|</div>
+    <div class="score-item">
+      <div class="score-num total" id="scoreRestant">0</div>
+      <div class="score-label">Restantes</div>
+    </div>
+  </div>
+
+  <div class="quiz-zone" id="quizZone">
 
     <div class="flashcard-wrap" id="flashcardWrap">
       <div class="flashcard" id="flashcard">
@@ -430,9 +435,9 @@
             <img id="cardImage" src="" alt="">
           </div>
           <div class="card-hint">
-            <button id="btnPrev" class="card-nav-btn" disabled>‹</button>
-            <button id="btnFlip" class="card-flip-btn">↩ Retourner</button>
-            <button id="btnNext" class="card-nav-btn">›</button>
+            <button id="btnPrev" class="card-nav-btn" disabled>←</button>
+            <button id="btnFlip" class="card-flip-btn">↺ Retourner</button>
+            <button id="btnNext" class="card-nav-btn">→</button>
           </div>
         </div>
 
@@ -453,7 +458,7 @@
             </div>
           </div>
           <div class="verso-footer">
-            <button class="verso-btn" id="btnRetour">↩ Recto</button>
+            <button class="verso-btn" id="btnRetour">↺ Recto</button>
             <button class="verso-btn verso-btn-fiche" id="btnFiche">📄 Fiche</button>
           </div>
         </div>
