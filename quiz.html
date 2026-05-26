@@ -108,14 +108,29 @@
     }
 
     .card-recto .card-hint {
-      background: rgba(0,0,0,0.45);
+      background: rgba(0,0,0,0.38);
       color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 12px;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      gap: 10px;
     }
+    .card-flip-btn {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .card-flip-btn:active { background: rgba(255,255,255,0.30); }
 
     /* VERSO — infos */
     .card-verso {
@@ -417,7 +432,10 @@
           <div class="card-img">
             <img id="cardImage" src="" alt="">
           </div>
-          <div class="card-hint" style="background:rgba(0,0,0,0.30);padding:6px 12px;font-size:11px;letter-spacing:1px">← Glisser pour naviguer →</div>
+          <div class="card-hint">
+            <span>← Glisser pour naviguer →</span>
+            <button id="btnFlip" class="card-flip-btn">↩ Retourner</button>
+          </div>
         </div>
 
         <!-- VERSO -->
@@ -446,10 +464,9 @@
     </div>
 
 
-    <!-- Avant flip : nav + retourner -->
+    <!-- Avant flip : navigation uniquement -->
     <div class="quiz-actions" id="actionsAvant" style="display:none">
       <button class="btn-action btn-nav" id="btnPrev" disabled>‹</button>
-      <button class="btn-action btn-flip" id="btnFlip">↩ Retourner</button>
       <button class="btn-action btn-nav" id="btnNext">›</button>
     </div>
 
