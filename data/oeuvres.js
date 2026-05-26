@@ -492,5 +492,38 @@ const OEUVRES = [
     "mot_mystere_mot": "Le memento mori",
     "mot_mystere_texte": "Memento mori est une expression latine qui signifie « Rappelle-toi que tu mourras ». C'est une idée très ancienne : les Romains rappelaient cette vérité à leurs généraux victorieux pour qu'ils restent humbles au milieu des acclamations. Au XVIIe siècle, les peintres aimaient intégrer des objets symboliques dans leurs tableaux — crânes, bougies qui s'éteignent, fleurs fanées — pour rappeler que la vie est brève. On appelle ces tableaux des « vanités ». Poussin, lui, choisit de glisser le message dans une inscription de pierre, au cœur d'un paysage de rêve.",
     "anecdote": "Poussin avait les mains qui tremblaient. Dès 1642, il se plaignit dans ses lettres d'un tremblement qui ne cessait de s'aggraver — peut-être dû aux maladies et aux traitements de l'époque. Un drame pour un peintre. Et pourtant : pendant plus de vingt ans, il continua à travailler, prenant encore plus de soin, encore plus de temps. Ses derniers tableaux sont d'une stabilité absolue. On ne voit jamais le tremblement. Même tremblant, Poussin ne trembla devant rien."
+  },
+  {
+    "id": 16,
+    "musee": "louvre",
+    "artiste": "Marie-Guillemine Benoist",
+    "dates_artiste": "1768–1826",
+    "titre": "Portrait de Madeleine",
+    "technique": "Huile sur toile",
+    "date": "1800",
+    "mouvement": "Néoclassicisme — XVIIIe–XIXe siècle",
+    "frise_titre": "Néoclassicisme — fin XVIIIe siècle",
+    "frise_desc": "Dans la rigueur néoclassique héritée de David, Benoist introduit une voix nouvelle : celle d'une femme peignant avec toute la dignité due à une autre femme.",
+    "salle": "Aile Denon, salle 700",
+    "image": "images/benoist.png",
+    "description_academique": "Exposé au Salon de 1800, ce tableau fut peint par Marie-Guillemine Benoist, élève de Jacques-Louis David. Il représente une jeune femme noire, originaire des Antilles, servante de la famille de l'artiste. Le tableau fut longtemps intitulé « Portrait d'une négresse » — une dénomination réductrice qu'on a récemment corrigée. Des recherches récentes ont permis d'identifier le modèle : elle se prénommait Madeleine. La peinture prend place cinq ans après l'abolition de l'esclavage en France par la Convention (1794) — abolition que Napoléon Bonaparte rétablira en 1802.",
+    "ce_quon_voit": [
+      "La première chose qu'on remarque, c'est le regard. Madeleine regarde droit devant elle, droit vers nous — avec une tranquillité, une assurance que rien ne vient troubler. Elle n'est pas surprise d'être regardée. Elle regarde à son tour. Ce face-à-face silencieux est rare dans l'art de cette époque : les modèles noirs, quand ils apparaissaient dans les tableaux, regardaient ailleurs, ou servaient de décor. Ici, c'est elle le sujet. C'est elle le centre.",
+      "Son vêtement blanc a glissé, dévoilant son épaule et son sein — un signe courant à l'époque pour évoquer la beauté et la fécondité. Ses bras croisés tiennent le tissu sans hâte. Sur sa tête, un turban de gaze fine et blanche, noué avec soin, dans la mode du temps. À son oreille, une boucle dorée. La palette du tableau est sobre : blanc de la robe, bleu du drapé derrière elle, fond neutre et sombre. Bleu, blanc et la chair — une allusion possible au drapeau national, dans un tableau peint cinq ans après l'abolition de l'esclavage.",
+      "On a longtemps oublié qui elle était. Pendant deux siècles, le tableau s'est appelé « Portrait d'une négresse » — un titre qui effaçait toute identité. Et puis des chercheurs ont retrouvé une trace, un prénom : Madeleine. Avec ce nom, tout change. Ce n'est plus un tableau qui montre une femme. C'est un tableau qui présente quelqu'un."
+    ],
+    "lecon_titre": "Abroge toute ségrégation",
+    "lecon_texte": "Madeleine nous regarde depuis 1800. Elle attendait qu'on lui rende son prénom — et il a fallu deux siècles. La ségrégation, c'est diviser les gens selon leur couleur, leur origine, leur sexe, pour décider qui mérite d'être vu, respecté, nommé. Benoist a refusé ça. Elle a peint une femme, pas une catégorie. Et en lui donnant ce regard direct, fier, calme, elle a fait quelque chose de révolutionnaire : elle a dit que tout être humain mérite d'être regardé en face, et regardé vraiment.",
+    "lecon_mot_cle": "tout être humain mérite d'être vu et nommé",
+    "grandparent_methode": "Invitez l'enfant à regarder les yeux de Madeleine en premier — vraiment les regarder. Puis demandez-lui ce qu'il ressent face à ce regard direct. Expliquez ensuite que ce tableau s'appelait autrement pendant deux cents ans, et que ça change tout.",
+    "grandparent_questions": [
+      "« Elle te regarde. Qu'est-ce que tu vois dans ses yeux ? »",
+      "« Ce tableau s'appelait autrement avant. Qu'est-ce que ça change, selon toi, de lui avoir rendu son prénom ? »",
+      "« Pourquoi c'est important qu'une femme ait peint le portrait d'une autre femme, plutôt qu'un homme ? »"
+    ],
+    "grandparent_conseil": "Regardez ensemble la palette du tableau : blanc, bleu, la peau de Madeleine sur fond sombre. Il y a peut-être là une allusion au drapeau français, et à l'abolition de l'esclavage de 1794. Cinq ans avant que Napoléon ne la rétablisse. Benoist n'a pas eu besoin de mots — elle a tout dit avec la couleur.",
+    "mot_mystere_mot": "Le Salon",
+    "mot_mystere_texte": "Le Salon était l'exposition officielle des beaux-arts en France, organisée à Paris depuis le XVIIe siècle. C'était l'événement artistique le plus important de l'année : les artistes y présentaient leurs œuvres devant des milliers de visiteurs, des critiques et des acheteurs potentiels. Être « accepté au Salon » était un honneur considérable — et un moyen d'exister aux yeux du monde. Le Portrait de Madeleine fut exposé au Salon de 1800, là où tout Paris pouvait le voir. À une époque où peu de femmes peintres accédaient à cette scène, Benoist y fit entrer non seulement son travail — mais le visage d'une femme que personne n'avait songé à peindre.",
+    "anecdote": "Pendant plus de deux siècles, ce tableau s'est appelé « Portrait d'une négresse » — un titre qui n'était pas celui de Benoist, mais une étiquette ajoutée après sa mort. Des chercheuses ont fouillé les archives, les inventaires, les correspondances. Et elles ont retrouvé un prénom : Madeleine. Une femme venue des Antilles, présente dans la maison de la famille Benoist. Aujourd'hui, le tableau s'appelle officiellement Portrait de Madeleine — au Louvre, sur le cartel, avec son prénom. Il a fallu deux cents ans. Mais le nom est là."
   }
 ];
