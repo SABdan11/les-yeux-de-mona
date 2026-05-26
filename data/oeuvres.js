@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 27,
+    "musee": "orsay",
+    "artiste": "Edgar Degas",
+    "dates_artiste": "1834–1917",
+    "titre": "L'Étoile (Danseuse sur scène)",
+    "technique": "Pastel sur monotype",
+    "date": "vers 1876–1878",
+    "mouvement": "Impressionnisme — XIXe siècle",
+    "frise_titre": "Impressionnisme — XIXe siècle",
+    "frise_desc": "Comme ses amis impressionnistes, Degas capture l'instant — mais depuis l'intérieur, dans les loges et les coulisses, avec la ligne comme arme secrète.",
+    "salle": "Musée d'Orsay, salle 31",
+    "image": "images/degas.png",
+    "description_academique": "Pastel sur monotype — technique double inventée par Degas lui-même. Il dessinait d'abord une image sur une plaque de métal (le monotype), puis travaillait le second tirage, plus léger et presque évanescent, avec des bâtonnets de pastels aux couleurs nuancées confectionnés par un chimiste de l'école Pasteur. Degas ne peignait pas sur le vif : il travaillait en atelier, d'après des études, des photographies et surtout sa mémoire. L'angle du tableau suggère une loge latérale en hauteur.",
+    "ce_quon_voit": [
+      "Une vue plongeante sur une scène de spectacle grise — le décor de fond figure vaguement une petite maison brossée. Dans la partie droite de la composition, une jeune danseuse surgit et occupe environ le tiers de la surface. Elle salue dans la position qu'on appelle « arabesque penchée » : le corps projeté vers le public, la tête basculée en arrière, les yeux mi-clos dans une discrète extase. La jambe d'appui est visible, mais l'autre a disparu — escamotée par l'angle de la loge.",
+      "Son costume blanc-argenté étincelle, constellé de pétales aux couleurs chaudes. Sur la tête, une tiare fleurie. Au cou, un ruban noir. Le bras droit est plié, le gauche déployé — elle remercie un public qu'on ne voit pas, hors cadre. C'est nous, spectateurs, depuis la loge. Le geste dit tout : elle vole.",
+      "Dans l'angle supérieur gauche, les coulisses. Mais au lieu de rideaux, des cavités étranges aux touches ocre et vert — comme des grottes, ou des falaises creuses. Là se tiennent trois autres danseuses immobiles, traitées à grands traits. Et au premier plan de ces coulisses, un homme en costume noir dont le visage est soigneusement caché. Blanc éclatant pour la danseuse étoile. Noir statique pour l'autorité qui la surveille."
+    ],
+    "lecon_titre": "Il faut danser sa vie",
+    "lecon_texte": "Nous faisons des milliers de gestes par jour : on marche pour aller quelque part, on mange pour ne pas avoir faim, on dort pour se reposer. Ces gestes ont une utilité. Mais le geste de la danse n'en a aucune. Il existe pour lui-même, pour la beauté du geste. Degas a écrit un poème sur ses danseuses : « Ses pieds de satin brodent comme à l'aiguille / Des dessins de plaisir. » La vie ne doit pas seulement se vivre — il faut aussi la danser. Faire des choses inutiles, gratuites, belles, qui n'obéissent à aucune contrainte.",
+    "lecon_mot_cle": "faire des choses belles qui n'ont pas besoin d'utilité",
+    "grandparent_methode": "Demandez à l'enfant pourquoi la jambe gauche de la danseuse a disparu. C'est le point d'entrée dans toute la logique de Degas : l'angle de vue, la loge, le spectateur placé dans le tableau. Puis montrez-lui l'homme en noir dont la tête est cachée — et demandez ce qu'il inspire.",
+    "grandparent_questions": [
+      "« La danseuse vole. Qu'est-ce qui, dans le tableau, donne cette impression de vol ? »",
+      "« L'homme en noir à l'arrière-plan, sa tête est cachée. Pourquoi Degas a fait ça, selon toi ? »",
+      "« Est-ce qu'il y a quelque chose dans ta vie que tu fais juste pour le plaisir, sans que ça serve à rien ? »"
+    ],
+    "grandparent_conseil": "Expliquez le monotype : Degas peignait sur une plaque de métal, essuyait la peinture pour dessiner, puis pressait une feuille de papier humide dessus. Il obtenait une image inversée, un peu floue — et il la retravaillait ensuite au pastel. C'était du bricolage de génie. Et si vous passez devant La Petite Danseuse, arrêtez-vous : une sculpture en cire avec un vrai jupon, de vrais cheveux de crin — un scandale en 1881, une merveille aujourd'hui.",
+    "mot_mystere_mot": "Le monotype",
+    "mot_mystere_texte": "Le monotype est une technique d'estampe inventée au XVIIe siècle et adorée par Degas. On applique de la peinture ou de l'encre sur une plaque de métal lisse, puis on gratte et on efface pour dessiner une image dans la matière liquide. On pose ensuite une feuille de papier humidifié sur la plaque, on la passe dans une presse — et on obtient le négatif de l'image. Le premier tirage est net et riche. Le second est beaucoup plus léger, presque fantomatique. Degas aimait ce second tirage : il le retravaillait avec des pastels colorés, ajoutant de la couleur et du dynamisme à l'image évanescente. Mono signifie « une fois » en grec — parce qu'on ne peut obtenir qu'un seul tirage vraiment réussi.",
+    "anecdote": "Degas était d'une exigence terrifiante. Il hurlait après ses modèles, les faisait pleurer pour obtenir la pose exacte qu'il voulait. Il disait : « L'art, c'est le vice. On ne l'épouse pas, on le viole. » Et pourtant, il écrivait des poèmes. Il admirait Mallarmé et Paul Valéry. Il collectionnait des œuvres d'Ingres, de Delacroix, de Manet. Il était terrible et fasciné par la beauté. À la fin de sa vie, comme Monet, il perdit presque la vue. Il continua à sculpter des danseuses en cire — à tâtons, avec ses doigts. Ses doigts savaient ce que ses yeux ne voyaient plus."
+  },
+  {
     "id": 26,
     "musee": "orsay",
     "artiste": "Claude Monet",
