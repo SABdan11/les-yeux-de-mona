@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 22,
+    "musee": "orsay",
+    "artiste": "Rosa Bonheur",
+    "dates_artiste": "1822–1899",
+    "titre": "Labourage nivernais",
+    "technique": "Huile sur toile",
+    "date": "1849",
+    "mouvement": "Réalisme — XIXe siècle",
+    "frise_titre": "Réalisme — XIXe siècle",
+    "frise_desc": "Peindre la vraie vie : les champs, les bêtes, le labeur — avec le respect et la majesté qu'on réservait jusqu'alors aux héros et aux dieux.",
+    "salle": "Musée d'Orsay, salle 4",
+    "image": "images/bonheur.png",
+    "description_academique": "Exposé au Salon de 1849, Labourage nivernais assure la renommée internationale de Rosa Bonheur. Le tableau représente deux attelages de bœufs du Charolais-Nivernais avançant en files parallèles sur un champ fraîchement labouré, dans la campagne bourguignonne. Rosa Bonheur, née en 1822 dans un milieu modeste, fut l'une des premières artistes femmes à connaître un succès mondial. Elle vivait avec d'autres femmes, portait les cheveux courts, fumait le cigare, s'habillait en pantalon — ce qui nécessitait une « permission de travestissement » — et installa dans son atelier parisien puis dans son château de Fontainebleau une véritable ménagerie.",
+    "ce_quon_voit": [
+      "Un ciel immense — bleus fondus en dégradés, lumière froide du matin — occupe presque la moitié de la toile. En dessous, deux files de bœufs avancent en oblique vers la droite, tirant leurs charrues sur des sillons de terre fraîchement retournée. Douze bœufs en tout, presque tous d'un pelage blanc-crème, leurs babines légèrement écumantes. Les lignes de labour, si on les prolongeait, se rejoindraient bien au-delà du cadre gauche : elles donnent le sentiment d'un chantier interminable, légèrement ascensionnel.",
+      "Les bouviers — hommes en sabots armés d'un aiguillon — sont traités sommairement, en retrait, comme des silhouettes. Les bœufs, eux, sont peints avec un soin extrême : les plissés de la robe, les nuances crème, beige, rousse, l'usure du poil, les ombres sur le garrot. Rosa Bonheur leur donne la prestance qu'on réserve d'habitude aux portraits de nobles.",
+      "Dans l'attelage de premier plan, l'animal du milieu tourne légèrement la tête vers nous. Son œil noir se dilate sur le blanc — immense, direct, pathétique. Il vient d'être piqué par l'aiguillon. Il nous regarde. Rosa Bonheur a peint là quelque chose de rare : un bœuf qui réclame notre empathie. On appelle cela le regard de l'admoniteur — celui qui, dans un tableau, brise le quatrième mur et nous interpelle."
+    ],
+    "lecon_titre": "L'animal est ton égal",
+    "lecon_texte": "Rosa Bonheur adorait les animaux — au point de dire que « l'espèce humaine ne vaut pas, en général, les animaux ». Elle en a peint toute sa vie avec un respect qu'on accordait rarement à des bœufs ou des chevaux. Ce qu'elle voulait montrer, c'est que les animaux ne sont pas des machines. Ils souffrent, ils ressentent, ils nous regardent. Ce bœuf au regard pathétique n'est pas un décor — c'est un être sensible au travail. Et cette idée — que les animaux méritent qu'on prenne en compte leur souffrance — a mis des siècles à s'imposer. Rosa Bonheur y a participé, avec son pinceau.",
+    "lecon_mot_cle": "respecter ce qui souffre, même en silence",
+    "grandparent_methode": "Invitez l'enfant à chercher le bœuf qui nous regarde — il faut l'identifier parmi les douze. Puis demandez-lui ce qu'il ressent face à ce regard. Est-ce qu'une bête peut « nous parler » dans un tableau ?",
+    "grandparent_questions": [
+      "« Tu trouves le bœuf qui nous regarde ? Qu'est-ce qu'il t'exprime avec son œil ? »",
+      "« Rosa Bonheur a peint les bœufs en grand et les paysans en petit. Pourquoi, selon toi ? »",
+      "« Elle disait qu'elle préférait les animaux aux humains. Est-ce que tu comprends ça ? »"
+    ],
+    "grandparent_conseil": "Regardez ensemble les sillons de terre : leur direction oblique crée une perspective qui donne l'impression que le champ monte légèrement et s'étend à l'infini hors du cadre. Rosa Bonheur a construit ça avec soin — ce n'est pas juste une campagne, c'est la sensation d'un labeur sans fin. Et si vous avez le temps, cherchez dans la galerie centrale le lion en bronze de Barye, au pied des escaliers : Rosa Bonheur aimait les lions aussi.",
+    "mot_mystere_mot": "Les lignes de fuite",
+    "mot_mystere_texte": "Les lignes de fuite sont un outil de la perspective : ce sont des lignes imaginaires qui, si on les prolongeait, se rejoindraient toutes en un seul point appelé « point de fuite ». Ce procédé, inventé à la Renaissance, permet de donner l'illusion de la profondeur sur une surface plane. Rosa Bonheur place son point de fuite très loin à gauche, hors du cadre : les sillons s'étirent donc vers la droite comme s'ils ne finissaient jamais. Ce n'est pas un accident — c'est un choix. Elle veut que le labeur des bœufs paraisse interminable, ascensionnel, écrasant. La géométrie au service de l'émotion.",
+    "anecdote": "Quelques années après avoir peint ce tableau, Rosa Bonheur s'acheta un grand atelier à Paris et un château près de la forêt de Fontainebleau. Dans les deux, elle installa une véritable ménagerie : chevaux, moutons, chèvres, vaches, chats, chiens, oiseaux, yaks, gazelles. Et un lion et une lionne qu'un dompteur lui avait offerts. Elle vivait au milieu d'eux, les peignait, les étudiait. Elle fut aussi l'une des premières adhérentes de la SPA — la Société protectrice des animaux, fondée en France en 1845. Ce qu'elle disait : « L'espèce humaine ne vaut pas, en général, les animaux. » Ce qu'elle pensait probablement : les animaux, eux, ne font pas la guerre."
+  },
+  {
     "id": 21,
     "musee": "orsay",
     "artiste": "Henri Fantin-Latour",
