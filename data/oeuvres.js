@@ -461,6 +461,39 @@ const OEUVRES = [
     "anecdote": "En 1785, David peint des guerriers qui tendent les bras et jurent de mourir pour Rome. Quatre ans plus tard, le 20 juin 1789, dans la salle du Jeu de Paume à Versailles, des centaines de représentants du peuple lèvent le bras exactement de la même façon et jurent de ne pas se séparer avant d'avoir donné une Constitution à la France. C'est le Serment du Jeu de Paume — le déclencheur de la Révolution française. David le peignit lui-même. Le tableau des Horaces n'avait pas prévu la Révolution : il l'avait répétée."
   },
   {
+    "id": 17,
+    "musee": "louvre",
+    "artiste": "Francisco Goya",
+    "dates_artiste": "1746–1828",
+    "titre": "Nature morte à la tête de mouton",
+    "technique": "Huile sur toile",
+    "date": "vers 1808–1812",
+    "mouvement": "Romantisme — XIXe siècle",
+    "frise_titre": "Romantisme — début XIXe siècle",
+    "frise_desc": "Contre la raison froide des Lumières, le romantisme plonge dans les passions, les ténèbres et les contradictions de l'âme humaine.",
+    "salle": "Aile Denon, salle 733",
+    "image": "images/goya.png",
+    "description_academique": "Cette nature morte, d'un format très modeste de 45 × 62 centimètres, est une rareté dans l'œuvre de Goya — artiste de cour, portraitiste des rois d'Espagne, plus à l'aise dans les grands formats et les fresques. Elle date des années 1808–1812, période marquée par l'occupation napoléonienne de l'Espagne et les atrocités de la guerre. Goya, sourd depuis 1793 à la suite d'une grave maladie, traversait alors une période de grande noirceur intérieure. Il signa son tableau en petites lettres dans la flaque de sang coulant sous le museau de l'agneau.",
+    "ce_quon_voit": [
+      "Sur un plateau de bois nu, devant un fond noir total, trois morceaux d'un même agneau. À gauche, la tête posée sur sa base, de profil, tournée vers la droite. L'œil est entrouvert, la paupière lourde. Sous le museau, la babine laisse apparaître trois dents. Au niveau du cou, là où la découpe a eu lieu, la peau partiellement arrachée laisse voir des tissus rougeâtres. Le reste du visage demeure velu, beige, taché de sang.",
+      "Au centre, une moitié de cage thoracique posée à la verticale : sept côtes se dressent vers le haut, leur face interne creuse et charnue exposée. Derrière elle, la seconde moitié, étalée sur le flanc. Les nuances de grenat, d'amarante et de pourpre donnent à la viande une apparence obscurcie, presque faisandée. Deux reins presque gélatineux restent accrochés à leur morceau par un cordon gluant, baignant dans leur propre graisse.",
+      "La touche est épaisse, posée à grandes masses, comme maçonnée. Goya n'a pas cherché la finition — il a cherché l'expressivité tremblante de l'ébauche. Dans la flaque de sang qui coule sous l'œil de l'agneau, on peut lire, si on s'approche, sa signature. Il s'est mis là, dans le sang. Et si l'on regarde les reins de très près, leur forme globuleuse évoque d'étranges yeux qui pousseraient sur de la viande."
+    ],
+    "lecon_titre": "Partout sont tapis les monstres",
+    "lecon_texte": "Goya n'a pas peint ce tableau pour dégoûter. Il l'a peint pour dire une vérité : les monstres ne sont pas réservés aux contes, ni aux guerres, ni aux autres. Ils se tapissent dans les rires des forts, dans les paroles des puissants, dans les idéaux les mieux intentionnés. Sa plus célèbre gravure montre un homme assailli par des créatures nocturnes, avec ces mots espagnols : « El sueño de la razón produce monstruos ». Suspendu entre sommeil et rêve, entre terreur et création, ce titre dit tout : ce qui fait peur peut aussi devenir une force, si on le regarde en face. Goya n'avait pas peur de voir. Et c'est pourquoi sa peinture nous apprend à voir, nous aussi — même quand c'est difficile.",
+    "lecon_mot_cle": "regarder la part d'ombre pour ne plus en avoir peur",
+    "grandparent_methode": "Laissez l'enfant être troublé — c'est normal, c'est voulu. Puis invitez-le à s'approcher vraiment près pour regarder les reins : leur forme est étrange, presque vivante. Demandez-lui ce qu'il voit. Sa réponse spontanée vaut mieux que toute explication.",
+    "grandparent_questions": [
+      "« Qu'est-ce que tu ressens en regardant ce tableau ? »",
+      "« Si tu regardes les reins de très près, qu'est-ce qu'ils te font penser ? »",
+      "« Goya a mis sa signature dans le sang, sous l'œil de l'agneau. Pourquoi faire ça, à ton avis ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la signature de Goya — elle est écrite en toutes petites lettres dans la flaque de sang sous le museau de l'agneau. Puis parlez de la gravure « El sueño de la razón » : un homme endormi sur son bureau, entouré de chauves-souris et de hiboux. L'idée que même nos plus grands rêves peuvent engendrer des cauchemars, c'est une idée que les enfants comprennent souvent mieux que les adultes.",
+    "mot_mystere_mot": "La nature morte",
+    "mot_mystere_texte": "La nature morte est un genre pictural qui représente des objets inanimés : fruits, fleurs, ustensiles de cuisine, animaux morts. Pendant longtemps, ce genre était considéré comme le moins noble de la peinture — en bas de l'échelle, sous les portraits, les paysages et les grandes scènes historiques. La raison : on estimait qu'une pomme ou un poisson mort ne pouvait pas enseigner de leçon morale. Goya a montré que c'était faux. Avec trois morceaux d'un agneau sur un plateau, il parle de violence, de guerre, de mort, de la condition humaine. Il n'y a pas de genre mineur quand c'est un grand artiste qui tient le pinceau.",
+    "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
+  },
+  {
     "id": 9,
     "musee": "louvre",
     "artiste": "Nicolas Poussin",
