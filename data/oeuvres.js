@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 23,
+    "musee": "orsay",
+    "artiste": "James Whistler",
+    "dates_artiste": "1834–1903",
+    "titre": "Arrangement en gris et noir no 1",
+    "technique": "Huile sur toile",
+    "date": "1871",
+    "mouvement": "Art pour l'art — XIXe siècle",
+    "frise_titre": "Art pour l'art — XIXe siècle",
+    "frise_desc": "Un tableau n'est pas seulement une histoire ou un message : c'est d'abord une harmonie de formes et de couleurs. Cette idée, révolutionnaire pour l'époque, ouvre la voie à l'art moderne.",
+    "salle": "Musée d'Orsay, salle 15",
+    "image": "images/wistler.png",
+    "description_academique": "Peint en 1871, ce tableau est l'œuvre la plus célèbre de l'Américain James Whistler. Il représente sa mère, Anna McNeill Whistler, assise de profil dans son appartement londonien. Whistler lui donne deux titres : « Arrangement en gris et noir no 1 » — qui met en avant la composition formelle — et « Portrait de la mère de l'artiste » — qui révèle le sujet intime. Il refusera de s'en séparer pendant vingt ans. La France l'achète en 1891. En 1938, une statue inspirée du profil de Mrs Whistler est érigée à Ashland, Pennsylvanie, avec l'inscription : « Rien au monde n'est plus sacré qu'une mère ».",
+    "ce_quon_voit": [
+      "Une vieille femme assise de profil, sur une chaise en bois dont on ne voit que les deux fins barreaux arrière. Cheveux gris réunis sous un bonnet de dentelle, brides blanches sur les épaules. Le visage, quelques rides légères, les pommettes rosées, un œil grand ouvert qui regarde hors cadre vers la gauche. Elle est tout en noir — une robe ample qui cache jusqu'au bout des chaussures, serrées sur un repose-pieds en bois. Les mains jointes sur les cuisses tiennent un mouchoir blanc.",
+      "Autour d'elle, tout est gris. Le mur derrière elle, d'un gris perle très clair, occupe les trois quarts de la largeur. Une plinthe sombre au bas. À gauche, une tenture aux motifs japonisants — lignes obliques, pétales suggérés, un monogramme entre les plis — qui s'avère être un kimono reconverti. Sur la tenture, en haut, une forme en papillon : c'est la signature de Whistler. Accroché au mur, légèrement décentré, un petit tableau horizontal aux tons neutres — une gravure de Whistler représentant la Tamise.",
+      "Whistler appelle ce tableau un « arrangement » — un terme musical. Comme une mélodie, il nous invite à savourer les couleurs pour elles-mêmes : le bistre du sol, la tenture taupe ponctuée de touches jaunes discrètes, le mur perle qui domine. La silhouette noire est le pivot autour duquel toutes ces nuances s'accordent et se répondent. Le portrait est aussi une déclaration d'amour : en noir, couleur du deuil et de la piété, Whistler statue sa mère de son vivant."
+    ],
+    "lecon_titre": "Rien au monde n'est plus sacré qu'une mère",
+    "lecon_texte": "Whistler voulait qu'on voie ce tableau comme un arrangement de couleurs — gris, noir, blanc. Mais quand on le regarde, on voit surtout une femme âgée assise dans sa maison, les mains jointes, regardant quelque chose qu'on ne voit pas. On voit surtout une mère. Et c'est ce que Mona a répondu quand son grand-père lui a demandé ce que le tableau voulait dire : « Une maman, c'est ce qu'il y a de plus sacré au monde. » Whistler adorait sa mère. Il avait peint sa force tranquille, sa présence, sa façon d'être là — simplement, profondément. Peindre, c'était d'abord aimer.",
+    "lecon_mot_cle": "aimer, c'est aussi une façon de peindre",
+    "grandparent_methode": "Laissez l'enfant regarder en silence, puis demandez-lui comment il se sent devant cette femme. Pas ce qu'il voit — ce qu'il ressent. Puis parlez-lui du double titre : arrangement / portrait de la mère. Lequel préfère-t-il, et pourquoi ?",
+    "grandparent_questions": [
+      "« Elle regarde quelque chose hors du tableau. Qu'est-ce qu'elle regarde, selon toi ? »",
+      "« Whistler l'a appelé 'arrangement en gris et noir' plutôt que 'portrait de ma mère'. Pourquoi cacher que c'est sa maman, tu crois ? »",
+      "« Est-ce qu'il y a quelqu'un que tu aimerais peindre comme ça — assis, tranquille, juste là ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble la signature de Whistler : c'est un papillon, en haut à gauche sur la tenture. Il l'utilisait pour tous ses tableaux — une métamorphose, disait-il, depuis sa jeunesse. Et cherchez le petit tableau dans le tableau, accroché au mur : une gravure de la Tamise, aux contours si délavés qu'elle se fond dans l'atmosphère grise. Whistler avait mis une pièce de lui-même dans le tableau de sa mère.",
+    "mot_mystere_mot": "L'art pour l'art",
+    "mot_mystere_texte": "« L'art pour l'art » est une idée née au XIXe siècle : un tableau n'a pas besoin de raconter une histoire, d'enseigner une leçon ou de représenter quelque chose de reconnaissable. Il peut exister pour lui-même — pour ses couleurs, ses formes, ses harmonies. Whistler y croyait profondément. Appeler un portrait « arrangement en gris et noir », c'est dire : regardez d'abord les couleurs, pas la vieille dame. Cette idée est révolutionnaire. Elle prépare l'art abstrait du XXe siècle — Kandinsky, Mondrian — qui ira encore plus loin : peindre sans aucune référence au monde réel.",
+    "anecdote": "En 1933, la France prête le tableau à une tournée américaine. C'est la première fois que les États-Unis le voient vraiment — leur propre compatriote, leur propre mère. Le succès est immense. Le président Franklin Roosevelt choisit ce portrait pour créer un timbre postal avec la légende : « En l'honneur et en souvenir des mères de l'Amérique ». Puis, en 1938, une ville de Pennsylvanie reprend le profil de Mrs Whistler, en tire une statue de bronze et l'installe sur une place avec cette phrase : « Rien au monde n'est plus sacré qu'une mère. » Un tableau sur les couleurs et les formes était devenu l'icône mondiale de l'amour maternel."
+  },
+  {
     "id": 22,
     "musee": "orsay",
     "artiste": "Rosa Bonheur",
