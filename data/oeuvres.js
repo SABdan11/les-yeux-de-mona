@@ -888,5 +888,38 @@ const OEUVRES = [
     "mot_mystere_mot": "Le Salon",
     "mot_mystere_texte": "Le Salon était l'exposition officielle des beaux-arts en France, organisée à Paris depuis le XVIIe siècle. C'était l'événement artistique le plus important de l'année : les artistes y présentaient leurs œuvres devant des milliers de visiteurs, des critiques et des acheteurs potentiels. Être « accepté au Salon » était un honneur considérable — et un moyen d'exister aux yeux du monde. Le Portrait de Madeleine fut exposé au Salon de 1800, là où tout Paris pouvait le voir. À une époque où peu de femmes peintres accédaient à cette scène, Benoist y fit entrer non seulement son travail — mais le visage d'une femme que personne n'avait songé à peindre.",
     "anecdote": "Pendant plus de deux siècles, ce tableau s'est appelé « Portrait d'une négresse » — un titre qui n'était pas celui de Benoist, mais une étiquette ajoutée après sa mort. Des chercheuses ont fouillé les archives, les inventaires, les correspondances. Et elles ont retrouvé un prénom : Madeleine. Une femme venue des Antilles, présente dans la maison de la famille Benoist. Aujourd'hui, le tableau s'appelle officiellement Portrait de Madeleine — au Louvre, sur le cartel, avec son prénom. Il a fallu deux cents ans. Mais le nom est là."
+  },
+  {
+    "id": 28,
+    "musee": "orsay",
+    "artiste": "Paul Cézanne",
+    "dates_artiste": "1839–1906",
+    "titre": "La Montagne Sainte-Victoire",
+    "technique": "Huile sur toile",
+    "date": "vers 1890",
+    "mouvement": "Post-impressionnisme",
+    "frise_titre": "Post-impressionnisme — fin XIXe siècle",
+    "frise_desc": "Après l'impressionnisme, des artistes cherchent à aller plus loin : structurer la couleur, construire la forme, trouver sous les apparences quelque chose de solide et d'éternel.",
+    "salle": "Niveau 5, salle 36",
+    "image": "images/cezane.png",
+    "description_academique": "Paul Cézanne a peint la montagne Sainte-Victoire, qui domine la campagne aixoise, plus de quatre-vingts fois au cours de sa vie. Cette version, réalisée vers 1890 à l'huile sur toile, est l'une des plus célèbres. Elle révèle la méthode singulière de Cézanne : des touches planes superposées qui construisent l'espace comme un architecte assemblerait des briques, cherchant sous la vibration de la lumière une structure géométrique permanente. Longtemps incompris, refusé par les Salons officiels, Cézanne est aujourd'hui considéré comme le « père de la peinture moderne » — celui qui a ouvert la voie au cubisme, à l'abstraction et à tout l'art du XXe siècle.",
+    "ce_quon_voit": [
+      "Au premier regard, c'est une montagne — massive, bleue et grise, qui occupe tout le haut du tableau. En dessous, une vallée dorée et verte, des arbres, des maisons minuscules, un viaduc. Et au premier plan, un grand pin parasol dont les branches s'étirent comme des bras vers le ciel. Mais si on regarde plus longtemps, quelque chose d'étrange apparaît : tout semble fait de petits blocs de couleur, posés les uns à côté des autres comme des pièces de puzzle. Le ciel n'est pas bleu d'un seul tenant — il est fait de dizaines de bleus différents. La montagne non plus. Cézanne ne peint pas ce qu'il voit : il reconstruit ce qu'il voit.",
+      "Cézanne revenait encore et encore au même endroit, devant la même montagne. Il appelait ça son « motif ». Pendant des heures, par tous les temps, il regardait, puis posait une touche, regardait encore, posait une autre touche. Il cherchait quelque chose que l'impressionnisme n'avait pas su saisir : non plus le frisson d'un instant, mais la structure cachée des choses — ce qui reste quand la lumière change, quand les saisons passent. Il voulait, disait-il, « refaire Poussin sur nature » — retrouver l'ordre classique au cœur même du monde vivant.",
+      "Cézanne a été refusé partout. Le Salon officiel de Paris l'a rejeté année après année. Les critiques se moquaient de lui. Son ami d'enfance, l'écrivain Émile Zola, a fini par le trahir en écrivant un roman dont le peintre raté était inspiré de lui. Cézanne a rangé le livre sans un mot et n'a plus jamais revu Zola. Puis il a continué à peindre. Seul, têtu, convaincu. Et quand il est mort, en 1906, sa révolution silencieuse avait déjà changé l'histoire de l'art — même si peu de gens s'en rendaient compte."
+    ],
+    "lecon_titre": "Viens, bats-toi, signe et persiste",
+    "lecon_texte": "Cézanne a échoué. Encore et encore. Refusé, moqué, trahi, incompris. Et chaque matin, il reprenait son chevalet et retournait devant sa montagne. Il n'avait pas besoin que les autres comprennent — il avait besoin de continuer. « Résiste ! » chantait France Gall. C'est exactement ça. Résister à l'envie d'arrêter, à la peur d'être nul, au découragement qui dit que ça ne sert à rien. Signer son travail, c'est dire : j'étais là, j'ai essayé, j'ai fait de mon mieux. Et demain je recommence.",
+    "lecon_mot_cle": "persister, c'est la forme la plus courageuse de croire en soi",
+    "grandparent_methode": "Demandez à l'enfant s'il a déjà abandonné quelque chose parce que c'était trop difficile. Racontez-lui que Cézanne a peint la même montagne plus de quatre-vingts fois — pas par obsession, mais parce qu'il cherchait quelque chose qu'il n'avait pas encore trouvé. Puis demandez : qu'est-ce qui lui aurait manqué s'il avait arrêté à la vingtième ?",
+    "grandparent_questions": [
+      "« Tu vois les petites touches de couleur ? Essaie d'en compter quelques-unes dans le ciel. Combien de bleus différents tu trouves ? »",
+      "« Cézanne a été rejeté des années et des années. Comment il a fait pour continuer, d'après toi ? »",
+      "« Si tu devais peindre la même chose quatre-vingts fois, qu'est-ce que tu choisirais ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble le grand pin au premier plan — ses branches en éventail forment comme un cadre naturel autour de la montagne. Cézanne a composé son tableau comme un architecte : le premier plan ancre, la vallée relie, la montagne domine. Tout est construit, rien n'est laissé au hasard. C'est ça, la leçon de méthode de Cézanne : même la liberté se construit.",
+    "mot_mystere_mot": "Le motif",
+    "mot_mystere_texte": "Cézanne utilisait le mot « motif » pour désigner l'endroit précis où il allait peindre — un coin de nature, un paysage, qu'il retrouvait chaque jour comme un rendez-vous. Ce n'était pas seulement un sujet de tableau : c'était une discipline. Retourner au même endroit, observer la même chose sous une lumière différente, chercher ce que le premier regard n'avait pas vu. La Sainte-Victoire était son motif par excellence — sa montagne, son obsession, sa leçon quotidienne. Aujourd'hui, le mot « motif » désigne encore en musique ou en design un élément qui se répète — comme les touches de Cézanne qui, superposées, finissent par construire quelque chose d'immense.",
+    "anecdote": "Cézanne et Émile Zola étaient amis depuis l'enfance, à Aix-en-Provence. Ils avaient grandi ensemble, rêvé ensemble de conquérir Paris. Zola est devenu célèbre le premier — romancier puissant, admiré dans toute l'Europe. Cézanne, lui, était encore inconnu, rejeté. En 1886, Zola publie « L'Œuvre », un roman dont le personnage principal est un peintre raté qui se suicide devant son tableau. Cézanne a reconnu son propre portrait. Il a envoyé un mot bref à Zola pour le remercier du livre, et il n'a plus jamais cherché à le revoir. Ils ne se sont jamais réconciliés. Zola est mort seize ans plus tard, en 1902. Cézanne a appris la nouvelle seul dans son atelier, à Aix. Il a pleuré toute une journée. Puis il est retourné peindre sa montagne."
   }
 ];
