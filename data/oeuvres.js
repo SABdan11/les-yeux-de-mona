@@ -494,6 +494,39 @@ const OEUVRES = [
     "anecdote": "Goya adorait le chocolat. Il en mangeait des quantités déraisonnables — au point, disait-on, de s'en rendre régulièrement malade. Ce peintre qui plongeait dans les ténèbres de l'âme humaine, qui représentait des corps déchiquetés et des monstres nocturnes, fondait littéralement devant une tasse de chocolat chaud. À la fin de leur visite, Mona et Henry quittèrent le tableau épuisés. Henry voulut tempérer l'image sombre qu'il venait de donner du peintre. Il allait lui parler de cette gourmandise. Avant même qu'il puisse finir sa phrase, Mona l'interrompit : « De l'agneau ? »"
   },
   {
+    "id": 20,
+    "musee": "orsay",
+    "artiste": "Gustave Courbet",
+    "dates_artiste": "1819–1877",
+    "titre": "Un enterrement à Ornans",
+    "technique": "Huile sur toile",
+    "date": "1849–1850",
+    "mouvement": "Réalisme — XIXe siècle",
+    "frise_titre": "Réalisme — XIXe siècle",
+    "frise_desc": "Contre l'idéal et le beau convenu, le réalisme peint le vrai : les gens ordinaires, les scènes de province, les imperfections du quotidien — parce que la vie est là, pas dans les palais ni les mythes.",
+    "salle": "Musée d'Orsay, salle 7",
+    "image": "images/courbet.png",
+    "description_academique": "Exposé au Salon de 1850, Un enterrement à Ornans provoqua un scandale immédiat. Courbet y représente en format monumental — habituellement réservé aux grandes scènes historiques ou religieuses — un enterrement ordinaire dans sa ville natale de Franche-Comté. On y reconnaît son père, sa mère et ses sœurs, ainsi que Jean-Antoine Oudot, son grand-père maternel, ancien député de la Convention révolutionnaire, qui venait de mourir. Le contenu du cercueil n'a jamais été formellement identifié.",
+    "ce_quon_voit": [
+      "Le tableau est immense — plus de trois mètres de haut sur six mètres de large. Il écrase littéralement le spectateur, comme une photographie de groupe géante. Au premier plan, on se trouve quasiment dans la fosse : un crâne est posé à son rebord, un chien tourne la tête. Le ciel gris pèse sur la scène. Deux falaises crayeuses encadrent un bout de vallée.",
+      "Des dizaines de personnages s'accumulent : le cercueil porté par quatre hommes aux grands chapeaux noirs, précédé par des enfants de chœur et un porte-croix moustachu au grand nez qui nous regarde en face tout en hissant le Christ crucifié. Le prêtre est plongé dans son missel, un fossoyeur est agenouillé. Deux bedeaux en rouge au milieu de la composition ont l'air de prendre la chose à la légère — « leur trogne frottée de vermillon et leur attitude avinée » selon un critique scandalisé.",
+      "Tout à gauche, presque fantomatique, un vieillard : c'est le grand-père de Courbet, Jean-Antoine Oudot, qui venait de mourir quand le tableau fut achevé. Courbet l'a peint de mémoire. À droite, dans la procession des femmes en pleurs, la mère et les sœurs du peintre. Au premier plan, deux hommes aux bas blancs et bleus : des vétérans de 1793, rescapés de la Révolution, toujours debout au bord de la fosse."
+    ],
+    "lecon_titre": "Crie fort et marche droit",
+    "lecon_texte": "Ce tableau est un cri. Pas un cri de colère — un cri de vérité. Courbet dit : les gens ordinaires méritent d'être représentés en grand, avec autant de dignité que les rois et les saints. Son grand-père lui avait transmis une devise : « Crie fort et marche droit. » Cela voulait dire : dis ce que tu penses, sans peur des critiques ni des conventions. Et avance, sans te laisser écraser. Le tableau fut qualifié de scandale, d'anarchie, de sabotage. Courbet continua.",
+    "lecon_mot_cle": "représenter le vrai, pas seulement le beau",
+    "grandparent_methode": "Laissez l'enfant se perdre dans le tableau — il faut du temps, c'est voulu. Invitez-le à trouver le personnage le plus amusant, le plus triste, le plus étrange. Puis cherchez ensemble la tombe et le crâne au premier plan.",
+    "grandparent_questions": [
+      "« Tu trouves que c'est beau, un enterrement ? Pourquoi Courbet l'a peint en si grand, à ton avis ? »",
+      "« Il y a des gens qui ont l'air de ne pas prendre l'enterrement très au sérieux. Qu'est-ce que tu en penses ? »",
+      "« Courbet a mis son grand-père dans le tableau alors que celui-ci venait de mourir. Qu'est-ce que ça dit de lui ? »"
+    ],
+    "grandparent_conseil": "Cherchez ensemble le personnage à l'extrême gauche, presque fantomatique, dans le prolongement du cercueil : c'est le grand-père de Courbet, peint de mémoire après sa mort. C'est lui qui lui a dit « Crie fort et marche droit ». Et regardez les deux hommes aux bas blancs et bleus, au bord de la fosse à gauche : ce sont des vétérans de la Révolution française de 1793. Debout au bord d'un tombeau, ils symbolisent une idée qui résiste.",
+    "mot_mystere_mot": "Le réalisme",
+    "mot_mystere_texte": "Le réalisme est un mouvement artistique né en France vers 1850. Contre le romantisme qui préférait les tempêtes, les héros et les légendes, les réalistes voulaient peindre ce qu'ils voyaient vraiment : des paysans, des mineurs, des enterrements de province. Pas de filtre, pas d'idéal. Le vrai, dans toutes ses aspérités. Courbet disait vouloir « encanailler l'art » — lui donner l'odeur de la boue et du vin, la rudesse des gens simples. Pour lui, représenter un enterrement ordinaire en grand format était un acte politique : c'était dire que tout le monde méritait d'exister dans la peinture, comme tout le monde devrait exister dans la démocratie.",
+    "anecdote": "Courbet mourut en exil en Suisse, le 31 décembre 1877, vaincu, malade, ruiné. Il avait participé à la Commune de Paris en 1871 — une insurrection populaire — et en avait payé le prix : prison, exil, confiscation de ses biens. Des décennies plus tard, Henry et sa femme tentèrent de faire rapatrier sa dépouille du cimetière d'Ornans pour le panthéoniser, à l'occasion du centenaire de la Commune. Sans succès. Mona, en sortant du musée, décida qu'elle y parviendrait. Peut-être pour les deux cents ans de la Commune — en 2071."
+  },
+  {
     "id": 18,
     "musee": "louvre",
     "artiste": "Caspar David Friedrich",

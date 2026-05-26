@@ -52,11 +52,11 @@
   <header class="parcours-header">
     <a href="musees.html" class="back-btn">‹ Musées</a>
     <h1>🗺️ Jeu de piste — Orsay</h1>
-    <p>16 œuvres · Durée estimée : 2h</p>
+    <p>15 œuvres · Durée estimée : 2h</p>
   </header>
   <div class="parcours-progress">
     <div class="pp-bar"><div class="pp-fill" id="ppFill" style="width:0%"></div></div>
-    <div class="pp-label" id="ppLabel">0 / 16 œuvres vues</div>
+    <div class="pp-label" id="ppLabel">0 / 15 œuvres vues</div>
   </div>
   <div class="parcours-body" id="parcoursBody"></div>
 
@@ -73,7 +73,7 @@
         direction: '→ Entrez par la rue de Bellechasse · Traversez la nef centrale',
         oeuvres: [
           { id: null, artiste: 'Rosa Bonheur', titre: 'Laborage nivernais', salle: 'Salle 4' },
-          { id: null, artiste: 'Gustave Courbet', titre: 'Un enterrement à Ornans', salle: 'Salle 7' },
+          { id: 20, artiste: 'Gustave Courbet', titre: 'Un enterrement à Ornans', salle: 'Salle 7' },
         ]
       },
       {
@@ -92,14 +92,6 @@
         direction: '→ Traverser la nef · Terrasse de sculpture · 2 min',
         oeuvres: [
           { id: null, artiste: 'Camille Claudel', titre: "L'Âge mûr", salle: 'Terrasse Amont' },
-        ]
-      },
-      {
-        etape: 'Niveau 0 — Aile droite',
-        salle: 'Peinture nordique · Salles 20–22',
-        direction: '→ Longer la nef sur la droite · 3 min',
-        oeuvres: [
-          { id: null, artiste: 'J. M. W. Turner', titre: 'Paysage avec une rivière', salle: 'Salle 21' },
         ]
       },
       {
@@ -127,10 +119,10 @@
       },
     ];
 
-    const idsOrsay = Array.from({length: 16}, (_, i) => i + 19);
+    const idsOrsay = Array.from({length: 15}, (_, i) => i + 20);
     const nbVus = idsOrsay.filter(id => vues[id]).length;
-    document.getElementById('ppFill').style.width = (nbVus / 16 * 100) + '%';
-    document.getElementById('ppLabel').textContent = nbVus + ' / 16 œuvres vues';
+    document.getElementById('ppFill').style.width = (nbVus / 15 * 100) + '%';
+    document.getElementById('ppLabel').textContent = nbVus + ' / 15 œuvres vues';
 
     const body = document.getElementById('parcoursBody');
     let num = 0;
