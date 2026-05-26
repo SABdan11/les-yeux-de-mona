@@ -195,5 +195,38 @@ const OEUVRES = [
     "mot_mystere_mot": "La touche",
     "mot_mystere_texte": "En peinture, la touche désigne la manière dont le peintre pose sa peinture sur la toile — ou sur le bois. Frans Hals travaillait très vite, avec des coups de pinceau larges et décidés, sans jamais corriger ni lisser. De près, ça ressemble presque à des griffures. De loin, c'est d'une vie extraordinaire. Deux siècles et demi plus tard, les impressionnistes — Monet, Renoir, Manet — découvrirent ses tableaux et s'écrièrent : c'est nous qui avons tout inventé, sauf lui.",
     "anecdote": "Frans Hals vécut plus de quatre-vingts ans dans la ville de Haarlem, aux Pays-Bas. Sa vie fut aussi désordonnée que sa peinture : de nombreux enfants, des dettes chroniques, deux mariages. À la fin de sa vie, il était si pauvre que la ville de Haarlem lui versait une pension de charité. Mais il continua à peindre jusqu'au bout — et ses derniers portraits, peints à plus de quatre-vingts ans, comptent parmi les plus puissants de toute l'histoire de la peinture."
+  },
+  {
+    "id": 7,
+    "musee": "louvre",
+    "artiste": "Rembrandt van Rijn",
+    "dates_artiste": "1606–1669",
+    "titre": "Autoportrait au chevalet",
+    "technique": "Huile sur toile",
+    "date": "vers 1660",
+    "mouvement": "Âge d'or hollandais — XVIIe siècle",
+    "frise_titre": "Âge d'or Hollandais — XVIIe siècle",
+    "frise_desc": "Vie quotidienne, vérité psychologique, maîtrise du clair-obscur et célébration de la spontanéité humaine.",
+    "salle": "Aile Richelieu, salle 844",
+    "image": "images/rembrandt.jpg",
+    "description_academique": "Peint vers 1660, cet autoportrait montre Rembrandt à cinquante-quatre ans — au sommet de son art, mais déclaré en faillite quatre ans plus tôt. Il se représente en peintre dans son atelier, palette et brosses en main, devant un chevalet dont on ne voit que le bord. C'est l'un d'une quarantaine d'autoportraits qu'il exécuta tout au long de sa vie : une enquête obstinée sur lui-même, de la jeunesse jusqu'à la mort.",
+    "ce_quon_voit": [
+      "La grande galerie hollandaise de l'aile Richelieu est l'une des salles les plus sombres et les plus intenses du Louvre. Le long des murs s'alignent des dizaines de tableaux profonds — portraits, scènes de genre, paysages. Et au milieu de tout cela, ce visage vous arrête net.",
+      "Un homme d'âge mûr, assis de trois quarts, vous regarde. Il porte un bonnet d'intérieur blanc qui tranche sur le fond obscur. La lumière vient d'en haut à gauche : elle éclaire un visage buriné, des joues rougeâtres, des yeux vagues et mélancoliques. Une ride profonde au front, un pli légèrement ironique au coin des lèvres. La barbe est négligée, les cheveux grisonnants. Il ne cherche pas à se faire beau. Son manteau sombre se fond dans le fond du tableau — on peine à voir où l'un finit et où l'autre commence. Plus bas, la lumière revient : une main tient une canne à peindre, l'autre serre des brosses, un chiffon et une toute petite palette. Sur cette palette, trois taches seulement : du vermillon, du mordoré, et du blanc avec un soupçon de noir. À droite, dépasse discrètement le bord d'un panneau de bois — le dos du tableau sur lequel il est en train de travailler.",
+      "Voilà un homme qui se regarde sans se flatter. Il se peint tel qu'il est — vieilli, ruiné, fatigué. Mais les yeux ne cèdent pas. Il y a dans ce regard quelque chose d'indéfinissable : la conscience d'avoir accompli des choses extraordinaires, et la certitude que ça ne suffit jamais à se protéger du monde."
+    ],
+    "lecon_titre": "Connais-toi toi-même",
+    "lecon_texte": "Rembrandt s'est peint des dizaines de fois — jeune et vieux, riche et ruiné, en costume de prince et en homme ordinaire. À chaque fois, il posait la même question devant son miroir : qui suis-je, vraiment ? Pas qui on voudrait être, pas qui les autres pensent qu'on est — mais soi, tel qu'on est. C'est la devise que les Grecs anciens avaient gravée à l'entrée du temple de Delphes : Gnôthi seautón. Connais-toi toi-même. C'est plus difficile qu'il n'y paraît. Et c'est le travail de toute une vie.",
+    "lecon_mot_cle": "connais-toi toi-même",
+    "grandparent_methode": "Laissez l'enfant regarder en silence ce visage qui regarde. Deux ou trois minutes suffisent. Puis demandez-lui ce qu'il ressent devant cet homme — pas ce qu'il voit, ce qu'il ressent.",
+    "grandparent_questions": [
+      "« Il est triste, tu crois ? Ou il pense à quelque chose ? »",
+      "« Tu vois les trois couleurs sur sa palette ? Ce sont exactement les couleurs qu'il faut pour peindre la peau humaine. Pourquoi, à ton avis ? »",
+      "« Rembrandt s'est peint quarante fois dans sa vie. Pourquoi quelqu'un ferait ça, selon toi ? »"
+    ],
+    "grandparent_conseil": "Attirez l'attention de l'enfant sur le bord du tableau visible à droite : Rembrandt se montre en train de travailler, pas en train de poser. Et regardez ensemble la palette — elle est toute petite. Les peintres n'utiliseront de palettes plus larges que plus tard.",
+    "mot_mystere_mot": "Le clair-obscur",
+    "mot_mystere_texte": "Le clair-obscur, c'est l'art de jouer avec la lumière et l'ombre dans un même tableau. Au lieu de tout éclairer uniformément, le peintre choisit ce qu'il veut montrer — et laisse le reste dans le noir. Rembrandt l'a appris d'un peintre italien révolutionnaire : le Caravage. En italien, ça s'appelle il chiaroscuro — et c'est encore plus beau à entendre. Avec Rembrandt, le noir n'est pas une absence : c'est une présence. Il enveloppe, il protège, il fait ressortir ce qui compte vraiment.",
+    "anecdote": "Rembrandt a peint une quarantaine d'autoportraits tout au long de sa vie — plus que tout autre grand peintre de l'histoire. Mais il n'a jamais signé ni vendu aucun d'eux de son vivant : ils restaient dans son atelier, comme un journal intime en images. À Amsterdam, on peut encore visiter sa maison, le Rembrandthuis, exactement comme elle était de son temps. Les salles sont remplies des centaines d'objets qu'il collectionnait : armes anciennes, coquillages exotiques, costumes orientaux, têtes en plâtre. Tout ce qui pouvait nourrir son imagination."
   }
 ];
