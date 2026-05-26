@@ -261,5 +261,38 @@ const OEUVRES = [
     "mot_mystere_mot": "La camera obscura",
     "mot_mystere_texte": "La camera obscura — « chambre noire » en latin — était une boîte fermée percée d'un tout petit trou. La lumière passait par ce trou et projetait sur la paroi d'en face l'image de ce qui se trouvait dehors, à l'envers et en miniature. Les peintres posaient un calque sur cette image projetée et traçaient les contours avec une précision impossible à l'œil nu. Vermeer s'en serait servi pour capturer la lumière et les lignes de perspective de sa chambre de Delft. C'est en quelque sorte l'ancêtre de notre appareil photo.",
     "anecdote": "Vermeer est mort à 43 ans, en 1675, laissant onze enfants et d'énormes dettes. Sa femme dut vendre ses tableaux pour rembourser ses créanciers — dont le boulanger, qui en reçut deux en paiement de sa facture de pain ! Pendant près de deux siècles, Vermeer fut presque oublié. Ce n'est qu'en 1866 qu'un critique d'art français, Théophile Thoré — réfugié politique en exil —, redécouvrit son œuvre et lui rendit sa juste place dans l'histoire de l'art. Aujourd'hui, L'Astronome est l'un des tableaux les plus précieux du Louvre."
+  },
+  {
+    "id": 9,
+    "musee": "louvre",
+    "artiste": "Nicolas Poussin",
+    "dates_artiste": "1594–1665",
+    "titre": "Les Bergers d'Arcadie",
+    "technique": "Huile sur toile",
+    "date": "vers 1637–1638",
+    "mouvement": "Classicisme français — XVIIe siècle",
+    "frise_titre": "Classicisme — XVIIe siècle",
+    "frise_desc": "Équilibre, raison et clarté au service d'une élévation morale : la beauté comme discipline intérieure.",
+    "salle": "Aile Richelieu, salle 825",
+    "image": "images/poussin.png",
+    "description_academique": "Peint vers 1637–1638 à Rome, Les Bergers d'Arcadie est le chef-d'œuvre de Nicolas Poussin. Quatre personnages — trois bergers et une femme — s'arrêtent devant une tombe portant une inscription latine : « Et in Arcadia ego » (« Moi aussi, j'ai vécu en Arcadie »). Cette formule rappelle que même dans le plus heureux des pays, la mort est présente. C'est ce qu'on appelle un memento mori — un appel à se souvenir de la brièveté de la vie.",
+    "ce_quon_voit": [
+      "Le tableau est plus grand qu'on ne l'imaginerait — un bon mètre sur un mètre vingt. Il est exposé dans la galerie des peintures françaises, une salle lumineuse et relativement calme. L'atmosphère y est étrangement sereine pour un sujet qui parle de mort.",
+      "Quatre personnages entourent un tombeau de pierre gris qui domine le centre de la composition. À gauche, un jeune berger se tient debout, accoudé au couvercle du tombeau, le corps appuyé sur un grand bâton. Ses cheveux bouclés sont couronnés de lierre, son drapé blanc vire au rose. À ses pieds, un berger plus âgé, à la barbe brune, est accroupi et lit l'inscription gravée sur la pierre. À droite, un troisième berger, jeune et vêtu d'un drapé rouge, se penche vers les mots gravés et les pointe du doigt. Mais sa tête se détourne : il regarde une femme debout derrière lui, habillée de jaune et de bleu, le crâne enturbanné. Elle a posé une main sur son épaule. Et elle sourit — peut-être même retient-elle un rire.",
+      "Les personnages ressemblent à des statues de marbre : ils ne gesticulent pas, ne crient pas. Tout est d'une clarté parfaite. Seule l'inscription sur la pierre reste à moitié dans l'ombre, à moitié masquée par les bras des bergers. On sait qu'il faut la lire. Mais on ne peut pas tout à fait."
+    ],
+    "lecon_titre": "Que rien ne te fasse trembler",
+    "lecon_texte": "La femme dans le tableau sourit. Devant une tombe, elle sourit. Pas par indifférence — elle a simplement compris quelque chose que les bergers sont encore en train d'apprendre : que la vie est courte, que nous mourrons tous un jour, et que cette vérité n'a rien d'effrayant. Poussin nous dit : ne tremble pas. Regarde les choses en face, sans te laisser emporter par la peur ou l'agitation. La sérénité n'est pas l'indifférence — c'est le courage silencieux de continuer à vivre en sachant que tout finit.",
+    "lecon_mot_cle": "la sérénité est un courage",
+    "grandparent_methode": "Laissez l'enfant regarder le tableau en cherchant l'inscription sur la tombe. Il va vouloir la lire — et ne pourra pas tout à fait. C'est voulu. Puis demandez-lui ce qu'il pense de la femme qui sourit.",
+    "grandparent_questions": [
+      "« Tu vois l'inscription sur la tombe ? Est-ce que tu arrives à la lire ? »",
+      "« La femme à droite sourit. Pourquoi, à ton avis, alors qu'on est devant une tombe ? »",
+      "« Les bergers ressemblent à des statues. Pourquoi Poussin les a peints comme ça, tu crois ? »"
+    ],
+    "grandparent_conseil": "Apprenez ensemble l'inscription : « Et in Arcadia ego » — « Moi aussi, j'ai vécu en Arcadie. » Demandez à l'enfant qui dit ces mots selon lui : le mort, ou la Mort elle-même. Il n'y a pas de bonne réponse — et c'est justement là tout le génie de Poussin.",
+    "mot_mystere_mot": "Le memento mori",
+    "mot_mystere_texte": "Memento mori est une expression latine qui signifie « Rappelle-toi que tu mourras ». C'est une idée très ancienne : les Romains rappelaient cette vérité à leurs généraux victorieux pour qu'ils restent humbles au milieu des acclamations. Au XVIIe siècle, les peintres aimaient intégrer des objets symboliques dans leurs tableaux — crânes, bougies qui s'éteignent, fleurs fanées — pour rappeler que la vie est brève. On appelle ces tableaux des « vanités ». Poussin, lui, choisit de glisser le message dans une inscription de pierre, au cœur d'un paysage de rêve.",
+    "anecdote": "Poussin avait les mains qui tremblaient. Dès 1642, il se plaignit dans ses lettres d'un tremblement qui ne cessait de s'aggraver — peut-être dû aux maladies et aux traitements de l'époque. Un drame pour un peintre. Et pourtant : pendant plus de vingt ans, il continua à travailler, prenant encore plus de soin, encore plus de temps. Ses derniers tableaux sont d'une stabilité absolue. On ne voit jamais le tremblement. Même tremblant, Poussin ne trembla devant rien."
   }
 ];
