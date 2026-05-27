@@ -92,6 +92,13 @@
               <div class="section-content">${voit}</div>
             </div>
 
+            <!-- L'ARTISTE -->
+            ${o.artiste_texte ? `
+            <div class="fiche-section">
+              <h2>🖌️ L'artiste</h2>
+              <div class="section-content">${o.artiste_texte.split('\n\n').map(p => `<p>${p}</p>`).join('')}</div>
+            </div>` : ''}
+
             <!-- LEÇON DE DADÉ -->
             <div class="lecon-bloc">
               <div class="lecon-label">La leçon de Dadé</div>
