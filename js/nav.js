@@ -5,11 +5,11 @@
   const page    = rawPage.startsWith('parcours_') ? 'musees.html' : rawPage;
 
   const items = [
-    { href: 'index.html',       icon: '🏠', label: 'Accueil'  },
-    { href: 'quiz.html',        icon: '🎯', label: 'Jeu'      },
-    { href: 'musees.html',      icon: '🗺️', label: 'Guide'    },
-    { href: 'chronologie.html', icon: '📜', label: 'Histoire' },
-    { href: 'roman.html',       icon: '🖼️', label: 'Fiches'   },
+    { href: 'quiz.html',        icon: '🎯', label: 'Jeu'       },
+    { href: 'musees.html',      icon: '🏛️', label: 'Musées'    },
+    { href: 'roman.html',       icon: '🎧', label: 'Audioguide'},
+    { href: 'chronologie.html', icon: '📜', label: 'Histoire'  },
+    { href: 'index.html',       icon: '🏠', label: 'Accueil'   },
   ];
 
   document.body.insertAdjacentHTML('beforeend', `
