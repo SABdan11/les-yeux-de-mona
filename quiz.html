@@ -115,24 +115,8 @@
       padding: 14px 12px 32px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
     }
-    .card-nav-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 26px;
-      font-weight: 300;
-      cursor: pointer;
-      padding: 4px 10px;
-      line-height: 1;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.7);
-      flex-shrink: 0;
-      transition: opacity 0.15s;
-      letter-spacing: -1px;
-    }
-    .card-nav-btn:disabled { opacity: 0.18; cursor: default; }
-    .card-nav-btn:not(:disabled):active { opacity: 0.6; }
     .card-flip-btn {
       background: white;
       border: none;
@@ -228,32 +212,18 @@
       font-style: italic;
     }
 
-    /* Score en cours */
-    .score-bar {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 5px 20px;
-      background: white;
-      border-bottom: 1px solid #f0ece6;
+    .btn-reset {
+      background: none;
+      border: 1px solid #e0d8ce;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      color: #bbb;
+      cursor: pointer;
+      font-family: 'Open Sans', sans-serif;
+      transition: color 0.15s, border-color 0.15s;
     }
-    .score-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1px;
-    }
-    .score-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1;
-    }
-    .score-num.reconnu { color: #2a8c4a; }
-    .score-num.rate    { color: #e05555; }
-    .score-num.total   { color: #1a3a5c; }
-    .score-label { font-size: 9px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; }
-    .score-sep { font-size: 14px; color: #e0d8ce; }
+    .btn-reset:hover { color: #e05555; border-color: #e05555; }
 
     /* Boutons */
     .quiz-actions {
@@ -275,20 +245,6 @@
       transition: transform 0.1s;
     }
     .btn-action:active { transform: scale(0.97); }
-
-    .btn-fiche {
-      background: #f4f0ea;
-      color: #1a3a5c;
-      flex: 0 0 auto;
-      padding: 14px 16px;
-    }
-
-    .btn-retour {
-      background: #f4f0ea;
-      color: #555;
-      flex: 0 0 auto;
-      padding: 14px 16px;
-    }
 
     /* Footer intégré au verso */
     .verso-footer {
@@ -327,17 +283,6 @@
       color: white;
     }
 
-    /* Hint navigation swipe */
-    .swipe-hint {
-      font-size: 11px;
-      color: #bbb;
-      text-align: center;
-      margin-top: -8px;
-      margin-bottom: 6px;
-      letter-spacing: 0.5px;
-    }
-
-
     /* Score final */
     .quiz-fin {
       display: none;
@@ -371,7 +316,6 @@
       font-weight: 700;
     }
     .ss-num.ok  { color: #2a8c4a; }
-    .ss-num.ko  { color: #e05555; }
     .ss-label { font-size: 11px; color: #888; margin-top: 2px; }
 
     .score-cumul {
@@ -404,24 +348,7 @@
   <div class="quiz-progress">
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label" id="progressLabel"></div>
-  </div>
-
-  <!-- Score en cours -->
-  <div class="score-bar">
-    <div class="score-item">
-      <div class="score-num reconnu" id="scoreReconnu">0</div>
-      <div class="score-label">Reconnus</div>
-    </div>
-    <div class="score-sep">|</div>
-    <div class="score-item">
-      <div class="score-num rate" id="scoreRate">0</div>
-      <div class="score-label">Pas encore</div>
-    </div>
-    <div class="score-sep">|</div>
-    <div class="score-item">
-      <div class="score-num total" id="scoreRestant">0</div>
-      <div class="score-label">Restantes</div>
-    </div>
+    <button class="btn-reset" id="btnReset">↺ Zéro</button>
   </div>
 
   <div class="quiz-zone" id="quizZone">
@@ -434,10 +361,8 @@
           <div class="card-img">
             <img id="cardImage" src="" alt="">
           </div>
-          <div class="card-hint">
-            <button id="btnPrev" class="card-nav-btn" disabled>❮</button>
+          <div class="card-hint" id="cardHint">
             <button id="btnFlip" class="card-flip-btn">↺ Retourner</button>
-            <button id="btnNext" class="card-nav-btn">❯</button>
           </div>
         </div>
 
@@ -466,8 +391,7 @@
       </div>
     </div>
 
-
-<!-- Après flip : auto-évaluation (2 boutons seulement) -->
+    <!-- Après flip : auto-évaluation -->
     <div class="quiz-actions btn-eval" id="actionsApres">
       <button class="btn-action btn-rate"    id="btnRate">✗ Pas encore</button>
       <button class="btn-action btn-reconnu" id="btnReconnu">✓ Reconnu !</button>
@@ -477,21 +401,21 @@
 
   <!-- ÉCRAN DE FIN -->
   <div class="quiz-fin" id="quizFin">
-    <div class="fin-emoji">🎉</div>
-    <h2>Session terminée !</h2>
+    <div class="fin-emoji" id="finEmoji">🎉</div>
+    <h2 id="finMessage">Bravo !</h2>
     <div class="score-session">
       <div class="ss-item">
         <div class="ss-num ok" id="finReconnu">0</div>
-        <div class="ss-label">Reconnus</div>
+        <div class="ss-label">Cette session</div>
       </div>
       <div class="score-sep" style="font-size:24px;color:#ddd">/</div>
       <div class="ss-item">
-        <div class="ss-num" style="color:#1a3a5c" id="finTotal">0</div>
-        <div class="ss-label">Cartes jouées</div>
+        <div class="ss-num" style="color:#1a3a5c" id="finMaitrisees">0</div>
+        <div class="ss-label">Total maîtrisées</div>
       </div>
     </div>
     <div class="score-cumul" id="scoreCumul"></div>
-    <button class="btn-recommencer" id="btnRecommencer">Rejouer 🔄</button>
+    <button class="btn-recommencer" id="btnRecommencer">Tout recommencer 🔄</button>
   </div>
 
   <script src="js/profil.js"></script>
@@ -504,41 +428,51 @@
       pompidou: 'Centre Pompidou'
     };
 
-    function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
-
-    let deck  = shuffle(OEUVRES);
-    let index = 0;
-    let sessionReconnu = 0;
-    let sessionRate    = 0;
-    let estRetourne    = false;
-
-    // Clé score cumulatif par profil
-    function keyScore() { return 'mona_score_' + Profil.getActif(); }
-    function getScore()  { return JSON.parse(localStorage.getItem(keyScore()) || '{"reconnu":0,"total":0}'); }
-    function saveScore(s){ localStorage.setItem(keyScore(), JSON.stringify(s)); }
-
-    const flashcard     = document.getElementById('flashcard');
-    const progressFill  = document.getElementById('progressFill');
-    const progressLabel = document.getElementById('progressLabel');
-    const quizZone      = document.getElementById('quizZone');
-    const quizFin       = document.getElementById('quizFin');
-    const actionsApres  = document.getElementById('actionsApres');
-    const cardHint      = document.querySelector('.card-hint');
-
-    function majScoreAffiche() {
-      document.getElementById('scoreReconnu').textContent = sessionReconnu;
-      document.getElementById('scoreRate').textContent    = sessionRate;
-      document.getElementById('scoreRestant').textContent = deck.length - index - 1;
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
     }
 
-    function majNavBtns() {
-      document.getElementById('btnPrev').disabled = (index === 0);
-      document.getElementById('btnNext').disabled = (index === deck.length - 1);
+    // Score persistant
+    function keyScore() { return 'mona_score_' + Profil.getActif(); }
+    function getScore()  { return JSON.parse(localStorage.getItem(keyScore()) || '{"ids":{}}'); }
+    function saveScore(s){ localStorage.setItem(keyScore(), JSON.stringify(s)); }
+
+    // État du jeu
+    let pool = [];
+    let maitrisees = 0;
+    let sessionReconnu = 0;
+    let estRetourne = false;
+
+    function initPool() {
+      const s = getScore();
+      const ids = s.ids || {};
+      maitrisees = Object.keys(ids).length;
+      pool = shuffle(OEUVRES.filter(o => !ids[o.id]));
+      sessionReconnu = 0;
+    }
+
+    // DOM
+    const flashcard    = document.getElementById('flashcard');
+    const progressFill = document.getElementById('progressFill');
+    const progressLabel= document.getElementById('progressLabel');
+    const quizZone     = document.getElementById('quizZone');
+    const quizFin      = document.getElementById('quizFin');
+    const actionsApres = document.getElementById('actionsApres');
+    const cardHint     = document.getElementById('cardHint');
+
+    function majAffiche() {
+      progressFill.style.width  = (maitrisees / 52 * 100) + '%';
+      progressLabel.textContent = maitrisees + ' / 52';
     }
 
     function chargerCarte(o) {
-      document.getElementById('cardImage').src = o.image;
-      document.getElementById('cardImage').alt = o.titre;
+      document.getElementById('cardImage').src              = o.image;
+      document.getElementById('cardImage').alt              = o.titre;
       document.getElementById('versoArtiste').textContent   = o.artiste;
       document.getElementById('versoTitre').textContent     = '« ' + o.titre + ' »';
       document.getElementById('versoDate').textContent      = o.date;
@@ -546,48 +480,48 @@
       document.getElementById('versoEpoque').textContent    = o.frise_titre;
       document.getElementById('versoMusee').textContent     = musees[o.musee] + ' · ' + o.salle;
       document.getElementById('versoLecon').textContent     = o.lecon_titre;
-      // Reset
       flashcard.classList.remove('flipped');
       estRetourne = false;
       actionsApres.style.display = 'none';
       cardHint.style.display = 'flex';
-      // Progression
-      progressFill.style.width  = ((index + 1) / deck.length * 100) + '%';
-      progressLabel.textContent = (index + 1) + ' / ' + deck.length;
-      majScoreAffiche();
-      majNavBtns();
+      majAffiche();
     }
 
-    function passerCarte(dir) {
-      const ni = index + dir;
-      if (ni < 0 || ni >= deck.length) return;
-      index = ni;
-      chargerCarte(deck[index]);
+    function showFin() {
+      quizZone.style.display = 'none';
+      quizFin.style.display  = 'flex';
+      document.getElementById('finReconnu').textContent   = sessionReconnu;
+      document.getElementById('finMaitrisees').textContent = maitrisees + ' / 52';
+      if (maitrisees === 52) {
+        document.getElementById('finEmoji').textContent   = '🏆';
+        document.getElementById('finMessage').textContent = 'Tu maîtrises les 52 œuvres !';
+        document.getElementById('scoreCumul').innerHTML   = 'Collection complète. Bravo !';
+      } else {
+        document.getElementById('finEmoji').textContent   = '🎉';
+        document.getElementById('finMessage').textContent = 'Session terminée !';
+        document.getElementById('scoreCumul').innerHTML   =
+          'Il reste <strong>' + pool.length + ' œuvre' + (pool.length > 1 ? 's' : '') + '</strong> à maîtriser.';
+      }
     }
 
     function evaluer(reconnu) {
-      if (reconnu) sessionReconnu++; else sessionRate++;
-      const s = getScore();
-      s.reconnu += reconnu ? 1 : 0;
-      s.total   += 1;
-      if (!s.ids) s.ids = {};
-      if (reconnu) s.ids[deck[index].id] = true;
-      else delete s.ids[deck[index].id];
-      saveScore(s);
-      // Carte suivante
-      index++;
-      if (index >= deck.length) {
-        quizZone.style.display = 'none';
-        quizFin.style.display  = 'flex';
-        document.getElementById('finReconnu').textContent = sessionReconnu;
-        document.getElementById('finTotal').textContent   = sessionReconnu + sessionRate;
-        const cumul = getScore();
-        const pct   = cumul.total > 0 ? Math.round(cumul.reconnu / cumul.total * 100) : 0;
-        document.getElementById('scoreCumul').innerHTML =
-          `Score cumulatif : <strong>${cumul.reconnu} reconnus sur ${cumul.total} tentatives</strong> (${pct}%)`;
-        return;
+      const carte = pool.shift();
+
+      if (reconnu) {
+        maitrisees++;
+        sessionReconnu++;
+        const s = getScore();
+        if (!s.ids) s.ids = {};
+        s.ids[carte.id] = true;
+        saveScore(s);
+        if (maitrisees === 52) { showFin(); return; }
+      } else {
+        // Réinsertion aléatoire dans le pool restant
+        const pos = Math.floor(Math.random() * (pool.length + 1));
+        pool.splice(pos, 0, carte);
       }
-      chargerCarte(deck[index]);
+
+      chargerCarte(pool[0]);
     }
 
     // Flip via tap carte
@@ -600,7 +534,7 @@
     });
 
     // Flip via bouton
-    document.getElementById('btnFlip').addEventListener('click', (e) => {
+    document.getElementById('btnFlip').addEventListener('click', e => {
       e.stopPropagation();
       flashcard.classList.add('flipped');
       estRetourne = true;
@@ -608,49 +542,47 @@
       actionsApres.style.display = 'flex';
     });
 
-    // Navigation flèches
-    document.getElementById('btnPrev').addEventListener('click', (e) => { e.stopPropagation(); passerCarte(-1); });
-    document.getElementById('btnNext').addEventListener('click', (e) => { e.stopPropagation(); passerCarte(1); });
-
-    // Swipe gauche/droite
-    let touchStartX = 0, touchStartY = 0;
-    const wrap = document.getElementById('flashcardWrap');
-    wrap.addEventListener('touchstart', e => {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-    wrap.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
-      if (Math.abs(dx) > 50 && Math.abs(dx) > dy * 1.5) {
-        dx < 0 ? passerCarte(1) : passerCarte(-1);
-      }
-    }, { passive: true });
-
-    document.getElementById('btnFiche').addEventListener('click', () => {
-      window.location.href = 'fiche.html?id=' + deck[index].id + '&from=quiz';
-    });
-    document.getElementById('btnRetour').addEventListener('click', (e) => {
+    document.getElementById('btnRetour').addEventListener('click', e => {
       e.stopPropagation();
       flashcard.classList.remove('flipped');
       estRetourne = false;
       actionsApres.style.display = 'none';
       cardHint.style.display = 'flex';
     });
+
+    document.getElementById('btnFiche').addEventListener('click', () => {
+      window.location.href = 'fiche.html?id=' + pool[0].id + '&from=quiz';
+    });
+
     document.getElementById('btnReconnu').addEventListener('click', () => evaluer(true));
     document.getElementById('btnRate').addEventListener('click',    () => evaluer(false));
 
-    document.getElementById('btnRecommencer').addEventListener('click', () => {
-      deck           = shuffle(OEUVRES);
-      index          = 0;
-      sessionReconnu = 0;
-      sessionRate    = 0;
+    // Reset en cours de partie
+    document.getElementById('btnReset').addEventListener('click', () => {
+      if (!confirm('Remettre toute la progression à zéro ? Les 52 œuvres seront à recommencer.')) return;
+      saveScore({ ids: {} });
+      initPool();
       quizFin.style.display  = 'none';
       quizZone.style.display = 'flex';
-      chargerCarte(deck[index]);
+      chargerCarte(pool[0]);
     });
 
-    chargerCarte(deck[index]);
+    // Recommencer depuis l'écran de fin (= reset complet)
+    document.getElementById('btnRecommencer').addEventListener('click', () => {
+      saveScore({ ids: {} });
+      initPool();
+      quizFin.style.display  = 'none';
+      quizZone.style.display = 'flex';
+      chargerCarte(pool[0]);
+    });
+
+    // Init
+    initPool();
+    if (pool.length === 0) {
+      showFin();
+    } else {
+      chargerCarte(pool[0]);
+    }
   </script>
 </body>
 </html>
