@@ -60,7 +60,11 @@
           <!-- AUDIO -->
           <div class="audio-player" id="audioPlayer">
             <button class="audio-btn" id="audioBtn">▶ Écouter la fiche</button>
-            <div class="audio-progress"><div class="audio-progress-bar" id="audioBar"></div></div>
+            <div class="audio-seek" id="audioSeek">
+              <div class="audio-seek-bar" id="audioSeekBar"></div>
+              <div class="audio-seek-handle" id="audioSeekHandle"></div>
+            </div>
+            <span class="audio-time" id="audioTime">0:00</span>
             <audio id="ficheAudio" src="audio/fiche_${o.id}.mp3" preload="none"></audio>
           </div>
 
@@ -148,9 +152,22 @@
         setVue(!!Profil.getVues()[o.id]);
 
         // --- Lecteur audio ---
-        const audio   = document.getElementById('ficheAudio');
-        const audioBtn = document.getElementById('audioBtn');
-        const audioBar = document.getElementById('audioBar');
+        const audio      = document.getElementById('ficheAudio');
+        const audioBtn   = document.getElementById('audioBtn');
+        const audioSeek  = document.getElementById('audioSeek');
+        const audioSeekBar = document.getElementById('audioSeekBar');
+        const audioHandle = document.getElementById('audioSeekHandle');
+        const audioTime  = document.getElementById('audioTime');
+
+        function fmtTime(s) {
+          const m = Math.floor(s / 60);
+          return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+        }
+
+        function setProgress(pct) {
+          audioSeekBar.style.setProperty('--progress', pct + '%');
+          audioHandle.style.setProperty('--progress', pct + '%');
+        }
 
         audioBtn.addEventListener('click', () => {
           if (audio.paused) {
@@ -165,13 +182,24 @@
         });
 
         audio.addEventListener('timeupdate', () => {
-          if (audio.duration) audioBar.style.width = (audio.currentTime / audio.duration * 100) + '%';
+          if (!audio.duration) return;
+          const pct = (audio.currentTime / audio.duration) * 100;
+          setProgress(pct);
+          audioTime.textContent = fmtTime(audio.currentTime);
         });
 
         audio.addEventListener('ended', () => {
           audioBtn.textContent = '▶ Écouter la fiche';
           audioBtn.classList.remove('playing');
-          audioBar.style.width = '0%';
+          setProgress(0);
+          audioTime.textContent = '0:00';
+        });
+
+        audioSeek.addEventListener('click', (ev) => {
+          if (!audio.duration) return;
+          const rect = audioSeek.getBoundingClientRect();
+          const pct  = Math.max(0, Math.min(1, (ev.clientX - rect.left) / rect.width));
+          audio.currentTime = pct * audio.duration;
         });
 
         btnsVue.forEach(btn => btn.addEventListener('click', () => {

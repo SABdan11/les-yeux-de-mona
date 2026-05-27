@@ -423,18 +423,47 @@ a { text-decoration: none; color: inherit; }
 .audio-btn:hover { background: rgba(255,255,255,0.25); }
 .audio-btn.playing { background: #c9a84c; border-color: #c9a84c; }
 
-.audio-progress {
+.audio-seek {
   flex: 1;
+  position: relative;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.audio-seek-bar {
+  position: absolute;
+  left: 0; right: 0;
   height: 3px;
   background: rgba(255,255,255,0.2);
   border-radius: 2px;
-  overflow: hidden;
 }
-.audio-progress-bar {
-  height: 100%;
+.audio-seek-bar::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: var(--progress, 0%);
   background: #c9a84c;
-  width: 0%;
+  border-radius: 2px;
   transition: width 0.5s linear;
+}
+.audio-seek-handle {
+  position: absolute;
+  width: 12px; height: 12px;
+  background: #c9a84c;
+  border-radius: 50%;
+  left: var(--progress, 0%);
+  transform: translateX(-50%);
+  transition: left 0.5s linear;
+  display: none;
+}
+.audio-seek:hover .audio-seek-handle { display: block; }
+.audio-time {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+  min-width: 32px;
+  text-align: right;
 }
 
 .frise-band {
