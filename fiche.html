@@ -96,27 +96,11 @@
               <div class="section-content">${voit}</div>
             </div>
 
-            <!-- L'ARTISTE -->
-            ${o.artiste_texte ? `
-            <div class="fiche-section">
-              <h2>🖌️ L'artiste</h2>
-              <div class="section-content">${o.artiste_texte.split('\n\n').map(p => `<p>${p}</p>`).join('')}</div>
-            </div>` : ''}
-
             <!-- LEÇON DE DADÉ -->
             <div class="lecon-bloc">
               <div class="lecon-label">La leçon de Dadé</div>
               <div class="lecon-titre">${o.lecon_titre}</div>
               <p>${o.lecon_texte}</p>
-            </div>
-
-            <!-- GRAND-PARENT -->
-            <div class="grandparent-bloc">
-              <h2>👴 Pour le grand-parent</h2>
-              <div class="gp-methode">La méthode de Dadé</div>
-              <p class="gp-texte">${o.grandparent_methode}</p>
-              <ol>${questions}</ol>
-              <div class="gp-conseil">${o.grandparent_conseil}</div>
             </div>
 
             <!-- MOT MYSTÈRE -->
@@ -126,10 +110,26 @@
               <p>${o.mot_mystere_texte}</p>
             </div>
 
+            <!-- L'ARTISTE -->
+            ${o.artiste_texte ? `
+            <div class="fiche-section">
+              <h2>🖌️ L'artiste</h2>
+              <div class="section-content">${o.artiste_texte.split('\n\n').map(p => `<p>${p}</p>`).join('')}</div>
+            </div>` : ''}
+
             <!-- ANECDOTE -->
             <div class="anecdote-bloc">
               <h2>💡 Le savais-tu ?</h2>
               <p>${o.anecdote}</p>
+            </div>
+
+            <!-- GRAND-PARENT -->
+            <div class="grandparent-bloc">
+              <h2>👴 Pour le grand-parent</h2>
+              <div class="gp-methode">La méthode de Dadé</div>
+              <p class="gp-texte">${o.grandparent_methode}</p>
+              <ol>${questions}</ol>
+              <div class="gp-conseil">${o.grandparent_conseil}</div>
             </div>
 
           </div>
